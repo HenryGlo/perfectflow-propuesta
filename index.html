@@ -1795,6 +1795,7 @@ function setLang(next){
   if(allBtn.getAttribute("aria-expanded") === "true") allBtn.textContent = T(ALL.close);
   clone();
   navSpy();
+  stabilize();
 }
 esBtn.addEventListener("click", function(){ setLang("es"); });
 enBtn.addEventListener("click", function(){ setLang("en"); });
@@ -1865,7 +1866,7 @@ window.addEventListener("scroll", function(){
   if(navLock){ navUnlockSoon(); return; }
   if(!spyTick){ spyTick = true; requestAnimationFrame(navSpy); }
 }, {passive: true});
-window.addEventListener("resize", function(){ navLock = null; navSpy(); });
+window.addEventListener("resize", function(){ if(!navLock) navSpy(); });
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(navSpy);
 navSpy();
 
@@ -2135,7 +2136,8 @@ function activate(){
   }
 }
 actBtn.addEventListener("click", activate);
-window.addEventListener("resize", function(){ if(sorted) layoutSorted(true); });
+var sortW = window.innerWidth;
+window.addEventListener("resize", function(){ if(window.innerWidth === sortW) return; sortW = window.innerWidth; if(sorted) layoutSorted(true); });
 for(var s0 = 0; s0 < 5; s0++) addNote(false);
 onSeen(board, startChaos, .25);
 
@@ -2918,7 +2920,8 @@ $$("#dashSeg button").forEach(function(b){ b.addEventListener("click", function(
 renderDash(false);
 onSeen(dash, function(){ dashSeen = true; renderDash(true); }, .25);
 var dashRz = null;
-window.addEventListener("resize", function(){ clearTimeout(dashRz); dashRz = setTimeout(function(){ renderLine(false); }, 150); });
+var dashW = window.innerWidth;
+window.addEventListener("resize", function(){ if(window.innerWidth === dashW) return; dashW = window.innerWidth; clearTimeout(dashRz); dashRz = setTimeout(function(){ renderLine(false); }, 150); });
 
 /* ---------- 10d. constructor de la página de reservas ---------- */
 var BK = {
@@ -3096,8 +3099,44 @@ onSeen($("#phone"), function(){
   });
 }, .4);
 
+/* ---------- 15. cajas estables: lo que se anima no empuja la página ---------- */
+// Cada componente que cambia de contenido reserva el alto de su estado más alto,
+// así la animación ocurre dentro de su caja y lo de abajo no salta.
+function holdHeight(el, states, restore){
+  if(!el) return;
+  el.style.minHeight = "";
+  var hi = function(){ return Math.ceil(el.getBoundingClientRect().height); }, max = hi();
+  states.forEach(function(fn){ fn(); max = Math.max(max, hi()); });
+  restore();
+  el.style.minHeight = max + "px";
+}
+function ptsHTML(sz){ return sz.pts.map(function(pt){ return '<li><i aria-hidden="true">✓</i><span>' + pt[lang] + "</span></li>"; }).join(""); }
+function stabilize(){
+  var logSave = hubLog.innerHTML;
+  holdHeight(hubLog, HUB_EV.map(function(ev){ return function(){
+    hubLog.innerHTML = hubLogHead() + ev.hits.map(function(h){ return '<p class="row"><i aria-hidden="true">✓</i><b>' + HUB_SHORT[h[0]][lang] + "</b><em>· " + h[1][lang] + "</em></p>"; }).join("");
+  }; }), function(){ hubLog.innerHTML = logSave; bindStep(); });
+  var keepCase = caseIdx;
+  holdHeight($("#flow"), CASES.map(function(c, i){ return function(){ caseIdx = i; renderCase(true); }; }), function(){ caseIdx = keepCase; renderCase(true); });
+  holdHeight(scalePts, SIZES.map(function(sz){ return function(){ scalePts.innerHTML = ptsHTML(sz); }; }), function(){ scalePts.innerHTML = ptsHTML(SIZES[sizeIdx]); });
+  holdHeight($("#bkPv"), [bkFinal], function(){ if(bkPlayed){ bkFinal(); } else { bkReset(); } });
+  var typing = bubs[1], typingDisp = typing.style.display;
+  holdHeight($("#chat"), [function(){ typing.style.display = ""; }], function(){ typing.style.display = typingDisp; });
+  var boutSave = bout.innerHTML;
+  holdHeight(bout, [B.pick, B.needSlot, B.free, B.paid].map(function(m){ return function(){ bout.innerHTML = T(m); }; }), function(){ bout.innerHTML = boutSave; });
+  var keepOn = MODS.map(function(m){ return m.on; });
+  holdHeight(swWidgets.closest(".app"), [function(){ MODS.forEach(function(m){ m.on = true; }); renderApp(); }], function(){ MODS.forEach(function(m, i){ m.on = keepOn[i]; }); renderApp(); });
+}
+var stW = window.innerWidth, stT = null;
+window.addEventListener("resize", function(){
+  if(window.innerWidth === stW) return;
+  stW = window.innerWidth; clearTimeout(stT); stT = setTimeout(stabilize, 200);
+});
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(stabilize);
+
 /* ---------- 14. arranque ---------- */
 clone();
+stabilize();
 if(/[?&]lang=en\b/.test(location.search)) setLang("en");
 })();
 </script>
