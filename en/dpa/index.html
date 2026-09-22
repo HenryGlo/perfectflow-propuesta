@@ -721,7 +721,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <a href="../../?lang=en" aria-label="PerfectFlow"><svg style="--word:#FFFFFF;--iso:#FFFFFF;display:block;height:64px;width:108px" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
     <nav class="foot-legal" aria-label="Legal"><a href="../../terms/">Terms of service</a><a href="../../privacy/">Privacy policy</a><a href="../../en/dpa/" aria-current="page">Data processing agreement (DPA)</a><a href="../../en/subprocessors/">Subprocessors</a><a href="../../data-deletion/">Data deletion</a></nav>
   </div>
-  <p class="note">PerfectFlow is built and operated by Code Flakes LLC · perfectflow.cloud · <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+  <p class="note">PerfectFlow is built and operated by Code Flakes LLC · perfectflow.cloud · <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
 </div></footer>
 
 <script>
@@ -729,6 +729,13 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 "use strict";
 var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+/* el correo se arma aquí: en el HTML no está la dirección, así que los robots de spam no la recogen */
+$$("[data-u][data-d]").forEach(function(a){
+  var mail = a.getAttribute("data-u") + "@" + a.getAttribute("data-d"), s = a.getAttribute("data-s");
+  a.setAttribute("href", "mailto:" + mail + (s ? "?subject=" + s : ""));
+  if(a.hasAttribute("data-mt")) a.textContent = mail;
+});
+
 /* barra de lectura */
 var prog = document.getElementById("prog"), tick = false;
 function onScroll(){ var h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; tick = false; }

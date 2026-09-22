@@ -519,7 +519,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>The data you enter into PerfectFlow remains yours. You authorise us to host and process it for the sole purpose of providing the service, and to access it where necessary to operate or support your instance.</p>
           <p>You can ask us for an export of your data while your subscription is active.</p>
           <p>In respect of that data, your company is the <strong>controller</strong> and CodeFlakes acts as <strong>processor</strong>. The terms of that processing — instructions, confidentiality, security measures, sub-processors, assistance with data subject rights and what happens to the data when the contract ends — are governed by the <strong><a href="../en/dpa/">data processing agreement</a></strong>, which forms an inseparable part of these terms.</p>
-          <p><strong>By subscribing to PerfectFlow you also accept that agreement</strong>, in the version published at the time of subscription. If you need a signed copy, or one with annexes specific to your organisation, write to <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a>.</p>
+          <p><strong>By subscribing to PerfectFlow you also accept that agreement</strong>, in the version published at the time of subscription. If you need a signed copy, or one with annexes specific to your organisation, write to <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>.</p>
           <p>The detail of what your instance processes — categories, purposes, active modules and connected providers — is set out in your <strong>configuration record</strong>, which we keep current and provide on request. Where these terms and the processing agreement conflict on data protection, the agreement prevails.</p>
         </section>
 
@@ -560,7 +560,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <div class="note">
             <p><strong>Code Flakes LLC</strong> — PerfectFlow</p>
             <p>4855 West Hillsboro Boulevard, Suite A3, Coconut Creek, FL 33073, United States</p>
-            <p>Email: <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+            <p>Email: <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
           </div>
         </section>
       </article>
@@ -575,7 +575,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <a href="../?lang=en" aria-label="PerfectFlow"><svg style="--word:#FFFFFF;--iso:#FFFFFF;display:block;height:64px;width:108px" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
     <nav class="foot-legal" aria-label="Legal"><a href="../terms/" aria-current="page">Terms of service</a><a href="../privacy/">Privacy policy</a><a href="../en/dpa/">Data processing agreement (DPA)</a><a href="../en/subprocessors/">Subprocessors</a><a href="../data-deletion/">Data deletion</a></nav>
   </div>
-  <p class="note">PerfectFlow is built and operated by Code Flakes LLC · perfectflow.cloud · <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+  <p class="note">PerfectFlow is built and operated by Code Flakes LLC · perfectflow.cloud · <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
 </div></footer>
 
 <script>
@@ -583,6 +583,13 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 "use strict";
 var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+/* el correo se arma aquí: en el HTML no está la dirección, así que los robots de spam no la recogen */
+$$("[data-u][data-d]").forEach(function(a){
+  var mail = a.getAttribute("data-u") + "@" + a.getAttribute("data-d"), s = a.getAttribute("data-s");
+  a.setAttribute("href", "mailto:" + mail + (s ? "?subject=" + s : ""));
+  if(a.hasAttribute("data-mt")) a.textContent = mail;
+});
+
 /* barra de lectura */
 var prog = document.getElementById("prog"), tick = false;
 function onScroll(){ var h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; tick = false; }

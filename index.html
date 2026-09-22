@@ -1237,7 +1237,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <h2 class="rv" data-en="Your business already has plenty of movement. Now it needs organization.">Tu negocio ya tiene suficiente movimiento. Ahora necesita organización.</h2>
     <p class="lead rv" data-en="Tell us how you work today and we&#39;ll show you how to organize it in PerfectFlow.">Cuéntanos cómo trabajas hoy y te mostramos cómo organizarlo en PerfectFlow.</p>
     <div class="hero-cta rv">
-      <a class="btn btn-lime" href="mailto:info@perfectflow.cloud?subject=Quiero%20organizar%20mi%20negocio" data-en="Organize my business">Organizar mi negocio</a>
+      <a class="btn btn-lime"  href="#cierre" data-en="Organize my business" data-u="info" data-d="perfectflow.cloud" data-s="Quiero%20organizar%20mi%20negocio">Organizar mi negocio</a>
     </div>
     <span class="stk round drag b-lime" style="--s:104px;--r:-10deg;top:-20px;left:2%" aria-hidden="true" data-en="Grow without carrying more">Crecer sin cargar más</span>
     <span class="stk pill drag b-coral" style="--r:7deg;bottom:-24px;right:4%" aria-hidden="true" data-en="no fine print">sin letra chica</span>
@@ -1251,7 +1251,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <div>
         <a class="logo" href="#top" aria-label="PerfectFlow"><svg class="imago" style="--h:74px;--word:#FFFFFF;--iso:#FFFFFF" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
         <p class="tiny" style="margin-top:16px" data-en="A serious platform for businesses with personality.">Una plataforma seria para negocios con personalidad.</p>
-        <p style="margin-top:10px"><a class="mail" href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+        <p style="margin-top:10px"><a class="mail"  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
       </div>
       <nav class="foot-nav" aria-label="Pie">
         <a href="#organizacion" data-en="Organization">Organización</a>
@@ -2125,6 +2125,13 @@ window.addEventListener("resize", function(){
   stW = window.innerWidth; clearTimeout(stT); stT = setTimeout(stabilize, 200);
 });
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(stabilize);
+
+/* el correo se arma aquí: en el HTML no está la dirección, así que los robots de spam no la recogen */
+$$("[data-u][data-d]").forEach(function(a){
+  var mail = a.getAttribute("data-u") + "@" + a.getAttribute("data-d"), s = a.getAttribute("data-s");
+  a.setAttribute("href", "mailto:" + mail + (s ? "?subject=" + s : ""));
+  if(a.hasAttribute("data-mt")) a.textContent = mail;
+});
 
 /* ---------- 14. arranque ---------- */
 clone();

@@ -519,7 +519,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>Los datos que cargas en PerfectFlow siguen siendo tuyos. Nos autorizas a alojarlos y procesarlos con el único fin de prestarte el servicio, y a acceder a ellos cuando sea necesario para operar o dar soporte a tu instancia.</p>
           <p>Puedes pedirnos una exportación de tus datos mientras la contratación esté vigente.</p>
           <p>Respecto de esos datos, tu empresa es el <strong>responsable del tratamiento</strong> y CodeFlakes actúa como <strong>encargado</strong>. Las condiciones de ese tratamiento —instrucciones, confidencialidad, medidas de seguridad, subencargados, asistencia con los derechos de las personas afectadas y qué ocurre con los datos al terminar el contrato— se rigen por el <strong><a href="../dpa/">acuerdo de encargo de tratamiento</a></strong>, que forma parte inseparable de estas condiciones.</p>
-          <p><strong>Al contratar PerfectFlow aceptas también ese acuerdo</strong>, en la versión publicada en el momento de la contratación. Si necesitas una copia firmada o con anexos particulares para tu organización, escríbenos a <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a>.</p>
+          <p><strong>Al contratar PerfectFlow aceptas también ese acuerdo</strong>, en la versión publicada en el momento de la contratación. Si necesitas una copia firmada o con anexos particulares para tu organización, escríbenos a <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>.</p>
           <p>El detalle de los datos que trata tu instancia —categorías, finalidades, módulos activos y proveedores conectados— consta en tu <strong>ficha de configuración</strong>, que mantenemos actualizada y te facilitamos cuando la pidas. En caso de contradicción entre estas condiciones y el acuerdo de encargo en materia de protección de datos, prevalece el acuerdo.</p>
         </section>
 
@@ -560,7 +560,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <div class="note">
             <p><strong>Code Flakes LLC</strong> — PerfectFlow</p>
             <p>4855 West Hillsboro Boulevard, Suite A3, Coconut Creek, FL 33073, Estados Unidos</p>
-            <p>Correo: <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+            <p>Correo: <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
           </div>
         </section>
       </article>
@@ -575,7 +575,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <a href="../" aria-label="PerfectFlow"><svg style="--word:#FFFFFF;--iso:#FFFFFF;display:block;height:64px;width:108px" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
     <nav class="foot-legal" aria-label="Legal"><a href="../terminos/" aria-current="page">Condiciones del servicio</a><a href="../privacidad/">Política de privacidad</a><a href="../dpa/">Acuerdo de encargo (DPA)</a><a href="../subprocessors/">Subencargados</a><a href="../eliminacion-de-datos/">Eliminación de datos</a></nav>
   </div>
-  <p class="note">PerfectFlow es construido y operado por Code Flakes LLC · perfectflow.cloud · <a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+  <p class="note">PerfectFlow es construido y operado por Code Flakes LLC · perfectflow.cloud · <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
 </div></footer>
 
 <script>
@@ -583,6 +583,13 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 "use strict";
 var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+/* el correo se arma aquí: en el HTML no está la dirección, así que los robots de spam no la recogen */
+$$("[data-u][data-d]").forEach(function(a){
+  var mail = a.getAttribute("data-u") + "@" + a.getAttribute("data-d"), s = a.getAttribute("data-s");
+  a.setAttribute("href", "mailto:" + mail + (s ? "?subject=" + s : ""));
+  if(a.hasAttribute("data-mt")) a.textContent = mail;
+});
+
 /* barra de lectura */
 var prog = document.getElementById("prog"), tick = false;
 function onScroll(){ var h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; tick = false; }

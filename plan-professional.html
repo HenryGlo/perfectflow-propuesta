@@ -578,7 +578,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <p class="lead rv" data-en="Professional · $199.99/month · Up to 30 users.">Professional · $199.99/mes · Hasta 30 usuarios.</p>
     <div class="cta-row rv">
       <a class="btn btn-lime" href="https://buy.stripe.com/28EbJ1f1j0N38jt4r5bwk0a" target="_blank" rel="noopener" data-en="Get started now">Contratar ahora</a>
-      <a class="btn btn-ghost" href="mailto:info@perfectflow.cloud?subject=Plan%20Professional" data-en="Talk to a person">Hablar con una persona</a>
+      <a class="btn btn-ghost"  href="#cierre" data-en="Talk to a person" data-u="info" data-d="perfectflow.cloud" data-s="Plan%20Professional">Hablar con una persona</a>
     </div>
   </div>
 </section>
@@ -587,7 +587,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 <footer class="foot"><div class="shell">
   <div class="foot-grid">
     <a href="./" aria-label="PerfectFlow"><svg style="--word:#FFFFFF;--iso:#FFFFFF;display:block;height:64px;width:108px" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
-    <p><a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
+    <p><a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a></p>
   </div>
   <nav class="foot-legal" aria-label="Legal">
     <a href="terminos/" data-href-en="terms/" data-en="Terms of service">Condiciones del servicio</a>
@@ -655,6 +655,13 @@ function onSeen(el, fn, th){
   var o = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ fn(); o.disconnect(); } }); }, {threshold:th || .3});
   o.observe(el);
 }
+/* el correo se arma aquí: en el HTML no está la dirección, así que los robots de spam no la recogen */
+$$("[data-u][data-d]").forEach(function(a){
+  var mail = a.getAttribute("data-u") + "@" + a.getAttribute("data-d"), s = a.getAttribute("data-s");
+  a.setAttribute("href", "mailto:" + mail + (s ? "?subject=" + s : ""));
+  if(a.hasAttribute("data-mt")) a.textContent = mail;
+});
+
 /* precio que cuenta */
 var amt = $("#amt"), target = parseFloat(amt.getAttribute("data-v"));
 if(!RM){
