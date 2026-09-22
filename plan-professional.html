@@ -81,6 +81,17 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .nav{display:flex;gap:4px;margin-left:auto}
 .nav a{text-decoration:none;font-size:.88rem;font-weight:500;padding:8px 12px;border-radius:var(--r-pill);white-space:nowrap;transition:background .2s}
 .nav a:hover{background:var(--lime)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.nav{position:relative}
+.nav a{position:relative;z-index:1;transition:background .2s,color .3s var(--ease)}
+.nav .ind{position:absolute;left:0;top:0;width:0;height:0;border-radius:var(--r-pill);background:var(--ink);box-shadow:2px 2px 0 var(--lime);opacity:0;pointer-events:none;z-index:0;
+  transition:transform .5s var(--boing),width .5s var(--boing),opacity .25s var(--ease)}
+.nav.has .ind{opacity:1}
+.nav a.on{color:var(--cream)}
+.nav a.on:hover{background:transparent}
+.mob a.on{color:var(--violet)}
+.mob a.on::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--lime);border:2px solid var(--ink);margin-right:10px;vertical-align:.18em}
 .hdr-end{display:flex;align-items:center;gap:8px}
 .lang{display:flex;border:var(--line);border-radius:var(--r-pill);overflow:hidden}
 .lang button{border:0;background:var(--paper);padding:6px 11px;font-size:.78rem;font-weight:600;cursor:pointer;min-height:44px;min-width:44px}
@@ -317,8 +328,8 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 <header class="hdr"><div class="shell"><div class="hdr-bar">
   <a class="logo" href="./" aria-label="PerfectFlow, inicio"><svg class="iso" viewBox="0 0 465 581" aria-hidden="true"><use href="#pf-iso"/></svg><span class="sr">PerfectFlow</span></a>
   <nav class="nav" aria-label="Plan">
-    <a href="#incluye" data-en="What&#39;s included">Qué incluye</a>
     <a href="#para-quien" data-en="Who it&#39;s for">Para quién</a>
+    <a href="#incluye" data-en="What&#39;s included">Qué incluye</a>
     <a href="#comparar" data-en="Compare plans">Comparar planes</a>
     <a href="#preguntas" data-en="Questions">Preguntas</a>
   </nav>
@@ -469,6 +480,7 @@ function setLang(n){
   });
   $("#es").setAttribute("aria-pressed", String(n === "es")); $("#en").setAttribute("aria-pressed", String(n === "en"));
   forgeLang();
+  if(typeof navSpy === "function") navSpy();
 }
 $("#es").addEventListener("click", function(){ setLang("es"); });
 $("#en").addEventListener("click", function(){ setLang("en"); });
@@ -590,6 +602,53 @@ if(FINE && !RM){
 }
 forgeReset();
 onSeen(forge, forgePlay, .25);
+
+/* ---------- la cabecera sigue la sección en pantalla ---------- */
+var navEl = document.querySelector(".nav"), navInd = document.createElement("span"), navLock = null, navLockT = null, spyTick = false;
+navInd.className = "ind"; navInd.setAttribute("aria-hidden", "true"); navEl.insertBefore(navInd, navEl.firstChild);
+var spyLinks = $$('.nav a[href^="#"], .mob a[href^="#"]:not(.btn)');
+var spySecs = [];
+spyLinks.forEach(function(a){
+  var id = a.getAttribute("href").slice(1), s = document.getElementById(id);
+  if(s && spySecs.indexOf(s) === -1) spySecs.push(s);
+});
+function spyMark(id){
+  spyLinks.forEach(function(a){
+    var on = a.getAttribute("href") === "#" + id;
+    a.classList.toggle("on", on);
+    if(on) a.setAttribute("aria-current", "location"); else a.removeAttribute("aria-current");
+  });
+  var cur = id ? navEl.querySelector('a[href="#' + id + '"]') : null;
+  if(cur && cur.offsetParent){
+    navInd.style.width = cur.offsetWidth + "px";
+    navInd.style.height = cur.offsetHeight + "px";
+    navInd.style.transform = "translate(" + cur.offsetLeft + "px," + cur.offsetTop + "px)";
+    navEl.classList.add("has");
+  }else{
+    navEl.classList.remove("has");
+  }
+}
+function navSpy(){
+  spyTick = false;
+  if(navLock) return;
+  var line = window.innerHeight * .35, id = null;
+  spySecs.forEach(function(s){ var r = s.getBoundingClientRect(); if(r.top <= line && r.bottom > line) id = s.id; });
+  spyMark(id);
+}
+function navUnlockSoon(){ clearTimeout(navLockT); navLockT = setTimeout(function(){ navLock = null; navSpy(); }, 160); }
+spyLinks.forEach(function(a){
+  a.addEventListener("click", function(){
+    navLock = a.getAttribute("href").slice(1); spyMark(navLock);
+    navUnlockSoon();
+  });
+});
+window.addEventListener("scroll", function(){
+  if(navLock){ navUnlockSoon(); return; }
+  if(!spyTick){ spyTick = true; requestAnimationFrame(navSpy); }
+}, {passive: true});
+window.addEventListener("resize", function(){ navLock = null; navSpy(); });
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(navSpy);
+navSpy();
 
 /* comparar: barras de usuarios */
 if(/[?&]lang=en\b/.test(location.search)) setLang("en");
