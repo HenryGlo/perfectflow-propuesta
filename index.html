@@ -670,6 +670,74 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .cfg-steps li.on .n,.cfg-steps li.done .n{background:var(--ink);color:var(--lime)}
 .b-replay{margin-top:14px}
 
+/* ---------- violeta: constructor de la página de reservas ---------- */
+.bk{margin-top:clamp(30px,4vw,48px);color:var(--ink)}
+.bk .app{min-height:520px}
+.bk-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:14px;padding:16px;flex:1}
+@media (max-width:760px){.bk-body{grid-template-columns:1fr}}
+.bk-cfg{display:flex;flex-direction:column;gap:12px;min-width:0}
+.bk-grp{background:var(--paper);border:var(--line);border-radius:14px;padding:10px 12px}
+.bk-grp h5{margin:0 0 8px;font-family:"Poppins",sans-serif;font-size:.74rem;font-weight:600;color:var(--ink-45)}
+.bk-row{display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;padding:5px 0;border-top:1px solid rgba(26,26,26,.08)}
+.bk-row:first-of-type{border-top:0}
+.bk-row .lbl{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tg{width:34px;height:20px;border-radius:var(--r-pill);border:1.5px solid var(--ink);background:var(--cream);position:relative;flex:0 0 34px;transition:background .25s}
+.tg::after{content:"";position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:var(--ink);transition:transform .3s var(--boing)}
+.bk-row.on .tg{background:var(--lime)}
+.bk-row.on .tg::after{transform:translateX(14px)}
+.bk-row.hit{animation:hitRow .6s var(--boing)}
+@keyframes hitRow{40%{background:rgba(200,240,75,.35);transform:translateX(3px)}}
+.svc{display:flex;align-items:center;gap:9px}
+.svc .th{width:40px;height:40px;border-radius:10px;border:1.5px solid var(--ink);background:linear-gradient(135deg,#FFD3C8,#E4D6FF);display:grid;place-items:center;flex:0 0 40px}
+.svc .th svg{width:18px;height:18px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc b{display:block;font-size:.82rem}
+.svc small{font-size:.72rem;color:var(--ink-45)}
+.stripe-b{display:inline-flex;align-items:center;gap:5px;font-size:.66rem;font-weight:600;color:var(--ink-45);white-space:nowrap}
+.stripe-b svg{width:12px;height:12px;fill:#635BFF}
+.stripe-b b{color:#635BFF;font-weight:700}
+.acts{display:flex;flex-wrap:wrap;gap:6px}
+.act{display:inline-flex;align-items:center;gap:5px;border:1.5px solid rgba(26,26,26,.25);border-radius:var(--r-pill);padding:.2em .7em;font-size:.72rem;font-weight:600;background:var(--cream);opacity:.45;transition:opacity .3s,background .3s,border-color .3s,transform .4s var(--boing)}
+.act svg{width:12px;height:12px}
+.act.on{opacity:1;background:var(--lime);border-color:var(--ink);transform:scale(1.06)}
+.act.more{border-style:dashed}
+/* la vista previa: la página pública */
+.pv{background:var(--cream);border:var(--line);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:9px;min-width:0;position:relative;overflow:hidden}
+.pv-h{display:flex;align-items:center;gap:8px;font-weight:700;font-family:"Chillax","Poppins",sans-serif;font-size:.95rem}
+.pv-h i{width:24px;height:24px;border-radius:50%;background:var(--brand);border:1.5px solid var(--ink);display:block}
+.pv-h small{margin-left:auto;font-family:"Poppins",sans-serif;font-weight:500;font-size:.66rem;color:var(--ink-45)}
+.pv-svc{border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--paper);display:none}
+.pv-svc.on{display:block;animation:didIn .45s var(--boing)}
+.pv-svc .img{height:78px;background:linear-gradient(120deg,#FFD3C8,#E4D6FF 55%,#D9EEFF);position:relative;display:grid;place-items:center}
+.pv-svc .img[data-img]{border:0;border-bottom:1.5px solid var(--ink)}
+.pv-svc .img svg{width:28px;height:28px;fill:none;stroke:var(--ink);stroke-width:1.8;opacity:.6}
+.pv-svc p{padding:7px 10px;font-size:.78rem;display:flex;justify-content:space-between;gap:8px}
+.pv-svc p b{font-weight:600}
+.pv-slots{display:none;gap:5px;flex-wrap:wrap}
+.pv-slots.on{display:flex;animation:didIn .4s var(--boing)}
+.pv-slots span{border:1.5px solid var(--ink);border-radius:var(--r-pill);padding:.15em .6em;font-size:.7rem;font-weight:600;background:var(--paper);transition:background .25s}
+.pv-slots span.sel{background:var(--lime)}
+.pv-f{display:flex;flex-direction:column;gap:5px}
+.pv-in{border:1.5px solid rgba(26,26,26,.3);border-radius:9px;background:var(--paper);padding:6px 9px;font-size:.74rem;min-height:30px;display:flex;flex-direction:column;animation:didIn .35s var(--boing)}
+.pv-in small{font-size:.6rem;color:var(--ink-45);font-weight:600}
+.pv-in span{font-weight:500;min-height:1.1em}
+.pv-pay{display:none;border:1.5px solid #635BFF;border-radius:10px;background:var(--paper);padding:7px 9px;flex-direction:column;gap:5px}
+.pv-pay.on{display:flex;animation:didIn .45s var(--boing)}
+.pv-pay .card{display:flex;justify-content:space-between;font-size:.74rem;font-weight:600;border:1.5px solid rgba(26,26,26,.2);border-radius:7px;padding:5px 8px;font-variant-numeric:tabular-nums}
+.pv-btn{background:var(--ink);color:var(--cream);border-radius:var(--r-pill);text-align:center;font-size:.8rem;font-weight:600;padding:8px;transition:transform .2s var(--boing),background .2s}
+.pv-btn.press{transform:scale(.94);background:var(--violet)}
+.pv-ok{position:absolute;inset:0;background:var(--lime);display:grid;place-items:center;text-align:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+.pv-ok.on{opacity:1}
+.pv-ok b{display:block;font-family:"Chillax","Poppins",sans-serif;font-size:1.3rem;margin-top:6px}
+.pv-ok small{font-size:.76rem;color:#3c4717}
+.pv-ok .ck{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--lime);display:grid;place-items:center;margin:0 auto;font-size:1.2rem;font-weight:700;transform:scale(0);transition:transform .5s var(--boing) .15s}
+.pv-ok.on .ck{transform:scale(1)}
+.bk-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:18px}
+.bk-foot .btn.pulse{animation:beg 1.1s var(--boing) 3}
+.bk-foot .stripe-b{color:rgba(255,255,255,.85);font-size:.78rem}
+.bk-foot .stripe-b svg{fill:#fff;width:14px;height:14px}
+.bk-foot .stripe-b b{color:#fff}
+.pay-note{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--ink-45);margin-top:2px}
+
 /* ---------- violeta: citas ---------- */
 .panel{background:var(--paper);color:var(--ink);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard-lg);padding:clamp(14px,2vw,22px)}
 .cal-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
@@ -888,7 +956,11 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .plan ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
 .plan li{font-size:.92rem;line-height:1.45;display:flex;gap:8px}
 .plan li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--violet);border:1.5px solid var(--ink);flex:0 0 10px;margin-top:.45em}
-.plan .btn{margin-top:auto}
+.plan .price small{font-family:"Poppins",sans-serif;font-weight:500;font-size:.85rem;letter-spacing:0;color:var(--ink-70)}
+.plan .seats-l{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;font-size:.82rem;font-weight:600;background:var(--paper);border:var(--line);border-radius:var(--r-pill);padding:4px 12px}
+.plan .acts{margin-top:auto;padding-top:14px;display:grid;gap:10px}
+.plan .acts .btn{margin-top:0;justify-content:center}
+.plan .more{font-size:.9rem;font-weight:600;text-align:center;text-decoration:underline;text-underline-offset:3px;min-height:44px;display:flex;align-items:center;justify-content:center}
 .plan-note{margin-top:clamp(26px,3vw,38px);background:var(--paper);border:2px dashed var(--ink);border-radius:var(--r-md);padding:16px 20px;font-size:.95rem;line-height:1.55;max-width:80ch}
 .plan-note b{background:var(--coral);padding:0 .25em;border-radius:4px}
 
@@ -1195,8 +1267,46 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 <!-- ======================= CITAS · violeta ======================= -->
 <section class="b-violet" id="citas">
   <div class="shell">
-    <h2 class="rv" style="max-width:18ch" data-en="Your client books. Your team gets organized. The system does the rest.">Tu cliente agenda. Tu equipo se organiza. El sistema hace el resto.</h2>
-    <p class="lead rv" style="margin-top:18px" data-en="Define schedules, services and availability. The client picks a moment and the team receives all the information organized.">Define horarios, servicios y disponibilidad. El cliente elige un momento y el equipo recibe toda la información organizada.</p>
+    <h2 class="rv" style="max-width:17ch" data-en="Your own booking page. With your fields, your payment and your rules.">Tu propia página de reservas. Con tus campos, tu cobro y tus reglas.</h2>
+    <p class="lead rv" style="margin-top:18px" data-en="Public bookings or sign-ups with the fields you decide to ask for. You choose whether people pay first, and where every piece of data goes: a confirmation email, a client record in PerfectFlow, a task, an alert… whatever you need.">Reservas o suscripciones públicas con los campos que tú decidas pedir. Eliges si se paga antes o no, y a dónde va cada dato: un correo de confirmación, la ficha del cliente en PerfectFlow, una tarea, un aviso… lo que necesites.</p>
+
+    <div class="bk rv" id="bk">
+      <div class="app" aria-hidden="true">
+        <aside class="app-side">
+          <p class="app-brand"><svg class="iso" viewBox="0 0 465 581"><use href="#pf-iso"/></svg><span>PerfectFlow</span></p>
+          <nav class="app-nav" id="bkNav"></nav>
+        </aside>
+        <div class="app-main">
+          <div class="app-top"><span class="crumb" id="bkCrumb" style="font-size:.82rem;font-weight:600;color:var(--ink-70);white-space:nowrap;overflow:hidden;text-overflow:ellipsis"></span><span class="pub" id="bkPub"></span></div>
+          <div class="bk-body">
+            <div class="bk-cfg">
+              <div class="bk-grp"><h5 id="bkFieldsT"></h5><div id="bkFields"></div></div>
+              <div class="bk-grp"><h5 id="bkSvcT"></h5><div class="svc"><span class="th"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/></svg></span><span><b id="bkSvcN"></b><small id="bkSvcM"></small></span></div></div>
+              <div class="bk-grp"><div class="bk-row" id="bkPayRow"><span class="lbl" id="bkPayL"></span><span class="tg" aria-hidden="true"></span></div><p class="pay-note"><span class="stripe-b"><svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span>powered by <b>Stripe</b></span></span></p></div>
+              <div class="bk-grp"><h5 id="bkActsT"></h5><div class="acts" id="bkActs"></div></div>
+            </div>
+            <div class="pv" id="bkPv">
+              <p class="pv-h"><i></i><span data-en="Nova Studio">Estudio Nova</span><small data-en="yourbusiness.com/book">tunegocio.com/reservar</small></p>
+              <div class="pv-svc" id="pvSvc">
+                <!-- IMAGEN: foto del servicio. Sustituir este div por <img src="..." alt="" style="width:100%;height:78px;object-fit:cover"> -->
+                <div class="img"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-7 7"/></svg></div>
+                <p><b id="pvSvcN"></b><span id="pvSvcM"></span></p>
+              </div>
+              <div class="pv-slots" id="pvSlots"><span>Mar 22 · 10:00</span><span>Mar 22 · 11:00</span><span>Mié 23 · 09:00</span></div>
+              <div class="pv-f" id="pvFields"></div>
+              <div class="pv-pay" id="pvPay"><div class="card"><span>•••• •••• •••• 4242</span><span>12/28</span></div><span class="stripe-b"><svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span id="pvPayNote"></span></span></div>
+              <p class="pv-btn" id="pvBtn"></p>
+              <div class="pv-ok" id="pvOk"><div><span class="ck">✓</span><b id="pvOkT"></b><small id="pvOkS"></small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bk-foot">
+        <a class="btn btn-lime" href="#demoReserva" id="bkTry" data-en="Try it yourself">Pruébalo tú mismo</a>
+        <button type="button" class="btn btn-sm" id="bkReplay" data-en="Watch it again">Verlo otra vez</button>
+        <span class="stripe-b"><svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span data-en="People can pay before booking · powered by <b>Stripe</b>, with your own account">La persona puede pagar antes de reservar · powered by <b>Stripe</b>, con tu propia cuenta</span></span>
+      </div>
+    </div>
 
     <div class="panel rv" style="margin-top:clamp(30px,4vw,48px)" id="calPanel">
       <div class="cal-head">
@@ -1244,7 +1354,7 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
     </div>
 
     <div class="book-grid">
-      <div class="panel rv">
+      <div class="panel rv" id="demoReserva">
         <h3 data-en="Your public booking page">Tu página pública de reservas</h3>
         <p class="tiny" data-en="A link where your client chooses a service and a time without creating an account.">Un enlace donde tu cliente elige servicio y hora sin crear cuenta.</p>
         <p class="sublbl" data-en="Service">Servicio</p>
@@ -1259,14 +1369,15 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
           <button type="button" class="opt" aria-pressed="false" data-en="Wed 23 · 09:00">Mié 23 · 09:00</button>
           <button type="button" class="opt" aria-pressed="false" data-en="Thu 24 · 16:00">Jue 24 · 16:00</button>
         </div>
-        <label class="pay"><input type="checkbox" id="paychk"><span data-en="Also send a WhatsApp reminder">Enviar también recordatorio por WhatsApp</span></label>
+        <label class="pay"><input type="checkbox" id="paychk"><span data-en="Pay before booking">Pagar antes de reservar</span></label>
+        <p class="pay-note"><span class="stripe-b"><svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span>powered by <b>Stripe</b></span></span></p>
         <button type="button" class="btn btn-lime" id="confirm" data-en="Confirm booking">Confirmar reserva</button>
         <p class="bout" id="bout" aria-live="polite"></p>
       </div>
       <div class="steps">
         <div class="step rv"><span class="n" aria-hidden="true">1</span><h3 data-en="You define the rules">Tú defines las reglas</h3><p data-en="Services, duration, capacity, availability windows, how far ahead people can book and how much notice you need.">Servicios, duración, capacidad, ventanas de disponibilidad, hasta cuándo se puede reservar y con cuánta antelación.</p></div>
-        <div class="step rv"><span class="n" aria-hidden="true">2</span><h3 data-en="The client picks a moment">El cliente elige un momento</h3><p data-en="From a link, without creating an account. They only see the slots that are genuinely free.">Desde un enlace, sin crear cuenta. Solo ve los huecos que de verdad están libres.</p></div>
-        <div class="step rv"><span class="n" aria-hidden="true">3</span><h3 data-en="The team receives it organized">El equipo lo recibe organizado</h3><p data-en="The booking lands confirmed, the record is created, the person in charge is notified and the reminder goes out on its own.">La reserva llega confirmada, se crea la ficha, se avisa al responsable y el recordatorio sale solo.</p></div>
+        <div class="step rv"><span class="n" aria-hidden="true">2</span><h3 data-en="The client picks a moment">El cliente elige un momento</h3><p data-en="From a link, without creating an account. If the service is charged, they pay right there, inside your page.">Desde un enlace, sin crear cuenta. Si el servicio se cobra, paga ahí mismo, dentro de tu página.</p></div>
+        <div class="step rv"><span class="n" aria-hidden="true">3</span><h3 data-en="The team receives it organized">El equipo lo recibe organizado</h3><p data-en="Once the payment clears the booking confirms itself, the record is created and the confirmation email goes out on its own.">Al confirmarse el pago la reserva se confirma sola, se crea la ficha y el correo de confirmación sale solo.</p></div>
       </div>
     </div>
   </div>
@@ -1429,43 +1540,55 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 <section class="b-cream" id="planes">
   <div class="shell">
     <h2 class="rv" style="max-width:15ch" data-en="Three plans. One complete platform.">Tres planes. Una plataforma completa.</h2>
-    <p class="lead rv" style="margin-top:18px" data-en="They differ in capacity, users, automations and level of operation. Never in locked features.">Se diferencian por capacidad, usuarios, automatizaciones y nivel de operación. Nunca por funciones bloqueadas.</p>
+    <p class="lead rv" style="margin-top:18px" data-en="They differ in users and infrastructure. Never in locked features.">Se diferencian en usuarios e infraestructura. Nunca en funciones bloqueadas.</p>
     <div class="plans">
       <article class="plan">
         <h3>Personal</h3>
         <p class="claim" data-en="For businesses with your name on them.">Para negocios con tu nombre.</p>
-        <p class="for" data-en="Professionals, creators, personal brands and small businesses.">Profesionales, creadores, marcas personales y empresas pequeñas.</p>
-        <p class="price" data-en="From ·">Desde ·</p>
+        <p class="for" data-en="Businesses that are starting out: professionals, creators, personal brands.">Negocios que están comenzando: profesionales, creadores, marcas personales.</p>
+        <p class="price">$99.99 <small data-en="/month">/mes</small></p>
+        <p class="seats-l" data-en="Up to 5 users">Hasta 5 usuarios</p>
         <ul>
           <li data-en="Shared server with your own database">Servidor compartido con base de datos propia</li>
           <li data-en="The full platform, modules on as you need them">La plataforma completa, con los módulos que enciendas</li>
           <li data-en="LandingHub landing page included">Landing de LandingHub incluida</li>
         </ul>
-        <a class="btn" href="#cierre" data-en="Let&#39;s talk about your capacity">Hablemos de tu capacidad</a>
+        <div class="acts">
+          <a class="btn" href="https://buy.stripe.com/cNi00j5qJ3Zf7fp9Lpbwk09" target="_blank" rel="noopener" data-en="Get started now">Contratar ahora</a>
+          <a class="more" href="plan-personal.html" data-en="See everything it includes →">Ver todo lo que incluye →</a>
+        </div>
       </article>
       <article class="plan hot">
         <h3>Professional</h3>
         <p class="claim" data-en="For teams that already need a system.">Para equipos que ya necesitan sistema.</p>
-        <p class="for" data-en="Startups and growing teams.">Startups y equipos en crecimiento.</p>
-        <p class="price" data-en="From ·">Desde ·</p>
+        <p class="for" data-en="Established companies, startups and growing teams.">Empresas ya rodadas, startups y equipos en crecimiento.</p>
+        <p class="price">$149.99 <small data-en="/month">/mes</small></p>
+        <p class="seats-l" data-en="Up to 30 users">Hasta 30 usuarios</p>
         <ul>
           <li data-en="Your own subdomain and branding">Subdominio y marca propios</li>
           <li data-en="Team, roles and permissions">Equipo, roles y permisos</li>
           <li data-en="Everything in Personal">Todo lo de Personal</li>
         </ul>
-        <a class="btn btn-ink" href="#cierre" data-en="Let&#39;s talk about your capacity">Hablemos de tu capacidad</a>
+        <div class="acts">
+          <a class="btn btn-ink" href="https://buy.stripe.com/28EbJ1f1j0N38jt4r5bwk0a" target="_blank" rel="noopener" data-en="Get started now">Contratar ahora</a>
+          <a class="more" href="plan-professional.html" data-en="See everything it includes →">Ver todo lo que incluye →</a>
+        </div>
       </article>
       <article class="plan">
         <h3>Company Oriented</h3>
         <p class="claim" data-en="For companies whose operation demands scale.">Para empresas cuya operación pide escala.</p>
-        <p class="for" data-en="Mid-sized companies.">Empresas medianas.</p>
-        <p class="price" data-en="From ·">Desde ·</p>
+        <p class="for" data-en="Mid-sized companies with several departments.">Empresas medianas y con varios departamentos.</p>
+        <p class="price">$449.99 <small data-en="/month">/mes</small></p>
+        <p class="seats-l" data-en="Unlimited users">Usuarios ilimitados</p>
         <ul>
           <li data-en="Dedicated server and database">Servidor y base de datos dedicados</li>
           <li data-en="Region of your choice: Frankfurt for the EEA, United States otherwise">Región a elegir: Fráncfort para el EEE, Estados Unidos para el resto</li>
           <li data-en="Everything in Professional">Todo lo de Professional</li>
         </ul>
-        <a class="btn" href="#cierre" data-en="Let&#39;s talk about your capacity">Hablemos de tu capacidad</a>
+        <div class="acts">
+          <a class="btn" href="https://buy.stripe.com/cNi5kD3iB8fvczJg9Nbwk0b" target="_blank" rel="noopener" data-en="Get started now">Contratar ahora</a>
+          <a class="more" href="plan-company.html" data-en="See everything it includes →">Ver todo lo que incluye →</a>
+        </div>
       </article>
     </div>
     <p class="plan-note" data-en="Every plan carries the complete platform and the LandingHub landing page: you switch on the modules you use and move up a plan when the business asks for it.">Todos los planes llevan la plataforma completa y la landing de LandingHub: enciendes los módulos que uses y subes de plan cuando el negocio lo pida.</p>
@@ -1586,6 +1709,8 @@ function setLang(next){
   renderTabs(); renderStrip(); clearTimeout(caseTimer); renderCase(true);
   bTimers.forEach(clearTimeout); if(bPlayed){ bFinal(); } else { bReset(); }
   renderDash(false);
+  bkTimers.forEach(clearTimeout); if(bkPlayed){ bkFinal(); } else { bkReset(); }
+  if(typeof confLabel === "function") confLabel();
   renderSizes(); setSize(sizeIdx);
   hubLabels(); if(hubIdx >= 0){ fireHub(hubIdx, true); } else { hubLog.innerHTML = hubLogHead() + '<p class="idle">' + T(HUB_UI.idle) + "</p>"; }
   if(allBtn.getAttribute("aria-expanded") === "true") allBtn.textContent = T(ALL.close);
@@ -2665,6 +2790,106 @@ onSeen(dash, function(){ dashSeen = true; renderDash(true); }, .25);
 var dashRz = null;
 window.addEventListener("resize", function(){ clearTimeout(dashRz); dashRz = setTimeout(function(){ renderLine(false); }, 150); });
 
+/* ---------- 10d. constructor de la página de reservas ---------- */
+var BK = {
+  crumb:{es:"Configuración › Página de reservas", en:"Settings › Booking page"},
+  draft:{es:"Borrador", en:"Draft"}, live:{es:"Publicada", en:"Live"},
+  fieldsT:{es:"Qué le pides al cliente", en:"What you ask the client"},
+  svcT:{es:"Servicio", en:"Service"}, svcN:{es:"Valoración inicial", en:"Initial assessment"}, svcM:{es:"60 min · $45", en:"60 min · $45"},
+  payL:{es:"Pagar antes de reservar", en:"Pay before booking"},
+  actsT:{es:"Después de reservar", en:"After booking"},
+  btn:{es:"Reservar", en:"Book"}, btnPay:{es:"Pagar $45 y reservar", en:"Pay $45 and book"},
+  payNote:{es:"Pago seguro · powered by <b>Stripe</b>", en:"Secure payment · powered by <b>Stripe</b>"},
+  okT:{es:"¡Reserva confirmada!", en:"Booking confirmed!"}, okS:{es:"Martes 22 · 11:00 · te llegó un correo", en:"Tuesday 22 · 11:00 · check your email"},
+  home:{es:"Inicio", en:"Home"}, cal:{es:"Agenda", en:"Calendar"}, book:{es:"Reservas", en:"Bookings"}
+};
+var BK_FIELDS = [
+  {es:"Nombre", en:"Name", v:"Marta Ruiz"},
+  {es:"Email", en:"Email", v:"marta@correo.com"},
+  {es:"Teléfono", en:"Phone", v:"+507 6000 0000"},
+  {es:"¿Cómo nos conociste?", en:"How did you find us?", v:"Instagram"}
+];
+var GMAIL_SVG = '<svg viewBox="0 0 24 24" style="fill:#EA4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>';
+var BK_ACTS = [
+  {es:"Correo de confirmación", en:"Confirmation email", ic:GMAIL_SVG},
+  {es:"Cliente creado en PerfectFlow", en:"Client created in PerfectFlow"},
+  {es:"Cita en el calendario", en:"Appointment in the calendar"},
+  {es:"+ lo que tú quieras", en:"+ whatever you need", more:true}
+];
+var bkEl = $("#bk"), bkNav = $("#bkNav"), bkFields = $("#bkFields"), bkActs = $("#bkActs"), bkPayRow = $("#bkPayRow"), bkPub = $("#bkPub");
+var pvSvc = $("#pvSvc"), pvSlots = $("#pvSlots"), pvFields = $("#pvFields"), pvPay = $("#pvPay"), pvBtn = $("#pvBtn"), pvOk = $("#pvOk"), bkTry = $("#bkTry");
+var bkTimers = [], bkPlayed = false;
+function bkStatic(){
+  $("#bkCrumb").textContent = T(BK.crumb);
+  $("#bkFieldsT").textContent = T(BK.fieldsT); $("#bkSvcT").textContent = T(BK.svcT); $("#bkActsT").textContent = T(BK.actsT);
+  $("#bkSvcN").textContent = T(BK.svcN); $("#bkSvcM").textContent = T(BK.svcM);
+  $("#pvSvcN").textContent = T(BK.svcN); $("#pvSvcM").textContent = T(BK.svcM);
+  $("#bkPayL").textContent = T(BK.payL); $("#pvPayNote").innerHTML = T(BK.payNote);
+  $("#pvOkT").textContent = T(BK.okT); $("#pvOkS").textContent = T(BK.okS);
+  bkNav.innerHTML = navItem(HOME_IC, T(BK.home)) + navItem(HUB_IC.citas, T(BK.cal)) + navItem(HUB_IC.cancel, T(BK.book), "act");
+  bkFields.innerHTML = BK_FIELDS.map(function(f){ return '<div class="bk-row"><span class="lbl">' + f[lang] + '</span><span class="tg" aria-hidden="true"></span></div>'; }).join("");
+  bkActs.innerHTML = BK_ACTS.map(function(a){ return '<span class="act' + (a.more ? " more" : "") + '">' + (a.ic || "") + a[lang] + "</span>"; }).join("");
+}
+function bkReset(){
+  bkTimers.forEach(clearTimeout); bkTimers = [];
+  bkStatic();
+  bkPub.textContent = T(BK.draft); bkPub.classList.remove("on");
+  bkPayRow.classList.remove("on");
+  pvSvc.classList.remove("on"); pvSlots.classList.remove("on"); $$("span", pvSlots).forEach(function(x){ x.classList.remove("sel"); });
+  pvFields.innerHTML = ""; pvPay.classList.remove("on"); pvOk.classList.remove("on");
+  pvBtn.textContent = T(BK.btn); pvBtn.classList.remove("press");
+  bkTry.classList.remove("pulse");
+}
+function bkAddField(i, value){
+  $$(".bk-row", bkFields)[i].classList.add("on", "hit");
+  pvFields.insertAdjacentHTML("beforeend", '<div class="pv-in"><small>' + BK_FIELDS[i][lang] + '</small><span>' + (value || "") + "</span></div>");
+}
+function bkFinal(){
+  bkReset();
+  BK_FIELDS.forEach(function(f, i){ bkAddField(i, f.v); $$(".bk-row", bkFields)[i].classList.remove("hit"); });
+  pvSvc.classList.add("on"); pvSlots.classList.add("on"); $$("span", pvSlots)[1].classList.add("sel");
+  bkPayRow.classList.add("on"); pvPay.classList.add("on"); pvBtn.textContent = T(BK.btnPay);
+  $$(".act", bkActs).forEach(function(a){ a.classList.add("on"); });
+  bkPub.textContent = T(BK.live); bkPub.classList.add("on");
+}
+function bkType(el, text, t0){
+  for(var i = 1; i <= text.length; i++){ (function(n){ bkTimers.push(setTimeout(function(){ el.textContent = text.slice(0, n); }, t0 + n * 45)); })(i); }
+  return t0 + text.length * 45;
+}
+function bkPlay(){
+  if(RM){ bkFinal(); bkPlayed = true; return; }
+  bkReset();
+  var t = 400, at = function(d, fn){ bkTimers.push(setTimeout(fn, d)); };
+  // 1. los campos que tú decides
+  BK_FIELDS.forEach(function(f, i){ at(t, function(){ bkAddField(i); }); t += 520; });
+  // 2. el servicio, con su imagen
+  at(t, function(){ pvSvc.classList.add("on"); }); t += 700;
+  at(t, function(){ pvSlots.classList.add("on"); }); t += 700;
+  // 3. pagar primero
+  at(t, function(){ bkPayRow.classList.add("on", "hit"); pvPay.classList.add("on"); pvBtn.textContent = T(BK.btnPay); }); t += 900;
+  // 4. el cliente rellena
+  at(t, function(){ $$("span", pvSlots)[1].classList.add("sel"); }); t += 500;
+  var ins = function(){ return $$(".pv-in span", pvFields); };
+  at(t, function(){}); 
+  BK_FIELDS.forEach(function(f, i){ (function(ii, tt){ at(tt, function(){ bkType(ins()[ii], f.v, 0); }); })(i, t); t += f.v.length * 45 + 220; });
+  // 5. paga
+  t += 300; at(t, function(){ pvBtn.classList.add("press"); });
+  t += 450; at(t, function(){ pvBtn.classList.remove("press"); pvOk.classList.add("on"); });
+  // 6. lo que pasa después
+  $$(".act", bkActs).forEach(function(a, i){ at(t + 500 + i * 480, function(){ a.classList.add("on"); }); });
+  t += 500 + BK_ACTS.length * 480 + 300;
+  at(t, function(){ bkPub.textContent = T(BK.live); bkPub.classList.add("on"); bkTry.classList.add("pulse"); bkPlayed = true; });
+  t += 2600; at(t, function(){ pvOk.classList.remove("on"); });
+}
+bkReset();
+$("#bkReplay").addEventListener("click", bkPlay);
+onSeen(bkEl, bkPlay, .3);
+bkTry.addEventListener("click", function(e){
+  e.preventDefault();
+  paychk.checked = true; paychk.dispatchEvent(new Event("change"));
+  $("#demoReserva").scrollIntoView({behavior: RM ? "auto" : "smooth", block: "center"});
+});
+
 /* ---------- 11. calendario: filtro y la reserva que entra ---------- */
 $$(".fbtn").forEach(function(b){
   b.addEventListener("click", function(){
@@ -2695,8 +2920,8 @@ var B = {
   needSlot: {es:"Te falta elegir el horario.", en:"Pick a time first."},
   free    : {es:"<b>Reserva confirmada.</b> El equipo la ve en su calendario, se crea la ficha con lo que escribió el cliente y le llega la confirmación desde tu correo.",
              en:"<b>Booking confirmed.</b> The team sees it in their calendar, the record is created with what the client wrote, and the confirmation goes out from your email."},
-  paid    : {es:"<b>Reserva confirmada, y con WhatsApp.</b> Además del correo, 24 horas antes le llega un recordatorio por WhatsApp desde tu cuenta de WhatsApp Business.",
-             en:"<b>Booking confirmed, with WhatsApp.</b> On top of the email, 24 hours before they get a reminder on WhatsApp from your WhatsApp Business account."}
+  paid    : {es:"<b>Pago confirmado en tu Stripe.</b> La reserva se confirma sola, se crea la ficha del cliente en PerfectFlow y le llega la confirmación desde tu correo.",
+             en:"<b>Payment confirmed in your Stripe.</b> The booking confirms itself, the client record is created in PerfectFlow and the confirmation goes out from your email."}
 };
 var bout = $("#bout"), paychk = $("#paychk");
 bout.innerHTML = T(B.pick);
@@ -2710,7 +2935,10 @@ function group(id){
   });
 }
 group("svc"); group("slot");
-paychk.addEventListener("change", function(){ bout.innerHTML = T(B.pick); });
+var CONF = {free:{es:"Confirmar reserva", en:"Confirm booking"}, paid:{es:"Pagar y reservar", en:"Pay and book"}};
+var confBtn = $("#confirm");
+function confLabel(){ confBtn.removeAttribute("data-en"); confBtn.removeAttribute("data-es"); confBtn.textContent = T(paychk.checked ? CONF.paid : CONF.free); }
+paychk.addEventListener("change", function(){ bout.innerHTML = T(B.pick); confLabel(); });
 $("#confirm").addEventListener("click", function(){
   var slot = $$("#slot .opt").some(function(b){ return b.getAttribute("aria-pressed") === "true"; });
   bout.innerHTML = !slot ? T(B.needSlot) : (paychk.checked ? T(B.paid) : T(B.free));
