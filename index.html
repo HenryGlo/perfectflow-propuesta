@@ -1009,6 +1009,9 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .foot-nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-left:auto}
 .foot-nav a{font-size:.92rem;color:rgba(251,246,236,.75);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
 .foot-nav a:hover{color:var(--lime)}
+.foot-legal{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:22px}
+.foot-legal a{display:inline-flex;align-items:center;min-height:44px;font-size:.86rem;color:rgba(251,246,236,.6);text-decoration:underline;text-underline-offset:3px}
+.foot-legal a:hover{color:var(--lime)}
 .foot .mail{color:var(--lime);font-weight:600}
 .foot-note{margin-top:clamp(26px,3.4vw,40px);padding-top:20px;border-top:1px solid rgba(251,246,236,.18);font-size:.82rem;color:rgba(251,246,236,.6);line-height:1.6;max-width:80ch}
 
@@ -1655,8 +1658,8 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
     <h2 class="rv" data-en="Your business already has plenty of movement. Now it needs organization.">Tu negocio ya tiene suficiente movimiento. Ahora necesita organización.</h2>
     <p class="lead rv" data-en="Tell us how you work today and we&#39;ll show you the first version of your operation inside PerfectFlow.">Cuéntanos cómo trabajas hoy y te enseñamos la primera versión de tu operación dentro de PerfectFlow.</p>
     <div class="hero-cta rv">
-      <a class="btn btn-lime" href="mailto:hola@perfectflow.cloud?subject=Quiero%20organizar%20mi%20negocio" data-en="Organize my business">Organizar mi negocio</a>
-      <a class="btn" href="mailto:hola@perfectflow.cloud?subject=Agendar%20una%20demo" data-en="Book a demo">Agendar una demo</a>
+      <a class="btn btn-lime" href="mailto:info@perfectflow.cloud?subject=Quiero%20organizar%20mi%20negocio" data-en="Organize my business">Organizar mi negocio</a>
+      <a class="btn" href="mailto:info@perfectflow.cloud?subject=Agendar%20una%20demo" data-en="Book a demo">Agendar una demo</a>
     </div>
     <span class="stk round drag b-lime" style="--s:104px;--r:-10deg;top:-20px;left:2%" aria-hidden="true" data-en="Grow without carrying more">Crecer sin cargar más</span>
     <span class="stk pill drag b-coral" style="--r:7deg;bottom:-24px;right:4%" aria-hidden="true" data-en="no fine print">sin letra chica</span>
@@ -1670,7 +1673,7 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
       <div>
         <a class="logo" href="#top" aria-label="PerfectFlow"><svg class="imago" style="--h:74px;--word:#FFFFFF;--iso:#FFFFFF" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
         <p class="tiny" style="margin-top:16px" data-en="A serious platform for businesses with personality.">Una plataforma seria para negocios con personalidad.</p>
-        <p style="margin-top:10px"><a class="mail" href="mailto:hola@perfectflow.cloud">hola@perfectflow.cloud</a></p>
+        <p style="margin-top:10px"><a class="mail" href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
       </div>
       <nav class="foot-nav" aria-label="Pie">
         <a href="#organizacion" data-en="Organization">Organización</a>
@@ -1684,6 +1687,13 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
         <a href="#datos" data-en="Your data">Tus datos</a>
       </nav>
     </div>
+    <nav class="foot-legal" aria-label="Legal">
+      <a href="terminos/" data-href-en="terms/" data-en="Terms of service">Condiciones del servicio</a>
+      <a href="privacidad/" data-href-en="privacy/" data-en="Privacy policy">Política de privacidad</a>
+      <a href="dpa/" data-href-en="en/dpa/" data-en="Data processing agreement (DPA)">Acuerdo de encargo (DPA)</a>
+      <a href="subprocessors/" data-href-en="en/subprocessors/" data-en="Subprocessors">Subencargados</a>
+      <a href="eliminacion-de-datos/" data-href-en="data-deletion/" data-en="Data deletion">Eliminación de datos</a>
+    </nav>
     <p class="foot-note" data-en="PerfectFlow is built and operated by Code Flakes LLC · perfectflow.cloud · Instagram, TikTok, WhatsApp, Gmail and the rest are trademarks of their respective owners; every integration is used with the client&#39;s own account.">PerfectFlow es construido y operado por Code Flakes LLC · perfectflow.cloud · Instagram, TikTok, WhatsApp, Gmail y las demás son marcas de sus respectivos dueños; cada integración se usa con la cuenta del cliente.</p>
   </div>
 </footer>
@@ -1750,6 +1760,10 @@ function setLang(next){
     if(v !== null) el.innerHTML = v;
   });
   document.documentElement.lang = next;
+  $$("[data-href-en]").forEach(function(a){
+    if(!a.hasAttribute("data-href-es")) a.setAttribute("data-href-es", a.getAttribute("href"));
+    a.setAttribute("href", a.getAttribute(next === "en" ? "data-href-en" : "data-href-es"));
+  });
   esBtn.setAttribute("aria-pressed", String(next === "es"));
   enBtn.setAttribute("aria-pressed", String(next === "en"));
   $("#burger").setAttribute("aria-label", next === "en" ? "Open menu" : "Abrir menú");
@@ -3025,6 +3039,7 @@ onSeen($("#phone"), function(){
 
 /* ---------- 14. arranque ---------- */
 clone();
+if(/[?&]lang=en\b/.test(location.search)) setLang("en");
 })();
 </script>
 </body>

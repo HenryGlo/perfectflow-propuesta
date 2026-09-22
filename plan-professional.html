@@ -169,6 +169,9 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .foot{background:var(--ink);color:var(--cream);border-top:var(--line);padding-block:clamp(40px,5vw,64px) calc(120px + var(--safe-b))}
 .foot-grid{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:flex-start;justify-content:space-between}
 .foot a{color:var(--lime)}
+.foot-legal{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:18px}
+.foot-legal a{display:inline-flex;align-items:center;min-height:44px;font-size:.86rem;color:rgba(251,246,236,.7);text-decoration:underline;text-underline-offset:3px}
+.foot-legal a:hover,.foot-legal a[aria-current="page"]{color:var(--lime)}
 .foot .note{margin-top:22px;padding-top:16px;border-top:1px solid rgba(251,246,236,.18);font-size:.8rem;color:rgba(251,246,236,.6);max-width:80ch}
 /* barra de compra fija */
 .buybar{position:fixed;left:0;right:0;bottom:0;z-index:140;padding:0 max(12px,var(--safe-l)) calc(12px + var(--safe-b));transform:translateY(120%);transition:transform .45s var(--boing);pointer-events:none}
@@ -417,7 +420,7 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
     <p class="lead rv" data-en="Professional · $199.99/month · Up to 30 users.">Professional · $199.99/mes · Hasta 30 usuarios.</p>
     <div class="cta-row rv">
       <a class="btn btn-lime" href="https://buy.stripe.com/28EbJ1f1j0N38jt4r5bwk0a" target="_blank" rel="noopener" data-en="Get started now">Contratar ahora</a>
-      <a class="btn btn-ghost" href="mailto:hola@perfectflow.cloud?subject=Plan%20Professional" data-en="Talk to a person">Hablar con una persona</a>
+      <a class="btn btn-ghost" href="mailto:info@perfectflow.cloud?subject=Plan%20Professional" data-en="Talk to a person">Hablar con una persona</a>
     </div>
   </div>
 </section>
@@ -426,8 +429,15 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 <footer class="foot"><div class="shell">
   <div class="foot-grid">
     <a href="./" aria-label="PerfectFlow"><svg style="--word:#FFFFFF;--iso:#FFFFFF;display:block;height:64px;width:108px" viewBox="0 0 978 580" aria-hidden="true"><use href="#pf-logo"/></svg></a>
-    <p><a href="mailto:hola@perfectflow.cloud">hola@perfectflow.cloud</a></p>
+    <p><a href="mailto:info@perfectflow.cloud">info@perfectflow.cloud</a></p>
   </div>
+  <nav class="foot-legal" aria-label="Legal">
+    <a href="terminos/" data-href-en="terms/" data-en="Terms of service">Condiciones del servicio</a>
+    <a href="privacidad/" data-href-en="privacy/" data-en="Privacy policy">Política de privacidad</a>
+    <a href="dpa/" data-href-en="en/dpa/" data-en="Data processing agreement (DPA)">Acuerdo de encargo (DPA)</a>
+    <a href="subprocessors/" data-href-en="en/subprocessors/" data-en="Subprocessors">Subencargados</a>
+    <a href="eliminacion-de-datos/" data-href-en="data-deletion/" data-en="Data deletion">Eliminación de datos</a>
+  </nav>
   <p class="note" data-en="PerfectFlow is built and operated by Code Flakes LLC · perfectflow.cloud · Payments are processed by Stripe. Instagram, TikTok, WhatsApp, Gmail, Stripe and the rest are trademarks of their respective owners.">PerfectFlow es construido y operado por Code Flakes LLC · perfectflow.cloud · Los pagos los procesa Stripe. Instagram, TikTok, WhatsApp, Gmail, Stripe y las demás son marcas de sus respectivos dueños.</p>
 </div></footer>
 
@@ -453,6 +463,10 @@ function setLang(n){
   lang = n;
   $$("[data-en]").forEach(function(el){ var v = el.getAttribute(n === "en" ? "data-en" : "data-es"); if(v !== null) el.innerHTML = v; });
   document.documentElement.lang = n;
+  $$("[data-href-en]").forEach(function(a){
+    if(!a.hasAttribute("data-href-es")) a.setAttribute("data-href-es", a.getAttribute("href"));
+    a.setAttribute("href", a.getAttribute(n === "en" ? "data-href-en" : "data-href-es"));
+  });
   $("#es").setAttribute("aria-pressed", String(n === "es")); $("#en").setAttribute("aria-pressed", String(n === "en"));
   forgeLang();
 }
@@ -578,6 +592,7 @@ forgeReset();
 onSeen(forge, forgePlay, .25);
 
 /* comparar: barras de usuarios */
+if(/[?&]lang=en\b/.test(location.search)) setLang("en");
 onSeen($("#cmp"), function(){ $$(".cmpc .ub i").forEach(function(i){ i.style.width = i.getAttribute("data-w") + "%"; }); }, .3);
 })();
 </script>
