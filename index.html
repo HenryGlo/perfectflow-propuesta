@@ -762,7 +762,7 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .heat .cell:hover,.heat .cell:focus{outline:2px solid var(--ink);outline-offset:-1px}
 .scale{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:.7rem;color:var(--axis)}
 .scale i{width:18px;height:10px;border-radius:2px;display:block}
-.bars{display:grid;gap:12px;margin-top:14px}
+.hbars{display:grid;gap:12px;margin-top:14px}
 .bar-row{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
 .bar-row .bn{font-size:.82rem;display:flex;justify-content:space-between;gap:8px}
 .bar-row .bn b{font-weight:600;font-variant-numeric:tabular-nums}
@@ -770,8 +770,8 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
 .bar-row .bf{height:100%;border-radius:0 4px 4px 0;background:var(--c1);transition:width .7s var(--ease);width:0}
 .meter-wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,.8fr));gap:12px;align-items:center}
 @media (max-width:700px){.meter-wrap{grid-template-columns:1fr}}
-.meter{height:12px;border-radius:6px;background:#E6DAFD;margin-top:10px;overflow:hidden}
-.meter i{display:block;height:100%;background:var(--c1);border-radius:6px;width:0;transition:width .8s var(--ease)}
+.tmeter{height:12px;border-radius:6px;background:#E6DAFD;margin-top:10px;overflow:hidden}
+.tmeter i{display:block;height:100%;background:var(--c1);border-radius:6px;width:0;transition:width .8s var(--ease)}
 .mstat{border-left:1.5px solid var(--grid);padding-left:14px}
 .mstat .kv{font-family:"Poppins",sans-serif;font-weight:600;font-size:1.6rem;line-height:1.1}
 .mstat .kl{font-size:.78rem;color:var(--ink-70)}
@@ -1285,9 +1285,9 @@ section{padding-block:var(--sec);border-top:var(--line);position:relative}
         <div class="dcard c-line"><h4 id="lnT"></h4><p class="sub" id="lnS"></p><div class="chart" id="lnChart"></div></div>
         <div class="dcard c-src"><h4 data-en="Where bookings come from">¿De dónde llegan las reservas?</h4><p class="sub" data-en="Share of bookings by channel">Porcentaje de reservas por canal</p><div class="stack" id="srcStack"></div><ul class="legend" id="srcLegend"></ul></div>
         <div class="dcard c-heat"><h4 data-en="When people book">¿Cuándo reserva tu gente?</h4><p class="sub" data-en="Appointments by day and time slot">Citas por día y franja horaria</p><div class="heat" id="heat"></div><div class="scale" id="heatScale"></div></div>
-        <div class="dcard c-svc"><h4 data-en="Most booked services">Servicios más reservados</h4><p class="sub" data-en="Appointments per service">Citas por servicio</p><div class="bars" id="svcBars"></div></div>
+        <div class="dcard c-svc"><h4 data-en="Most booked services">Servicios más reservados</h4><p class="sub" data-en="Appointments per service">Citas por servicio</p><div class="hbars" id="svcBars"></div></div>
         <div class="dcard c-meter"><div class="meter-wrap">
-          <div><h4 data-en="Tasks completed">Tareas completadas</h4><p class="sub" id="mtS"></p><div class="meter" role="img" id="mtBar"><i></i></div></div>
+          <div><h4 data-en="Tasks completed">Tareas completadas</h4><p class="sub" id="mtS"></p><div class="tmeter" role="img" id="mtBar"><i></i></div></div>
           <div class="mstat"><p class="kv" id="remV"></p><p class="kl" data-en="reminders sent on their own">recordatorios enviados solos</p></div>
           <div class="mstat"><p class="kv" id="canV"></p><p class="kl" data-en="cancellations with notice, slot freed">cancelaciones con aviso, hueco liberado</p></div>
         </div></div>
