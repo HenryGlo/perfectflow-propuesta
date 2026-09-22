@@ -805,7 +805,15 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 @media (min-width:1100px){.cal-sync{grid-template-columns:auto minmax(0,1fr) auto}.sync-feed{grid-column:auto;flex-direction:column;align-items:flex-start;gap:6px}}
 @media (max-width:700px){.cal-scroll{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}}
 @media (max-width:640px){.cal-sync{grid-template-columns:1fr}.cal-sync .iso-b{width:44px;height:44px}}
-/* quién hace qué: se enciende con la demo */
+/* quién hace qué: tres pasos que se encienden al llegar */
+.relay-wrap{margin-top:clamp(30px,4vw,48px)}
+.cal-sync{margin-top:clamp(24px,3vw,36px)}
+@media (min-width:900px){
+  .relay-wrap .relay{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  .relay-wrap .relay::before{left:28px;right:28px;top:27px;bottom:auto;border-left:0;border-top:2px dashed rgba(255,255,255,.45)}
+  .relay-wrap .rstep{grid-template-columns:1fr;gap:14px}
+  .relay-wrap .rstep .bx{height:100%}
+}
 .relay-h{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;opacity:.85}
 .relay{position:relative;display:grid;gap:14px;list-style:none;margin:0;padding:0}
 .relay::before{content:"";position:absolute;left:27px;top:30px;bottom:30px;border-left:2px dashed rgba(255,255,255,.45)}
@@ -1013,6 +1021,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .close h2{font-size:clamp(2.6rem,7.4vw,6.2rem);letter-spacing:-.025em;max-width:16ch;margin-inline:auto;line-height:.92}
 .close .lead{margin:22px auto 0}
 .close .hero-cta{justify-content:center}
+@media (max-width:640px){.close .shell{padding-top:64px}.close .stk.round{--s:84px!important;top:-18px!important;left:auto!important;right:6%}.close .stk.pill{bottom:-34px!important}}
 
 /* ---------- pie ---------- */
 .foot{background:var(--ink);color:var(--cream);border-top:var(--line);padding-block:clamp(44px,6vw,72px) calc(34px + var(--safe-b))}
@@ -1053,13 +1062,12 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <div class="hdr-bar">
       <a class="logo" href="#top" aria-label="PerfectFlow, inicio"><svg class="iso" viewBox="0 0 465 581" aria-hidden="true"><use href="#pf-iso"/></svg><span class="sr">PerfectFlow</span></a>
       <nav class="nav" aria-label="Principal">
-        <a href="#organizacion" data-en="Organization">Organización</a>
         <a href="#modulos" data-en="Modules">Módulos</a>
         <a href="#integraciones" data-en="Integrations">Integraciones</a>
         <a href="#citas" data-en="Appointments">Citas</a>
         <a href="#reportes" data-en="Reports">Reportes</a>
         <a href="#planes" data-en="Plans">Planes</a>
-        <a href="#humanos" data-en="Humans">Humanos</a>
+        <a href="landing-incluida.html" data-href-en="landing-incluida.html?lang=en" data-en="Free landing">Landing gratis</a>
       </nav>
       <div class="hdr-end">
         <div class="lang" role="group" aria-label="Idioma / Language">
@@ -1077,9 +1085,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <a href="#citas" data-en="Appointments">Citas</a>
         <a href="#reportes" data-en="Reports">Reportes</a>
       <a href="#planes" data-en="Plans">Planes</a>
-      <a href="#historias" data-en="Stories">Historias</a>
       <a href="#humanos" data-en="Humans">Humanos</a>
-      <a href="#datos" data-en="Your data">Tus datos</a>
+      <a href="landing-incluida.html" data-href-en="landing-incluida.html?lang=en" data-en="Free landing">Landing gratis</a>
       <a class="btn btn-lime" href="#cierre" data-en="Organize my business">Organizar mi negocio</a>
     </div>
   </div>
@@ -1131,12 +1138,6 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
   </div>
 </section>
 
-<!-- ======================= TICKER · tinta ======================= -->
-<div class="ticker b-ink marq" style="border-top:var(--line)" data-marq aria-hidden="true">
-  <div class="marq-track">
-    <span data-en="Less chaos <em>✦</em> More clarity <em>✦</em> Your operation doesn&#39;t live in your head <em>✦</em> Growing shouldn&#39;t weigh more <em>✦</em>">Menos caos <em>✦</em> Más claridad <em>✦</em> Tu operación no vive en tu cabeza <em>✦</em> Crecer no debería pesar más <em>✦</em></span>
-  </div>
-</div>
 
 <!-- ======================= MÓDULOS POR CASOS · papel ======================= -->
 <section class="b-paper" id="modulos">
@@ -1256,25 +1257,6 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
   </div>
 </section>
 
-<!-- ======================= TENGAS EL TAMAÑO QUE TENGAS · lima ======================= -->
-<section class="b-lime" id="escala">
-  <div class="shell scale-wrap">
-    <div>
-      <h2 class="rv" style="max-width:17ch" data-en="Getting organized takes problems off your plate. Whatever your size.">Organizarte te quita problemas de encima. Tengas el tamaño que tengas.</h2>
-      <p class="lead rv" style="margin-top:18px" data-en="You don&#39;t need chaos to get organized. Whether you&#39;re one person starting out, an established company or one with several departments, PerfectFlow adapts to you, not you to PerfectFlow. And what doesn&#39;t get measured doesn&#39;t get better.">No hace falta tener caos para ordenar. Seas una persona que empieza, una empresa ya rodada o una con varios departamentos, PerfectFlow se adapta a ti, no tú a PerfectFlow. Y lo que no se mide, no se mejora.</p>
-      <div class="sizes rv" role="group" aria-label="Tamaño del negocio" id="sizes"></div>
-      <ul class="scale-pts" id="scalePts" aria-live="polite"></ul>
-      <p class="scale-plan" id="scalePlan"></p>
-    </div>
-    <div class="rv">
-      <div class="org" id="org" aria-hidden="true">
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none" id="orgLines"></svg>
-        <div class="core"><svg class="iso" viewBox="0 0 465 581"><use href="#pf-iso"/></svg></div>
-      </div>
-      <p class="org-cap" data-en="Same system. Different scale. No bottleneck when the business grows.">Mismo sistema. Otra escala. Sin cuello de botella cuando el negocio crece.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ======================= SE CONFIGURA · papel ======================= -->
 <section class="b-paper">
@@ -1314,8 +1296,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 <!-- ======================= CITAS · violeta ======================= -->
 <section class="b-violet" id="citas">
   <div class="shell">
-    <h2 class="rv" style="max-width:17ch" data-en="Your own booking page. With your fields, your payment and your rules.">Tu propia página de reservas. Con tus campos, tu cobro y tus reglas.</h2>
-    <p class="lead rv" style="margin-top:18px" data-en="Public bookings or sign-ups with the fields you decide to ask for. You choose whether people pay first, and where every piece of data goes: a confirmation email, a client record in PerfectFlow, a task, an alert… whatever you need.">Reservas o suscripciones públicas con los campos que tú decidas pedir. Eliges si se paga antes o no, y a dónde va cada dato: un correo de confirmación, la ficha del cliente en PerfectFlow, una tarea, un aviso… lo que necesites.</p>
+    <h2 class="rv" style="max-width:17ch" data-en="Your own booking page.">Tu propia página de reservas.</h2>
+    <p class="lead rv" style="margin-top:18px" data-en="Your fields, your payment, your rules. And every booking lands in PerfectFlow on its own.">Tus campos, tu cobro y tus reglas. Y cada reserva cae sola en PerfectFlow.</p>
 
     <div class="bk rv" id="bk">
       <div class="app" aria-hidden="true">
@@ -1349,56 +1331,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
         </div>
       </div>
       <div class="bk-foot">
-        <a class="btn btn-lime" href="#demoReserva" id="bkTry" data-en="Try it yourself">Pruébalo tú mismo</a>
         <button type="button" class="btn btn-sm" id="bkReplay" data-en="Watch it again">Verlo otra vez</button>
         <span class="stripe-b"><svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span data-en="People can pay before booking · powered by <b>Stripe</b>, with your own account">La persona puede pagar antes de reservar · powered by <b>Stripe</b>, con tu propia cuenta</span></span>
       </div>
     </div>
 
-    <div class="panel rv" style="margin-top:clamp(30px,4vw,48px)" id="calPanel">
-      <div class="cal-head">
-        <span data-en="Week of 21 September">Semana del 21 de septiembre</span>
-        <div class="who" role="group" aria-label="Filtrar por responsable">
-          <button type="button" class="fbtn" data-c="ana" aria-pressed="true"><i aria-hidden="true"></i>Ana</button>
-          <button type="button" class="fbtn" data-c="marco" aria-pressed="true"><i aria-hidden="true"></i>Marco</button>
-          <button type="button" class="fbtn" data-c="leo" aria-pressed="true"><i aria-hidden="true"></i>Leo</button>
-        </div>
-      </div>
-      <div class="cal-scroll">
-        <div class="cal">
-          <span></span>
-          <span class="day" data-en="Mon 21">Lun 21</span><span class="day" data-en="Tue 22">Mar 22</span><span class="day" data-en="Wed 23">Mié 23</span><span class="day" data-en="Thu 24">Jue 24</span><span class="day" data-en="Fri 25">Vie 25</span>
-
-          <span class="hr">09:00</span>
-          <div class="ev ana"><b data-en="Assessment">Valoración</b>Ana · 60 min</div>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-          <div class="ev free" data-en="Available">Disponible</div>
-          <div class="ev ana"><b data-en="Assessment">Valoración</b>Ana · 60 min</div>
-          <div class="ev leo"><b data-en="Online">Online</b>Leo · 30 min</div>
-
-          <span class="hr">11:00</span>
-          <div class="ev leo"><b data-en="Group">Grupal</b><span data-en="Leo · 6 spots">Leo · 6 cupos</span></div>
-          <div class="ev free" id="hotslot" data-en="Available">Disponible</div>
-          <div class="ev ana"><b data-en="Follow-up">Seguimiento</b>Ana · 45 min</div>
-          <div class="ev marco"><b data-en="Assessment">Valoración</b>Marco · 60 min</div>
-          <div class="ev pend"><b data-en="Pending">Pendiente</b><span data-en="to confirm">por confirmar</span></div>
-
-          <span class="hr">13:00</span>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-          <div class="ev ana"><b data-en="Online">Online</b>Ana · 30 min</div>
-          <div class="ev free" data-en="Available">Disponible</div>
-          <div class="ev leo"><b data-en="Group">Grupal</b><span data-en="Leo · 4 spots">Leo · 4 cupos</span></div>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-
-          <span class="hr">16:00</span>
-          <div class="ev ana"><b data-en="Assessment">Valoración</b>Ana · 60 min</div>
-          <div class="ev leo"><b data-en="Online">Online</b>Leo · 30 min</div>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-          <div class="ev free" data-en="Available">Disponible</div>
-          <div class="ev ana"><b data-en="Group">Grupal</b><span data-en="Ana · 8 spots">Ana · 8 cupos</span></div>
-        </div>
-      </div>
-    </div>
 
     <div class="cal-sync rv" id="calSync">
       <span class="iso-b" aria-hidden="true"><svg class="iso" viewBox="0 0 465 581"><use href="#pf-iso"/></svg></span>
@@ -1413,30 +1350,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       </div>
     </div>
 
-    <div class="book-grid">
-      <div class="panel rv" id="demoReserva">
-        <p class="demo-k"><i aria-hidden="true"></i><span data-en="Try it yourself">Pruébalo tú mismo</span></p>
-        <p class="sublbl" data-en="Service">Servicio</p>
-        <div class="opts" role="group" aria-label="Servicio" id="svc">
-          <button type="button" class="opt" aria-pressed="true" data-en="Initial assessment · 60 min">Valoración inicial · 60 min</button>
-          <button type="button" class="opt" aria-pressed="false" data-en="Follow-up · 45 min">Seguimiento · 45 min</button>
-          <button type="button" class="opt" aria-pressed="false" data-en="Online · 30 min">Online · 30 min</button>
-        </div>
-        <p class="sublbl" data-en="Time">Horario</p>
-        <div class="opts" role="group" aria-label="Horario" id="slot">
-          <button type="button" class="opt" aria-pressed="false" data-en="Tue 22 · 11:00">Mar 22 · 11:00</button>
-          <button type="button" class="opt" aria-pressed="false" data-en="Wed 23 · 09:00">Mié 23 · 09:00</button>
-          <button type="button" class="opt" aria-pressed="false" data-en="Thu 24 · 16:00">Jue 24 · 16:00</button>
-        </div>
-        <label class="pay"><input type="checkbox" id="paychk"><span data-en="Pay before booking">Pagar antes de reservar</span></label>
-        <p class="pay-note"><span class="stripe-b"><svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span>powered by <b>Stripe</b></span></span></p>
-        <button type="button" class="btn btn-lime" id="confirm" data-en="Confirm booking">Confirmar reserva</button>
-        <p class="bout" id="bout" aria-live="polite"></p>
-      </div>
+    <div class="relay-wrap">
       <div class="rv">
         <p class="relay-h" data-en="Who does what">Quién hace qué</p>
         <ol class="relay" id="relay">
-          <li class="rstep lit" data-s="1">
+          <li class="rstep" data-s="1">
             <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></span>
             <div class="bx"><span class="who-t" data-en="You">Tú</span><h3 data-en="Set the rules">Pones las reglas</h3><p data-en="Services, duration, capacity, opening hours and how far ahead people can book.">Servicios, duración, capacidad, horarios y con cuánta antelación se puede reservar.</p></div>
           </li>
@@ -1515,58 +1433,10 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
   </div>
 </section>
 
-<!-- ======================= LETRA PEQUEÑA · coral ======================= -->
-<section class="b-coral" id="datos">
-  <div class="shell">
-    <h2 class="rv" data-en="The fine print, in huge type.">La letra pequeña, en enorme.</h2>
-    <div class="fine-list">
-      <div class="fine-row rv"><h3 data-en="Your accounts, not ours.">Tus cuentas, no las nuestras.</h3><p data-en="Email goes out from your address and messages from your own WhatsApp and social accounts. We never sit in the middle.">El correo sale desde tu dirección y los mensajes desde tu WhatsApp y tus redes. Nunca nos ponemos en medio.</p></div>
-      <div class="fine-row rv"><h3 data-en="We don&#39;t read your inbox.">No leemos tu buzón.</h3><p data-en="Connecting your email only grants permission to send on your behalf. Not to read what arrives.">Conectar tu correo solo da permiso para enviar en tu nombre. No para leer lo que te llega.</p></div>
-      <div class="fine-row rv"><h3 data-en="No tracking pixel.">Sin píxel de seguimiento.</h3><p data-en="We don&#39;t insert one into any email that leaves PerfectFlow.">No lo insertamos en ningún correo que salga desde PerfectFlow.</p></div>
-      <div class="fine-row rv"><h3 data-en="Data you can take with you.">Datos que te puedes llevar.</h3><p data-en="Export or delete everything the system holds about a person, irreversibly or anonymized.">Exporta o borra todo lo que el sistema guarda de una persona, de forma irreversible o anonimizada.</p></div>
-    </div>
-  </div>
-</section>
 
-<!-- ======================= LANDING INCLUIDA · gradiente ======================= -->
-<section class="b-brand" id="landing">
-  <div class="hero-pattern" aria-hidden="true"></div>
-  <div class="shell lh">
-    <div>
-      <p class="badge rv" data-en="Included, not an add-on">Incluida, no es un extra</p>
-      <h2 class="rv" style="margin-top:22px" data-en="Need a proper landing page? It comes free.">¿Necesitas una landing en condiciones? Va gratis.</h2>
-      <p class="lead rv" data-en="If you sign up for PerfectFlow, LandingHub builds your landing page with your domain and your branding, and it&#39;s included with the subscription.">Si contratas PerfectFlow, LandingHub te construye la landing con tu dominio y tu marca, y viene incluida con la suscripción.</p>
-      <ul>
-        <li class="rv"><i aria-hidden="true">✓</i><span data-en="Your own domain, logo and colours">Tu dominio, tu logo y tus colores</span></li>
-        <li class="rv"><i aria-hidden="true">✓</i><span data-en="Forms and bookings land straight in PerfectFlow">Formularios y reservas caen directo en PerfectFlow</span></li>
-        <li class="rv"><i aria-hidden="true">✓</i><span data-en="Written for your business, not a template with your name swapped in">Escrita para tu negocio, no una plantilla con tu nombre cambiado</span></li>
-      </ul>
-      <div class="hero-cta rv"><a class="btn btn-lime" href="#cierre" data-en="I want mine">La quiero</a></div>
-    </div>
-    <div class="lh-media rv">
-    <!-- Meme propio (sin imagen de terceros): isotipo de PerfectFlow + tipografía de meme -->
-    <div class="meme stk drag" aria-hidden="true" style="position:absolute">
-      <div class="mi"><span class="mt t" data-en="Pro landing page">Landing profesional</span><svg class="iso" viewBox="0 0 465 581"><use href="#pf-iso"/></svg><span class="mt b">It&#39;s free.</span></div>
-      <small data-en="with your PerfectFlow subscription">con tu suscripción a PerfectFlow</small>
-    </div>
-    <div class="browser" aria-hidden="true">
-      <div class="browser-bar"><i></i><i></i><i></i><span class="url" data-en="yourbusiness.com">tunegocio.com</span></div>
-      <div class="browser-body">
-        <div>
-          <h3 data-en="Your business, on your own domain.">Tu negocio, con tu dominio.</h3>
-          <p data-en="Your story, your services, and a booking button that talks to PerfectFlow.">Tu historia, tus servicios y un botón de reserva que habla con PerfectFlow.</p>
-          <span class="fake" data-en="Book now">Reservar ahora</span>
-        </div>
-        <!-- IMAGEN: sustituir la línea de abajo por <img src="..." alt=""> -->
-        <div data-img="lh" data-label="Captura de una landing real · por subir"></div>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
 
 <!-- ======================= HISTORIAS · papel ======================= -->
-<section class="b-paper" id="historias">
+<section class="b-paper" id="historias" hidden>
   <div class="shell">
     <h2 class="rv" style="max-width:16ch" data-en="Getting organized is also a way of growing.">Organizarse bien también es una forma de crecer.</h2>
     <p class="lead rv" style="margin-top:18px" data-en="These are the stories we&#39;re collecting. Each card says what it will cover: nothing here is invented, and nothing goes live until the client approves it.">Estas son las historias que estamos recogiendo. Cada tarjeta dice de qué irá: aquí no hay nada inventado, y nada se publica hasta que el cliente lo apruebe.</p>
@@ -1693,9 +1563,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
         <a href="#citas" data-en="Appointments">Citas</a>
         <a href="#reportes" data-en="Reports">Reportes</a>
         <a href="#planes" data-en="Plans">Planes</a>
-        <a href="#historias" data-en="Stories">Historias</a>
         <a href="#humanos" data-en="Humans">Humanos</a>
-        <a href="#datos" data-en="Your data">Tus datos</a>
+        <a href="landing-incluida.html" data-href-en="landing-incluida.html?lang=en" data-en="Free landing">Landing gratis</a>
       </nav>
     </div>
     <nav class="foot-legal" aria-label="Legal">
@@ -1780,8 +1649,6 @@ function setLang(next){
   $("#burger").setAttribute("aria-label", next === "en" ? "Open menu" : "Abrir menú");
   renderSwitches();
   renderCount();
-  bout.innerHTML = T(B.pick);
-  if(booked) paintBooked();
   notes.forEach(paintNote);
   actBtn.textContent = T(sorted ? ACT.again : ACT.go);
   if(sorted){ sortedMsg.textContent = T(ACT.done); layoutSorted(true); }
@@ -1789,8 +1656,6 @@ function setLang(next){
   bTimers.forEach(clearTimeout); if(bPlayed){ bFinal(); } else { bReset(); }
   renderDash(false);
   bkTimers.forEach(clearTimeout); if(bkPlayed){ bkFinal(); } else { bkReset(); }
-  if(typeof confLabel === "function") confLabel();
-  renderSizes(); setSize(sizeIdx);
   hubLabels(); if(hubIdx >= 0){ fireHub(hubIdx, true); } else { hubLog.innerHTML = hubLogHead() + '<p class="idle">' + T(HUB_UI.idle) + "</p>"; }
   if(allBtn.getAttribute("aria-expanded") === "true") allBtn.textContent = T(ALL.close);
   clone();
@@ -2512,118 +2377,6 @@ function renderCount(){
 }
 renderSwitches(); renderCount();
 
-/* ---------- 10a. tengas el tamaño que tengas ---------- */
-var SIZE_IC = {
-  one : '<circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>',
-  team: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
-  org : '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>'
-};
-var SIZES = [
-  {k:"one",  t:{es:"Solo tú", en:"Just you"}, s:{es:"Una persona que está empezando", en:"One person starting out"},
-   plan:{es:"Plan <b>Personal</b>", en:"<b>Personal</b> plan"},
-   pts:[{es:"Empiezas ordenado, no apagando fuegos.", en:"You start organized, not putting out fires."},
-        {es:"Agenda, clientes y mensajes en un solo sitio.", en:"Calendar, clients and messages in one place."},
-        {es:"Ves cuántas citas y clientes mueves cada semana.", en:"You see how many bookings and clients you handle each week."}]},
-  {k:"team", t:{es:"Un equipo", en:"A team"}, s:{es:"Una empresa ya rodada", en:"An established company"},
-   plan:{es:"Plan <b>Professional</b>", en:"<b>Professional</b> plan"},
-   pts:[{es:"Todo el equipo trabaja sobre la misma información.", en:"The whole team works on the same information."},
-        {es:"Cada persona ve lo que le toca.", en:"Everyone sees what&#39;s theirs."},
-        {es:"Sabes qué funciona porque está medido.", en:"You know what works because it&#39;s measured."}]},
-  {k:"org",  t:{es:"Varios departamentos", en:"Several departments"}, s:{es:"Una empresa grande que sigue creciendo", en:"A large company that keeps growing"},
-   plan:{es:"Plan <b>Company Oriented</b>", en:"<b>Company Oriented</b> plan"},
-   pts:[{es:"Cada departamento con sus permisos y sus datos.", en:"Each department with its own permissions and data."},
-        {es:"Igual de rápido cuando la empresa crece.", en:"Just as fast as the company grows."},
-        {es:"Crecer es sumar gente, no cambiar de sistema.", en:"Growing means adding people, not changing systems."}]}
-];
-var AV_COL = ["var(--lime)","var(--sky)","var(--coral)","var(--cream)","#E4D6FF","#FFE08A"];
-var TEAM = [
-  {n:"Ana",    m:"citas"}, {n:"Leo",   m:"clientes"}, {n:"Marco", m:"tareas"},
-  {n:"Sofía",  m:"redes"}, {n:"Lucía", m:"camp"},     {n:"Carlos", m:"rep"}
-];
-var MOD_SHORT = {
-  citas:{es:"Agenda",en:"Calendar"}, clientes:{es:"Clientes",en:"Clients"}, tareas:{es:"Tareas",en:"Tasks"},
-  redes:{es:"Mensajes",en:"Messages"}, camp:{es:"Campañas",en:"Campaigns"}, rep:{es:"Reportes",en:"Reports"}
-};
-var DEPTS = [
-  {es:"Atención",    en:"Support",    mods:["redes","clientes"]},
-  {es:"Operaciones", en:"Operations", mods:["citas","tareas"]},
-  {es:"Marketing",   en:"Marketing",  mods:["camp","rep"]}
-];
-var ONE_CHIPS = [{m:"citas",c:"var(--lime)"},{m:"clientes",c:"var(--sky)"},{m:"redes",c:"#E4D6FF"}];
-var org = $("#org"), orgLines = $("#orgLines"), sizesEl = $("#sizes"), scalePts = $("#scalePts"), scalePlan = $("#scalePlan");
-var AV_TXT = "AMLSCEJPRTDNVGB";
-var meAv, chips = [], pnodes = [], depts = [], dchips = [], pdots = [], davs = [], sizeIdx = 0, sizeAuto = null, sizeUser = false;
-(function buildOrg(){
-  meAv = document.createElement("span"); meAv.className = "av2 me"; meAv.style.setProperty("--s", "64px"); meAv.style.setProperty("--c", "var(--lime)"); org.appendChild(meAv);
-  ONE_CHIPS.forEach(function(c){ var e = document.createElement("span"); e.className = "chip2"; e.style.setProperty("--c", c.c); org.appendChild(e); chips.push(e); });
-  TEAM.forEach(function(t, i){ var e = document.createElement("span"); e.className = "pn"; e.style.setProperty("--c", AV_COL[i % AV_COL.length]); org.appendChild(e); pnodes.push(e); });
-  DEPTS.forEach(function(d, di){
-    var e = document.createElement("span"); e.className = "dept"; org.appendChild(e); depts.push(e);
-    d.mods.forEach(function(){ var c = document.createElement("span"); c.className = "chip2"; c.style.setProperty("--c", AV_COL[(di * 2 + dchips.length) % AV_COL.length]); org.appendChild(c); dchips.push(c); });
-    for(var j = 0; j < 4; j++){ var dt = document.createElement("span"); dt.className = "pdot"; dt.style.setProperty("--c", AV_COL[(di + j) % AV_COL.length]); org.appendChild(dt); pdots.push(dt); }
-  });
-  for(var i = 0; i < 15; i++){ var a = document.createElement("span"); a.className = "av2"; a.style.setProperty("--c", AV_COL[i % AV_COL.length]); a.style.setProperty("--s", "30px"); a.textContent = AV_TXT[i]; org.appendChild(a); davs.push(a); }
-})();
-function place(el, x, y, k){ el.style.setProperty("--x", x + "%"); el.style.setProperty("--y", y + "%"); el.style.setProperty("--k", k); }
-function orgDraw(pairs){
-  orgLines.innerHTML = pairs.map(function(p, i){
-    return '<line x1="' + p[0] + '" y1="' + p[1] + '" x2="' + p[2] + '" y2="' + p[3] + '" pathLength="100" style="animation-delay:' + (RM ? 0 : 200 + i * 40) + "ms" + (p[4] ? ";stroke-width:" + p[4] : "") + '"/>';
-  }).join("");
-}
-function layoutSize(){
-  var k = SIZES[sizeIdx].k, pairs = [];
-  meAv.textContent = lang === "en" ? "You" : "Tú";
-  chips.forEach(function(c, i){ c.textContent = MOD_SHORT[ONE_CHIPS[i].m][lang]; });
-  pnodes.forEach(function(e, i){ e.innerHTML = "<i>" + TEAM[i].n[0] + "</i><span><b>" + TEAM[i].n + "</b> · " + MOD_SHORT[TEAM[i].m][lang] + "</span>"; });
-  depts.forEach(function(d, i){ d.textContent = DEPTS[i][lang]; });
-  var ci = 0; DEPTS.forEach(function(d){ d.mods.forEach(function(m){ dchips[ci++].textContent = MOD_SHORT[m][lang]; }); });
-  [meAv].concat(chips, pnodes, depts, dchips, pdots, davs).forEach(function(e){ place(e, 50, 50, 0); });
-  if(k === "one"){
-    place(meAv, 24, 26, 1); pairs.push([50, 50, 24, 26, .7]);
-    [[78, 26], [80, 66], [44, 84]].forEach(function(p, i){ place(chips[i], p[0], p[1], 1); pairs.push([50, 50, p[0], p[1]]); });
-  }else if(k === "team"){
-    TEAM.forEach(function(t, i){
-      var ang = (-90 + i * 60) * Math.PI / 180, x = 50 + 35 * Math.cos(ang), y = 50 + 36 * Math.sin(ang);
-      place(pnodes[i], x, y, 1); pairs.push([50, 50, x, y]);
-    });
-  }else{
-    [-90, 30, 150].forEach(function(deg, di){
-      var ang = deg * Math.PI / 180, cx = 50 + 31 * Math.cos(ang), cy = 50 + 31 * Math.sin(ang);
-      place(depts[di], cx, cy + (di === 0 ? -12.5 : 12.5), 1);
-      pairs.push([50, 50, cx, cy, .8]);
-      for(var j = 0; j < 5; j++){
-        var a2 = (-90 + j * 72) * Math.PI / 180, x2 = cx + 8.5 * Math.cos(a2), y2 = cy + 8.5 * Math.sin(a2);
-        place(davs[di * 5 + j], x2, y2, 1);
-        pairs.push([cx, cy, x2, y2, .35]);
-      }
-    });
-  }
-  orgDraw(pairs);
-}
-function renderSizes(){
-  sizesEl.innerHTML = "";
-  SIZES.forEach(function(sz, i){
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "size"; b.setAttribute("aria-pressed", String(i === sizeIdx));
-    b.innerHTML = '<span class="si" aria-hidden="true"><svg viewBox="0 0 24 24">' + SIZE_IC[sz.k] + "</svg></span><span><b>" + sz.t[lang] + "</b><small>" + sz.s[lang] + "</small></span>";
-    b.addEventListener("click", function(){ sizeUser = true; if(sizeAuto){ clearInterval(sizeAuto); sizeAuto = null; } setSize(i); });
-    sizesEl.appendChild(b);
-  });
-}
-function setSize(i){
-  sizeIdx = i;
-  $$(".size", sizesEl).forEach(function(b, j){ b.setAttribute("aria-pressed", String(j === i)); });
-  var sz = SIZES[i];
-  scalePts.innerHTML = sz.pts.map(function(pt){ return '<li><i aria-hidden="true">✓</i><span>' + pt[lang] + "</span></li>"; }).join("");
-  scalePlan.innerHTML = sz.plan[lang];
-  layoutSize();
-}
-renderSizes(); setSize(0);
-onSeen(org, function(){
-  if(RM || sizeUser) return;
-  sizeAuto = setInterval(function(){ setSize((sizeIdx + 1) % SIZES.length); }, 4200);
-}, .3);
-
 /* ---------- 10b. el editor del modelo de datos ---------- */
 var BT = {
   crumb:{es:"Configuración › Modelo de datos", en:"Settings › Data model"},
@@ -2950,7 +2703,7 @@ var BK_ACTS = [
   {es:"+ lo que tú quieras", en:"+ whatever you need", more:true}
 ];
 var bkEl = $("#bk"), bkNav = $("#bkNav"), bkFields = $("#bkFields"), bkActs = $("#bkActs"), bkPayRow = $("#bkPayRow"), bkPub = $("#bkPub");
-var pvSvc = $("#pvSvc"), pvSlots = $("#pvSlots"), pvFields = $("#pvFields"), pvPay = $("#pvPay"), pvBtn = $("#pvBtn"), pvOk = $("#pvOk"), bkTry = $("#bkTry");
+var pvSvc = $("#pvSvc"), pvSlots = $("#pvSlots"), pvFields = $("#pvFields"), pvPay = $("#pvPay"), pvBtn = $("#pvBtn"), pvOk = $("#pvOk");
 var bkTimers = [], bkPlayed = false;
 function bkStatic(){
   $("#bkCrumb").textContent = T(BK.crumb);
@@ -2971,7 +2724,6 @@ function bkReset(){
   pvSvc.classList.remove("on"); pvSlots.classList.remove("on"); $$("span", pvSlots).forEach(function(x){ x.classList.remove("sel"); });
   pvFields.innerHTML = ""; pvPay.classList.remove("on"); pvOk.classList.remove("on");
   pvBtn.textContent = T(BK.btn); pvBtn.classList.remove("press");
-  bkTry.classList.remove("pulse");
 }
 function bkAddField(i, value){
   $$(".bk-row", bkFields)[i].classList.add("on", "hit");
@@ -3011,81 +2763,21 @@ function bkPlay(){
   // 6. lo que pasa después
   $$(".act", bkActs).forEach(function(a, i){ at(t + 500 + i * 480, function(){ a.classList.add("on"); }); });
   t += 500 + BK_ACTS.length * 480 + 300;
-  at(t, function(){ bkPub.textContent = T(BK.live); bkPub.classList.add("on"); bkTry.classList.add("pulse"); bkPlayed = true; });
+  at(t, function(){ bkPub.textContent = T(BK.live); bkPub.classList.add("on"); bkPlayed = true; });
   t += 2600; at(t, function(){ pvOk.classList.remove("on"); });
 }
 bkReset();
 $("#bkReplay").addEventListener("click", bkPlay);
 onSeen(bkEl, bkPlay, .3);
-bkTry.addEventListener("click", function(e){
-  e.preventDefault();
-  paychk.checked = true; paychk.dispatchEvent(new Event("change"));
-  $("#demoReserva").scrollIntoView({behavior: RM ? "auto" : "smooth", block: "center"});
-});
 
-/* ---------- 11. calendario: filtro y la reserva que entra ---------- */
-$$(".fbtn").forEach(function(b){
-  b.addEventListener("click", function(){
-    b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true"));
-    var on = $$(".fbtn").filter(function(x){ return x.getAttribute("aria-pressed") === "true"; }).map(function(x){ return x.getAttribute("data-c"); });
-    $$(".ev").forEach(function(ev){
-      var who = ["ana", "marco", "leo"].filter(function(c){ return ev.classList.contains(c); })[0];
-      ev.classList.toggle("dim", !!who && on.indexOf(who) === -1);
-    });
-  });
-});
-var hot = $("#hotslot"), booked = false;
-function paintBooked(){
-  hot.innerHTML = lang === "en" ? "<b>Booking received</b>2 s ago · no clashes" : "<b>Reserva recibida</b>hace 2 s · sin cruces";
-}
-onSeen($("#calPanel"), function(){
-  setTimeout(function(){
-    booked = true;
-    hot.className = "ev booked";
-    hot.removeAttribute("data-en"); hot.removeAttribute("data-es");
-    paintBooked();
-    $$("#syncFeed span").forEach(function(sp, i){ setTimeout(function(){ sp.classList.add("on"); }, RM ? 0 : 500 + i * 450); });
-  }, RM ? 0 : 2400);
-}, .2);
-
-/* ---------- 12. demo de reserva ---------- */
-var B = {
-  pick    : {es:"Elige un servicio y un horario para ver qué recibe el equipo.", en:"Pick a service and a time to see what the team receives."},
-  needSlot: {es:"Te falta elegir el horario.", en:"Pick a time first."},
-  free    : {es:"<b>Reserva confirmada.</b> El equipo la ve en su calendario, se crea la ficha con lo que escribió el cliente y le llega la confirmación desde tu correo.",
-             en:"<b>Booking confirmed.</b> The team sees it in their calendar, the record is created with what the client wrote, and the confirmation goes out from your email."},
-  paid    : {es:"<b>Pago confirmado en tu Stripe.</b> La reserva se confirma sola, se crea la ficha del cliente en PerfectFlow y le llega la confirmación desde tu correo.",
-             en:"<b>Payment confirmed in your Stripe.</b> The booking confirms itself, the client record is created in PerfectFlow and the confirmation goes out from your email."}
-};
-var bout = $("#bout"), paychk = $("#paychk");
-bout.innerHTML = T(B.pick);
-function group(id){
-  $$("#" + id + " .opt").forEach(function(b){
-    b.addEventListener("click", function(){
-      $$("#" + id + " .opt").forEach(function(x){ x.setAttribute("aria-pressed", "false"); });
-      b.setAttribute("aria-pressed", "true");
-      bout.innerHTML = T(B.pick);
-      relay();
-    });
-  });
-}
-function relay(done){
-  var slot = $$("#slot .opt").some(function(b){ return b.getAttribute("aria-pressed") === "true"; });
-  $$("#relay .rstep").forEach(function(st){
-    var n = +st.getAttribute("data-s");
-    st.classList.toggle("lit", n === 1 || (n === 2 && slot) || (n === 3 && slot && !!done));
-  });
-}
-group("svc"); group("slot");
-var CONF = {free:{es:"Confirmar reserva", en:"Confirm booking"}, paid:{es:"Pagar y reservar", en:"Pay and book"}};
-var confBtn = $("#confirm");
-function confLabel(){ confBtn.removeAttribute("data-en"); confBtn.removeAttribute("data-es"); confBtn.textContent = T(paychk.checked ? CONF.paid : CONF.free); }
-paychk.addEventListener("change", function(){ bout.innerHTML = T(B.pick); confLabel(); relay(); });
-$("#confirm").addEventListener("click", function(){
-  var slot = $$("#slot .opt").some(function(b){ return b.getAttribute("aria-pressed") === "true"; });
-  bout.innerHTML = !slot ? T(B.needSlot) : (paychk.checked ? T(B.paid) : T(B.free));
-  relay(true);
-});
+/* ---------- 11. la franja: todo cae en PerfectFlow ---------- */
+onSeen($("#calSync"), function(){
+  $$("#syncFeed span").forEach(function(sp, i){ setTimeout(function(){ sp.classList.add("on"); }, RM ? 0 : 400 + i * 450); });
+}, .4);
+/* ---------- 12. quién hace qué: se enciende paso a paso ---------- */
+onSeen($("#relay"), function(){
+  $$("#relay .rstep").forEach(function(st, i){ setTimeout(function(){ st.classList.add("lit"); }, RM ? 0 : i * 700); });
+}, .4);
 
 /* ---------- 13. la conversación ---------- */
 var bubs = $$("#chat .bub");
@@ -3110,7 +2802,6 @@ function holdHeight(el, states, restore){
   restore();
   el.style.minHeight = max + "px";
 }
-function ptsHTML(sz){ return sz.pts.map(function(pt){ return '<li><i aria-hidden="true">✓</i><span>' + pt[lang] + "</span></li>"; }).join(""); }
 function stabilize(){
   var logSave = hubLog.innerHTML;
   holdHeight(hubLog, HUB_EV.map(function(ev){ return function(){
@@ -3118,12 +2809,9 @@ function stabilize(){
   }; }), function(){ hubLog.innerHTML = logSave; bindStep(); });
   var keepCase = caseIdx;
   holdHeight($("#flow"), CASES.map(function(c, i){ return function(){ caseIdx = i; renderCase(true); }; }), function(){ caseIdx = keepCase; renderCase(true); });
-  holdHeight(scalePts, SIZES.map(function(sz){ return function(){ scalePts.innerHTML = ptsHTML(sz); }; }), function(){ scalePts.innerHTML = ptsHTML(SIZES[sizeIdx]); });
   holdHeight($("#bkPv"), [bkFinal], function(){ if(bkPlayed){ bkFinal(); } else { bkReset(); } });
   var typing = bubs[1], typingDisp = typing.style.display;
   holdHeight($("#chat"), [function(){ typing.style.display = ""; }], function(){ typing.style.display = typingDisp; });
-  var boutSave = bout.innerHTML;
-  holdHeight(bout, [B.pick, B.needSlot, B.free, B.paid].map(function(m){ return function(){ bout.innerHTML = T(m); }; }), function(){ bout.innerHTML = boutSave; });
   var keepOn = MODS.map(function(m){ return m.on; });
   holdHeight(swWidgets.closest(".app"), [function(){ MODS.forEach(function(m){ m.on = true; }); renderApp(); }], function(){ MODS.forEach(function(m, i){ m.on = keepOn[i]; }); renderApp(); });
 }
