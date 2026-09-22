@@ -3,21 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
-<title>PerfectFlow — No somos otro CRM aburrido</title>
-<meta name="description" content="PerfectFlow organiza clientes, citas, mensajes, redes, tareas y equipo en un solo sistema. Una plataforma seria para negocios con personalidad. Construido y operado por Code Flakes LLC.">
+<title>PerfectFlow · CRM con agenda y página de reservas para organizar tu negocio</title>
+<meta name="description" content="PerfectFlow organiza agenda, clientes, tareas, redes y equipo en un solo sistema, con página pública de reservas y cobro con Stripe. Desde 99,99 $ al mes.">
 <link rel="canonical" href="https://perfectflow.cloud/">
 <meta name="theme-color" content="#D600FE">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PerfectFlow">
 <meta property="og:url" content="https://perfectflow.cloud/">
-<meta property="og:title" content="PerfectFlow — No somos otro CRM aburrido">
-<meta property="og:description" content="Tu operación no debería vivir en tu cabeza. Clientes, citas, mensajes y equipo en un solo sistema.">
+<meta property="og:title" content="PerfectFlow · CRM con agenda y página de reservas">
+<meta property="og:description" content="PerfectFlow organiza agenda, clientes, tareas, redes y equipo en un solo sistema, con página pública de reservas y cobro con Stripe. Desde 99,99 $ al mes.">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://perfectflow.cloud/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PerfectFlow: organiza tu agenda, tu equipo y tus procesos en un solo lugar">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PerfectFlow — No somos otro CRM aburrido">
-<meta name="twitter:description" content="Tu operación no debería vivir en tu cabeza. Clientes, citas, mensajes y equipo en un solo sistema.">
+<meta name="twitter:image" content="https://perfectflow.cloud/assets/og.jpg">
+<meta name="twitter:title" content="PerfectFlow · CRM con agenda y página de reservas">
+<meta name="twitter:description" content="PerfectFlow organiza agenda, clientes, tareas, redes y equipo en un solo sistema, con página pública de reservas y cobro con Stripe. Desde 99,99 $ al mes.">
 <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,7 +314,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .meter .lbl{max-width:18ch;line-height:1.25}
 .board{
   position:relative;height:clamp(440px,44vw,500px);margin-top:18px;border:var(--line);border-radius:var(--r-lg);
-  background:rgba(255,255,255,.18);overflow:hidden;transition:height .7s var(--ease),background .6s var(--ease);
+  background:var(--paper);overflow:hidden;transition:height .7s var(--ease),background .6s var(--ease);
 }
 .board.full{animation:shake .5s var(--ease)}
 @keyframes shake{20%{transform:translateX(-5px) rotate(-.3deg)}40%{transform:translateX(5px) rotate(.3deg)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
@@ -581,37 +584,15 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .pv-ok.on .ck{transform:scale(1)}
 .bk-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:18px}
 .bk-foot .btn.pulse{animation:beg 1.1s var(--boing) 3}
-.bk-foot .stripe-b{color:rgba(255,255,255,.85);font-size:.78rem;white-space:normal;align-items:flex-start;min-width:0;line-height:1.4}
+.bk-foot .stripe-b{color:var(--ink-45);font-size:.78rem;white-space:normal;align-items:flex-start;min-width:0;line-height:1.4}
 .bk-foot .stripe-b svg{flex:none;margin-top:2px}
-.bk-foot .stripe-b svg{fill:#fff;width:14px;height:14px}
-.bk-foot .stripe-b b{color:#fff}
+.bk-foot .stripe-b svg{fill:#635BFF;width:14px;height:14px}
+.bk-foot .stripe-b b{color:#635BFF}
 .pay-note{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--ink-45);margin-top:2px}
 
 /* ---------- violeta: citas ---------- */
 .panel{background:var(--paper);color:var(--ink);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard-lg);padding:clamp(14px,2vw,22px)}
-.cal-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
-.cal-head>span{font-weight:700;font-family:"Chillax","Poppins",sans-serif;font-size:1.15rem;letter-spacing:-.03em}
 .who{display:flex;flex-wrap:wrap;gap:7px;margin-left:auto}
-.fbtn{border:var(--line);background:var(--paper);border-radius:var(--r-pill);padding:.35em .9em;font-size:.84rem;font-weight:600;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;gap:7px;transition:background .2s}
-.fbtn i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);display:block}
-.fbtn[data-c="ana"] i{background:var(--coral)}
-.fbtn[data-c="marco"] i{background:var(--sky)}
-.fbtn[data-c="leo"] i{background:var(--lime)}
-.fbtn[aria-pressed="false"]{opacity:.5;text-decoration:line-through}
-.cal-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding-bottom:6px}
-.cal{display:grid;grid-template-columns:48px repeat(5,minmax(110px,1fr));gap:7px;min-width:620px}
-.cal .day{font-size:.8rem;font-weight:700;padding-bottom:4px}
-.cal .hr{font-size:.75rem;color:var(--ink-45);padding-top:8px;font-weight:600}
-.ev{border:var(--line);border-radius:11px;padding:7px 9px;font-size:.76rem;line-height:1.25;transition:opacity .3s var(--ease),filter .3s var(--ease),transform .3s var(--boing)}
-.ev b{display:block;font-weight:600;font-size:.8rem}
-.ev.ana{background:#FFD3C8}
-.ev.marco{background:#D9EEFF}
-.ev.leo{background:#E9F9B7}
-.ev.free{border-style:dashed;background:transparent;display:grid;place-items:center;font-weight:600;min-height:48px;color:var(--ink-70)}
-.ev.pend{background:var(--cream);border-style:dotted}
-.ev.dim{opacity:.18;filter:grayscale(1)}
-.ev.booked{background:var(--lime);border-style:solid;animation:bookpop .7s var(--boing)}
-@keyframes bookpop{0%{transform:scale(.7) rotate(-6deg)}100%{transform:none}}
 .book-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,3vw,40px);margin-top:clamp(28px,3.6vw,44px);align-items:start}
 @media (max-width:900px){.book-grid{grid-template-columns:1fr}}
 .panel h3{font-size:1.3rem}
@@ -626,42 +607,29 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .bout{margin-top:14px;border-top:2px solid var(--ink);padding-top:14px;font-size:.9rem;line-height:1.5;min-height:3.4em}
 .bout b{background:var(--lime);padding:0 .25em;border-radius:4px}
 /* bajo el calendario: todo cae en PerfectFlow */
-.cal-sync{margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 18px;align-items:center;background:var(--lime);color:var(--ink);border:var(--line);border-radius:var(--r-lg);box-shadow:6px 6px 0 var(--ink);padding:16px 18px}
-.cal-sync .iso-b{width:52px;height:52px;border-radius:14px;background:var(--paper);border:var(--line);display:grid;place-items:center}
-.cal-sync .iso-b svg{width:26px;height:32px}
-.cal-sync h3{font-size:clamp(1.1rem,1.8vw,1.35rem);line-height:1.2}
-.cal-sync p{font-size:.9rem;line-height:1.45;margin-top:4px;color:var(--ink-70)}
-.sync-feed{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
-.sync-feed span{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border:var(--line);border-radius:var(--r-pill);padding:6px 12px 6px 8px;font-size:.8rem;font-weight:600;opacity:.35;transform:translateY(6px);transition:opacity .35s var(--ease),transform .45s var(--boing)}
-.sync-feed span i{width:18px;height:18px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-style:normal;font-size:.62rem;background:var(--paper);transition:background .3s}
-.sync-feed span.on{opacity:1;transform:none}
-.sync-feed span.on i{background:var(--violet);color:#fff}
 @media (min-width:1100px){.cal-sync{grid-template-columns:auto minmax(0,1fr) auto}.sync-feed{grid-column:auto;flex-direction:column;align-items:flex-start;gap:6px}}
-@media (max-width:700px){.cal-scroll{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}}
-@media (max-width:640px){.cal-sync{grid-template-columns:1fr}.cal-sync .iso-b{width:44px;height:44px}}
 /* quién hace qué: tres pasos que se encienden al llegar */
 .relay-wrap{margin-top:clamp(30px,4vw,48px)}
-.cal-sync{margin-top:clamp(24px,3vw,36px)}
 @media (min-width:900px){
   .relay-wrap .relay{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-  .relay-wrap .relay::before{left:28px;right:28px;top:27px;bottom:auto;border-left:0;border-top:2px dashed rgba(255,255,255,.45)}
+  .relay-wrap .relay::before{left:28px;right:28px;top:27px;bottom:auto;border-left:0;border-top:2px dashed rgba(21,19,27,.22)}
   .relay-wrap .rstep{grid-template-columns:1fr;gap:14px}
   .relay-wrap .rstep .bx{height:100%}
 }
 .relay-h{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;opacity:.85}
 .relay{position:relative;display:grid;gap:14px;list-style:none;margin:0;padding:0}
-.relay::before{content:"";position:absolute;left:27px;top:30px;bottom:30px;border-left:2px dashed rgba(255,255,255,.45)}
-.rstep{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start;opacity:.5;transition:opacity .35s var(--ease)}
+.relay::before{content:"";position:absolute;left:27px;top:30px;bottom:30px;border-left:2px dashed rgba(21,19,27,.22)}
+.rstep{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start;opacity:.6;transition:opacity .35s var(--ease)}
 .rstep .ic{width:56px;height:56px;border-radius:50%;border:var(--line);background:var(--paper);color:var(--ink);display:grid;place-items:center;transition:background .3s,transform .45s var(--boing),box-shadow .3s}
 .rstep .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .rstep .ic svg.iso{width:22px;height:28px;stroke:none;stroke-width:0}
-.rstep .bx{border:2px solid rgba(255,255,255,.5);border-radius:var(--r-lg);padding:12px 16px;transition:border-color .3s,background .3s}
-.rstep .who-t{display:inline-block;font-size:.75rem;font-weight:700;background:rgba(255,255,255,.16);border-radius:var(--r-pill);padding:2px 10px;margin-bottom:6px}
+.rstep .bx{border:var(--line);background:var(--paper);border-radius:var(--r-lg);padding:12px 16px;transition:border-color .3s,background .3s}
+.rstep .who-t{display:inline-block;font-size:.75rem;font-weight:700;background:var(--cream);border:1.5px solid var(--ink);border-radius:var(--r-pill);padding:2px 10px;margin-bottom:6px}
 .rstep h3{font-size:1.15rem;margin-bottom:4px}
 .rstep p{font-size:.9rem;line-height:1.5;opacity:.9}
 .rstep.lit{opacity:1}
 .rstep.lit .ic{background:var(--lime);transform:rotate(-8deg) scale(1.06);box-shadow:3px 3px 0 var(--ink)}
-.rstep.lit .bx{border-color:#fff;background:rgba(255,255,255,.08)}
+.rstep.lit .bx{border-color:var(--ink);background:var(--paper);box-shadow:var(--hard-sm)}
 .rstep.lit .who-t{background:var(--lime);color:var(--ink)}
 .demo-k{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;background:var(--ink);color:var(--lime);border-radius:var(--r-pill);padding:5px 12px}
 .demo-k i{width:8px;height:8px;border-radius:50%;background:var(--lime);animation:blink 1.4s steps(2,start) infinite}
@@ -881,6 +849,10 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .ints-strip .lg .disc{width:40px;height:40px}
 .ints-strip .lg .disc svg{width:20px;height:20px}
 
+.ints-strip .lg.more{align-items:center;gap:8px;background:var(--lime);border:var(--line);border-radius:var(--r-pill);box-shadow:var(--hard-sm);padding:.3em 1em}
+.ints-strip .lg.more .disc{display:none}
+.ints-strip .lg.more b{font-size:.9rem}
+
 /* ---------- visibilidad y acompañamiento ---------- */
 .vis .dash-grid{grid-template-columns:1fr}
 .vis .dash{margin-top:clamp(24px,3vw,32px)}
@@ -888,6 +860,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 @media (max-width:1020px){.vis{grid-template-columns:1fr}}
 .vis-side{background:var(--cream);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard);padding:clamp(22px,2.6vw,30px);position:sticky;top:96px}
 @media (max-width:1020px){.vis-side{position:static}}
+.vis-badge{display:inline-flex;align-items:center;gap:10px;background:var(--lime);border:var(--line);border-radius:var(--r-pill);box-shadow:var(--hard-sm);padding:.3em .9em .3em .3em;font-weight:600;font-size:.9rem;margin:0 0 18px}
+.vis-ic{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink)}
+.vis-ic svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .vis-side h3{font-size:clamp(1.3rem,2vw,1.6rem);margin-bottom:12px}
 .vis-side>p{color:var(--ink-70);margin:0 0 18px}
 
@@ -920,6 +895,17 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
   [data-img]::before{content:none}
 }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://perfectflow.cloud/#org","name":"PerfectFlow","url":"https://perfectflow.cloud/","logo":"https://perfectflow.cloud/assets/brand/perfectflow-logo.svg","email":"info@perfectflow.cloud","parentOrganization":{"@type":"Organization","name":"Code Flakes LLC","address":{"@type":"PostalAddress","streetAddress":"4855 West Hillsboro Boulevard, Suite A3","addressLocality":"Coconut Creek","addressRegion":"FL","postalCode":"33073","addressCountry":"US"}}},
+{"@type":"WebSite","@id":"https://perfectflow.cloud/#web","url":"https://perfectflow.cloud/","name":"PerfectFlow","inLanguage":["es","en"],"publisher":{"@id":"https://perfectflow.cloud/#org"}},
+{"@type":"SoftwareApplication","name":"PerfectFlow","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://perfectflow.cloud/","publisher":{"@id":"https://perfectflow.cloud/#org"},
+ "offers":[
+  {"@type":"Offer","name":"Personal","price":"99.99","priceCurrency":"USD","url":"https://perfectflow.cloud/plan-personal.html"},
+  {"@type":"Offer","name":"Professional","price":"199.99","priceCurrency":"USD","url":"https://perfectflow.cloud/plan-professional.html"},
+  {"@type":"Offer","name":"Company Oriented","price":"449.99","priceCurrency":"USD","url":"https://perfectflow.cloud/plan-company.html"}]}
+]}
+</script>
 </head>
 <body>
 <!-- Logo oficial de PerfectFlow (manual de marca 001): isotipo e imagotipo -->
@@ -994,7 +980,6 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <div class="board" id="board" aria-label="Notas sueltas de un negocio sin organizar"></div>
     <p class="hint-fine" id="hint" data-en="You can drag them around. It won&#39;t help much.">Puedes arrastrarlas. No va a servir de mucho.</p>
     <p class="sorted-msg" id="sortedMsg" aria-live="polite"></p>
-    <p class="punch rv" data-en="Everything organized. Nothing chasing you.">Todo organizado. Nada persiguiéndote.</p>
   </div>
 </section>
 
@@ -1009,11 +994,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
   <div class="shell">
     <h2 class="rv" style="max-width:16ch" data-en="The platform at a glance.">La plataforma en un vistazo.</h2>
     <p class="lead rv" data-en="Four capabilities hold up the day to day. The rest is there when you need it.">Cuatro capacidades sostienen el día a día. El resto está ahí cuando lo necesites.</p>
-    <div class="caps"><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3 data-en="Appointments and calendar">Citas y calendario</h3><p data-en="Share availability and handle bookings from one clear calendar.">Comparte disponibilidad y coordina reservas desde una agenda clara.</p></article><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span><h3 data-en="Clients and context">Clientes y contexto</h3><p data-en="Information, history and next steps in one place.">Información, historial y próximos pasos en un solo lugar.</p></article><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3 data-en="Tasks and processes">Tareas y procesos</h3><p data-en="Turn what repeats into an organized way of working.">Convierte lo que se repite en una forma de trabajo organizada.</p></article><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><h3 data-en="Automations">Automatizaciones</h3><p data-en="Whatever can happen on its own, happens on its own.">Lo que puede ocurrir solo, que ocurra solo.</p></article></div>
+    <div class="caps"><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3 data-en="Appointments and calendar">Citas y calendario</h3><p data-en="Share availability and handle bookings from one clear calendar.">Comparte disponibilidad y coordina reservas desde una agenda clara.</p></article><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h3 data-en="Social and messages">Redes y mensajes</h3><p data-en="Instagram, TikTok and WhatsApp next to each client record.">Instagram, TikTok y WhatsApp junto a la ficha de cada cliente.</p></article><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3 data-en="Tasks and processes">Tareas y procesos</h3><p data-en="Turn what repeats into an organized way of working.">Convierte lo que se repite en una forma de trabajo organizada.</p></article><article class="cap rv"><span class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span><h3 data-en="Clients and context">Clientes y contexto</h3><p data-en="Information, history and next steps in one place.">Información, historial y próximos pasos en un solo lugar.</p></article></div>
     <p class="caps-note rv" data-en="Every module is available. Switch on only the ones you need.">Todos los módulos están disponibles. Enciende únicamente los que necesites.</p>
     <details class="xcaps rv">
       <summary data-en="See all capabilities">Ver todas las capacidades</summary>
-      <div class="xcaps-grid"><div class="xcap"><b data-en="Roles and permissions">Roles y permisos</b><span data-en="Each person sees and touches what's theirs.">Cada persona ve y toca lo que le toca.</span></div><div class="xcap"><b data-en="Social and messages">Redes y mensajes</b><span data-en="Instagram, TikTok and WhatsApp next to the client record.">Instagram, TikTok y WhatsApp junto a la ficha del cliente.</span></div><div class="xcap"><b data-en="Campaigns and email">Campañas y correo</b><span data-en="Branded campaigns, from your own account.">Campañas con tu marca, desde tu propia cuenta.</span></div><div class="xcap"><b data-en="Reports and dashboards">Reportes y paneles</b><span data-en="How the operation is doing, without asking for summaries.">Cómo va la operación, sin pedir resúmenes.</span></div><div class="xcap"><b data-en="Your own data model">Modelo de datos a tu medida</b><span data-en="Your fields, your stages and your rules.">Tus campos, tus estados y tus reglas.</span></div><div class="xcap"><b data-en="LandingHub landing page">Landing de LandingHub</b><span data-en="Your website on your domain, included.">Tu web con tu dominio, incluida.</span></div></div>
+      <div class="xcaps-grid"><div class="xcap"><b data-en="Automations">Automatizaciones</b><span data-en="Whatever can happen on its own, happens on its own.">Lo que puede ocurrir solo, que ocurra solo.</span></div><div class="xcap"><b data-en="Roles and permissions">Roles y permisos</b><span data-en="Each person sees and touches what's theirs.">Cada persona ve y toca lo que le toca.</span></div><div class="xcap"><b data-en="Campaigns and email">Campañas y correo</b><span data-en="Branded campaigns, from your own account.">Campañas con tu marca, desde tu propia cuenta.</span></div><div class="xcap"><b data-en="Reports and dashboards">Reportes y paneles</b><span data-en="How the operation is doing, without asking for summaries.">Cómo va la operación, sin pedir resúmenes.</span></div><div class="xcap"><b data-en="Your own data model">Modelo de datos a tu medida</b><span data-en="Your fields, your stages and your rules.">Tus campos, tus estados y tus reglas.</span></div><div class="xcap"><b data-en="LandingHub landing page">Landing de LandingHub</b><span data-en="Your website on your domain, included.">Tu web con tu dominio, incluida.</span></div></div>
     </details>
 
     <div class="yours rv">
@@ -1033,7 +1018,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <div class="lg rv" style="--bi:#412991"><!-- Logo oficial (Simple Icons, CC0); marca de su propietario --><span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg></span><b>OpenAI</b><small data-en="AI features inside the product">Funciones con IA en el producto</small></div>
       <div class="lg rv" style="--bi:#E4405F"><!-- Logo oficial (Simple Icons, CC0); marca de su propietario --><span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span><b>Instagram</b><small data-en="Posts, metrics and DMs">Posts, métricas y DMs</small></div>
       <div class="lg rv" style="--bi:#1A0B2E"><!-- Logo oficial (Simple Icons, CC0); marca de su propietario --><span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span><b>TikTok</b><small data-en="Post and schedule">Publicar y programar</small></div>
-      </div>
+      <div class="lg rv" style="--bi:#006BFF"><!-- Logo oficial (Simple Icons, CC0); marca de su propietario --><span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.655 14.262c.281 0 .557.023.828.064 0 .005-.005.01-.005.014-.105.267-.234.534-.381.786l-1.219 2.106c-1.112 1.936-3.177 3.127-5.411 3.127h-2.432c-2.23 0-4.294-1.191-5.412-3.127l-1.218-2.106a6.251 6.251 0 0 1 0-6.252l1.218-2.106C6.736 4.832 8.8 3.641 11.035 3.641h2.432c2.23 0 4.294 1.191 5.411 3.127l1.219 2.106c.147.252.271.519.381.786 0 .004.005.009.005.014-.267.041-.543.064-.828.064-1.816 0-2.501-.607-3.291-1.306-.764-.676-1.711-1.517-3.44-1.517h-1.029c-1.251 0-2.387.455-3.2 1.278-.796.805-1.233 1.904-1.233 3.099v1.411c0 1.196.437 2.295 1.233 3.099.813.823 1.949 1.278 3.2 1.278h1.034c1.729 0 2.676-.841 3.439-1.517.791-.703 1.471-1.306 3.287-1.301Zm.005-3.237c.399 0 .794-.036 1.179-.11-.002-.004-.002-.01-.002-.014-.073-.414-.193-.823-.349-1.218.731-.12 1.407-.396 1.986-.819 0-.004-.005-.013-.005-.018-.331-1.085-.832-2.101-1.489-3.03-.649-.915-1.435-1.719-2.331-2.395-1.867-1.398-4.088-2.138-6.428-2.138-1.448 0-2.855.28-4.175.841-1.273.543-2.423 1.315-3.407 2.299S2.878 6.552 2.341 7.83c-.557 1.324-.842 2.726-.842 4.175 0 1.448.281 2.855.842 4.174.542 1.274 1.314 2.423 2.298 3.407s2.129 1.761 3.407 2.299c1.324.556 2.727.841 4.175.841 2.34 0 4.561-.74 6.428-2.137a10.815 10.815 0 0 0 2.331-2.396c.652-.929 1.158-1.949 1.489-3.03 0-.004.005-.014.005-.018-.579-.423-1.255-.699-1.986-.819.161-.395.276-.804.349-1.218.005-.009.005-.014.005-.023.869.166 1.692.506 2.404 1.035.685.505.552 1.075.446 1.416C22.184 20.437 17.619 24 12.221 24c-6.625 0-12-5.375-12-12s5.37-12 12-12c5.398 0 9.963 3.563 11.471 8.464.106.341.239.915-.446 1.421-.717.529-1.535.873-2.404 1.034.128.716.128 1.45 0 2.166-.387-.074-.782-.11-1.182-.11-4.184 0-3.968 2.823-6.736 2.823h-1.029c-1.899 0-3.15-1.357-3.15-3.095v-1.411c0-1.738 1.251-3.094 3.15-3.094h1.034c2.768 0 2.552 2.823 6.731 2.827Z"/></svg></span><b>Calendly</b></div><div class="lg more rv"><span class="disc"><span class="ini" aria-hidden="true">+200</span></span><b data-en="And 200 more">Y 200 más</b></div></div>
     </div>
   </div>
 </section>
@@ -1082,63 +1067,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     </div>
 
 
-    <div class="panel rv" style="margin-top:clamp(30px,4vw,48px)" id="calPanel">
-      <div class="cal-head">
-        <span data-en="Week of 21 September">Semana del 21 de septiembre</span>
-        <div class="who" role="group" aria-label="Filtrar por responsable">
-          <button type="button" class="fbtn" data-c="ana" aria-pressed="true"><i aria-hidden="true"></i>Ana</button>
-          <button type="button" class="fbtn" data-c="marco" aria-pressed="true"><i aria-hidden="true"></i>Marco</button>
-          <button type="button" class="fbtn" data-c="leo" aria-pressed="true"><i aria-hidden="true"></i>Leo</button>
-        </div>
-      </div>
-      <div class="cal-scroll">
-        <div class="cal">
-          <span></span>
-          <span class="day" data-en="Mon 21">Lun 21</span><span class="day" data-en="Tue 22">Mar 22</span><span class="day" data-en="Wed 23">Mié 23</span><span class="day" data-en="Thu 24">Jue 24</span><span class="day" data-en="Fri 25">Vie 25</span>
 
-          <span class="hr">09:00</span>
-          <div class="ev ana"><b data-en="Assessment">Valoración</b>Ana · 60 min</div>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-          <div class="ev free" data-en="Available">Disponible</div>
-          <div class="ev ana"><b data-en="Assessment">Valoración</b>Ana · 60 min</div>
-          <div class="ev leo"><b data-en="Online">Online</b>Leo · 30 min</div>
-
-          <span class="hr">11:00</span>
-          <div class="ev leo"><b data-en="Group">Grupal</b><span data-en="Leo · 6 spots">Leo · 6 cupos</span></div>
-          <div class="ev free" id="hotslot" data-en="Available">Disponible</div>
-          <div class="ev ana"><b data-en="Follow-up">Seguimiento</b>Ana · 45 min</div>
-          <div class="ev marco"><b data-en="Assessment">Valoración</b>Marco · 60 min</div>
-          <div class="ev pend"><b data-en="Pending">Pendiente</b><span data-en="to confirm">por confirmar</span></div>
-
-          <span class="hr">13:00</span>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-          <div class="ev ana"><b data-en="Online">Online</b>Ana · 30 min</div>
-          <div class="ev free" data-en="Available">Disponible</div>
-          <div class="ev leo"><b data-en="Group">Grupal</b><span data-en="Leo · 4 spots">Leo · 4 cupos</span></div>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-
-          <span class="hr">16:00</span>
-          <div class="ev ana"><b data-en="Assessment">Valoración</b>Ana · 60 min</div>
-          <div class="ev leo"><b data-en="Online">Online</b>Leo · 30 min</div>
-          <div class="ev marco"><b data-en="Follow-up">Seguimiento</b>Marco · 45 min</div>
-          <div class="ev free" data-en="Available">Disponible</div>
-          <div class="ev ana"><b data-en="Group">Grupal</b><span data-en="Ana · 8 spots">Ana · 8 cupos</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cal-sync rv" id="calSync" hidden>
-      <span class="iso-b" aria-hidden="true"><svg class="iso" viewBox="0 0 465 581"><use href="#pf-iso"/></svg></span>
-      <div>
-        <h3 data-en="Everyone who books or signs up shows up in PerfectFlow automatically.">Todas las personas que agendan o reservan se ven en PerfectFlow automáticamente.</h3>
-        <p data-en="In the calendar of whoever handles it, with their record and their history. Nobody copies anything by hand.">En el calendario de quien la atiende, con su ficha y su historial. Nadie copia nada a mano.</p>
-      </div>
-      <div class="sync-feed" id="syncFeed" aria-hidden="true">
-        <span><i>✓</i><em style="font-style:normal" data-en="In the calendar">En el calendario</em></span>
-        <span><i>✓</i><em style="font-style:normal" data-en="Record created">Ficha creada</em></span>
-        <span><i>✓</i><em style="font-style:normal" data-en="Confirmation sent">Confirmación enviada</em></span>
-      </div>
-    </div>
 
     <div class="relay-wrap">
       <div class="rv">
@@ -1193,6 +1122,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     </div>
       </div>
       <aside class="vis-side rv">
+        <p class="vis-badge"><span class="vis-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h2.5a1.5 1.5 0 0 1 1.5 1.5v2A1.5 1.5 0 0 1 6.5 19H6a2 2 0 0 1-2-2z"/><path d="M20 14h-2.5a1.5 1.5 0 0 0-1.5 1.5v2a1.5 1.5 0 0 0 1.5 1.5h.5a2 2 0 0 0 2-2z"/><path d="M18 19v.5a2.5 2.5 0 0 1-2.5 2.5H13"/></svg></span><span data-en="Support">Soporte</span></p>
         <h3 data-en="When you need help, a person answers.">Cuando necesitas ayuda, responde una persona.</h3>
         <p data-en="We walk you through the setup and the day-to-day support.">Te acompañamos durante la configuración y el soporte diario.</p>
         <p class="hp"><span class="n" aria-hidden="true">1</span><span data-en="Guided setup, with you.">Puesta en marcha acompañada, contigo.</span></p>
@@ -1405,7 +1335,6 @@ function setLang(next){
     if(v !== null) el.innerHTML = v;
   });
   document.documentElement.lang = next;
-  if(booked) paintBooked();
   $$("[data-href-en]").forEach(function(a){
     if(!a.hasAttribute("data-href-es")) a.setAttribute("data-href-es", a.getAttribute("href"));
     a.setAttribute("href", a.getAttribute(next === "en" ? "data-href-en" : "data-href-es"));
@@ -2167,31 +2096,6 @@ bkReset();
 $("#bkReplay").addEventListener("click", bkPlay);
 onSeen(bkEl, bkPlay, .3);
 
-/* ---------- 11. calendario: filtro por responsable y la reserva que entra ---------- */
-$$(".fbtn").forEach(function(b){
-  b.addEventListener("click", function(){
-    b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true"));
-    var on = $$(".fbtn").filter(function(x){ return x.getAttribute("aria-pressed") === "true"; }).map(function(x){ return x.getAttribute("data-c"); });
-    $$(".ev").forEach(function(ev){
-      var who = ["ana", "marco", "leo"].filter(function(c){ return ev.classList.contains(c); })[0];
-      ev.classList.toggle("dim", !!who && on.indexOf(who) === -1);
-    });
-  });
-});
-var hot = $("#hotslot"), booked = false;
-function paintBooked(){ hot.innerHTML = lang === "en" ? "<b>Booking received</b>just now · no clashes" : "<b>Reserva recibida</b>ahora mismo · sin cruces"; }
-onSeen($("#calPanel"), function(){
-  setTimeout(function(){
-    booked = true; hot.className = "ev booked";
-    hot.removeAttribute("data-en"); hot.removeAttribute("data-es");
-    paintBooked();
-  }, RM ? 0 : 1800);
-}, .25);
-
-/* ---------- 11b. la franja: todo cae en PerfectFlow ---------- */
-onSeen($("#calSync"), function(){
-  $$("#syncFeed span").forEach(function(sp, i){ setTimeout(function(){ sp.classList.add("on"); }, RM ? 0 : 400 + i * 450); });
-}, .4);
 /* ---------- 12. quién hace qué: se enciende paso a paso ---------- */
 onSeen($("#relay"), function(){
   $$("#relay .rstep").forEach(function(st, i){ setTimeout(function(){ st.classList.add("lit"); }, RM ? 0 : i * 700); });

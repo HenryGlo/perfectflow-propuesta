@@ -3,21 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
 <title>Landing gratis con PerfectFlow — tu web incluida en la suscripción</title>
 <meta name="description" content="Si contratas PerfectFlow, LandingHub te construye la landing con tu dominio y tu marca, y viene incluida con la suscripción.">
-<link rel="canonical" href="https://perfectflow.cloud/landing-incluida">
+<link rel="canonical" href="https://perfectflow.cloud/landing-incluida.html">
 <meta name="theme-color" content="#D600FE">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PerfectFlow">
-<meta property="og:url" content="https://perfectflow.cloud/">
-<meta property="og:title" content="PerfectFlow — No somos otro CRM aburrido">
-<meta property="og:description" content="Tu operación no debería vivir en tu cabeza. Clientes, citas, mensajes y equipo en un solo sistema.">
+<meta property="og:url" content="https://perfectflow.cloud/landing-incluida.html">
+<meta property="og:title" content="PerfectFlow · CRM con agenda y página de reservas">
+<meta property="og:description" content="PerfectFlow organiza agenda, clientes, tareas, redes y equipo en un solo sistema, con página pública de reservas y cobro con Stripe. Desde 99,99 $ al mes.">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://perfectflow.cloud/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PerfectFlow: organiza tu agenda, tu equipo y tus procesos en un solo lugar">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PerfectFlow — No somos otro CRM aburrido">
-<meta name="twitter:description" content="Tu operación no debería vivir en tu cabeza. Clientes, citas, mensajes y equipo en un solo sistema.">
+<meta name="twitter:image" content="https://perfectflow.cloud/assets/og.jpg">
+<meta name="twitter:title" content="PerfectFlow · CRM con agenda y página de reservas">
+<meta name="twitter:description" content="PerfectFlow organiza agenda, clientes, tareas, redes y equipo en un solo sistema, con página pública de reservas y cobro con Stripe. Desde 99,99 $ al mes.">
 <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,7 +314,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .meter .lbl{max-width:18ch;line-height:1.25}
 .board{
   position:relative;height:clamp(440px,44vw,500px);margin-top:18px;border:var(--line);border-radius:var(--r-lg);
-  background:rgba(255,255,255,.18);overflow:hidden;transition:height .7s var(--ease),background .6s var(--ease);
+  background:var(--paper);overflow:hidden;transition:height .7s var(--ease),background .6s var(--ease);
 }
 .board.full{animation:shake .5s var(--ease)}
 @keyframes shake{20%{transform:translateX(-5px) rotate(-.3deg)}40%{transform:translateX(5px) rotate(.3deg)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
@@ -581,37 +584,15 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .pv-ok.on .ck{transform:scale(1)}
 .bk-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:18px}
 .bk-foot .btn.pulse{animation:beg 1.1s var(--boing) 3}
-.bk-foot .stripe-b{color:rgba(255,255,255,.85);font-size:.78rem;white-space:normal;align-items:flex-start;min-width:0;line-height:1.4}
+.bk-foot .stripe-b{color:var(--ink-45);font-size:.78rem;white-space:normal;align-items:flex-start;min-width:0;line-height:1.4}
 .bk-foot .stripe-b svg{flex:none;margin-top:2px}
-.bk-foot .stripe-b svg{fill:#fff;width:14px;height:14px}
-.bk-foot .stripe-b b{color:#fff}
+.bk-foot .stripe-b svg{fill:#635BFF;width:14px;height:14px}
+.bk-foot .stripe-b b{color:#635BFF}
 .pay-note{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--ink-45);margin-top:2px}
 
 /* ---------- violeta: citas ---------- */
 .panel{background:var(--paper);color:var(--ink);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard-lg);padding:clamp(14px,2vw,22px)}
-.cal-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
-.cal-head>span{font-weight:700;font-family:"Chillax","Poppins",sans-serif;font-size:1.15rem;letter-spacing:-.03em}
 .who{display:flex;flex-wrap:wrap;gap:7px;margin-left:auto}
-.fbtn{border:var(--line);background:var(--paper);border-radius:var(--r-pill);padding:.35em .9em;font-size:.84rem;font-weight:600;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;gap:7px;transition:background .2s}
-.fbtn i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);display:block}
-.fbtn[data-c="ana"] i{background:var(--coral)}
-.fbtn[data-c="marco"] i{background:var(--sky)}
-.fbtn[data-c="leo"] i{background:var(--lime)}
-.fbtn[aria-pressed="false"]{opacity:.5;text-decoration:line-through}
-.cal-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding-bottom:6px}
-.cal{display:grid;grid-template-columns:48px repeat(5,minmax(110px,1fr));gap:7px;min-width:620px}
-.cal .day{font-size:.8rem;font-weight:700;padding-bottom:4px}
-.cal .hr{font-size:.75rem;color:var(--ink-45);padding-top:8px;font-weight:600}
-.ev{border:var(--line);border-radius:11px;padding:7px 9px;font-size:.76rem;line-height:1.25;transition:opacity .3s var(--ease),filter .3s var(--ease),transform .3s var(--boing)}
-.ev b{display:block;font-weight:600;font-size:.8rem}
-.ev.ana{background:#FFD3C8}
-.ev.marco{background:#D9EEFF}
-.ev.leo{background:#E9F9B7}
-.ev.free{border-style:dashed;background:transparent;display:grid;place-items:center;font-weight:600;min-height:48px;color:var(--ink-70)}
-.ev.pend{background:var(--cream);border-style:dotted}
-.ev.dim{opacity:.18;filter:grayscale(1)}
-.ev.booked{background:var(--lime);border-style:solid;animation:bookpop .7s var(--boing)}
-@keyframes bookpop{0%{transform:scale(.7) rotate(-6deg)}100%{transform:none}}
 .book-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,3vw,40px);margin-top:clamp(28px,3.6vw,44px);align-items:start}
 @media (max-width:900px){.book-grid{grid-template-columns:1fr}}
 .panel h3{font-size:1.3rem}
@@ -626,42 +607,29 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .bout{margin-top:14px;border-top:2px solid var(--ink);padding-top:14px;font-size:.9rem;line-height:1.5;min-height:3.4em}
 .bout b{background:var(--lime);padding:0 .25em;border-radius:4px}
 /* bajo el calendario: todo cae en PerfectFlow */
-.cal-sync{margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 18px;align-items:center;background:var(--lime);color:var(--ink);border:var(--line);border-radius:var(--r-lg);box-shadow:6px 6px 0 var(--ink);padding:16px 18px}
-.cal-sync .iso-b{width:52px;height:52px;border-radius:14px;background:var(--paper);border:var(--line);display:grid;place-items:center}
-.cal-sync .iso-b svg{width:26px;height:32px}
-.cal-sync h3{font-size:clamp(1.1rem,1.8vw,1.35rem);line-height:1.2}
-.cal-sync p{font-size:.9rem;line-height:1.45;margin-top:4px;color:var(--ink-70)}
-.sync-feed{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
-.sync-feed span{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border:var(--line);border-radius:var(--r-pill);padding:6px 12px 6px 8px;font-size:.8rem;font-weight:600;opacity:.35;transform:translateY(6px);transition:opacity .35s var(--ease),transform .45s var(--boing)}
-.sync-feed span i{width:18px;height:18px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-style:normal;font-size:.62rem;background:var(--paper);transition:background .3s}
-.sync-feed span.on{opacity:1;transform:none}
-.sync-feed span.on i{background:var(--violet);color:#fff}
 @media (min-width:1100px){.cal-sync{grid-template-columns:auto minmax(0,1fr) auto}.sync-feed{grid-column:auto;flex-direction:column;align-items:flex-start;gap:6px}}
-@media (max-width:700px){.cal-scroll{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}}
-@media (max-width:640px){.cal-sync{grid-template-columns:1fr}.cal-sync .iso-b{width:44px;height:44px}}
 /* quién hace qué: tres pasos que se encienden al llegar */
 .relay-wrap{margin-top:clamp(30px,4vw,48px)}
-.cal-sync{margin-top:clamp(24px,3vw,36px)}
 @media (min-width:900px){
   .relay-wrap .relay{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-  .relay-wrap .relay::before{left:28px;right:28px;top:27px;bottom:auto;border-left:0;border-top:2px dashed rgba(255,255,255,.45)}
+  .relay-wrap .relay::before{left:28px;right:28px;top:27px;bottom:auto;border-left:0;border-top:2px dashed rgba(21,19,27,.22)}
   .relay-wrap .rstep{grid-template-columns:1fr;gap:14px}
   .relay-wrap .rstep .bx{height:100%}
 }
 .relay-h{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;opacity:.85}
 .relay{position:relative;display:grid;gap:14px;list-style:none;margin:0;padding:0}
-.relay::before{content:"";position:absolute;left:27px;top:30px;bottom:30px;border-left:2px dashed rgba(255,255,255,.45)}
-.rstep{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start;opacity:.5;transition:opacity .35s var(--ease)}
+.relay::before{content:"";position:absolute;left:27px;top:30px;bottom:30px;border-left:2px dashed rgba(21,19,27,.22)}
+.rstep{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start;opacity:.6;transition:opacity .35s var(--ease)}
 .rstep .ic{width:56px;height:56px;border-radius:50%;border:var(--line);background:var(--paper);color:var(--ink);display:grid;place-items:center;transition:background .3s,transform .45s var(--boing),box-shadow .3s}
 .rstep .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .rstep .ic svg.iso{width:22px;height:28px;stroke:none;stroke-width:0}
-.rstep .bx{border:2px solid rgba(255,255,255,.5);border-radius:var(--r-lg);padding:12px 16px;transition:border-color .3s,background .3s}
-.rstep .who-t{display:inline-block;font-size:.75rem;font-weight:700;background:rgba(255,255,255,.16);border-radius:var(--r-pill);padding:2px 10px;margin-bottom:6px}
+.rstep .bx{border:var(--line);background:var(--paper);border-radius:var(--r-lg);padding:12px 16px;transition:border-color .3s,background .3s}
+.rstep .who-t{display:inline-block;font-size:.75rem;font-weight:700;background:var(--cream);border:1.5px solid var(--ink);border-radius:var(--r-pill);padding:2px 10px;margin-bottom:6px}
 .rstep h3{font-size:1.15rem;margin-bottom:4px}
 .rstep p{font-size:.9rem;line-height:1.5;opacity:.9}
 .rstep.lit{opacity:1}
 .rstep.lit .ic{background:var(--lime);transform:rotate(-8deg) scale(1.06);box-shadow:3px 3px 0 var(--ink)}
-.rstep.lit .bx{border-color:#fff;background:rgba(255,255,255,.08)}
+.rstep.lit .bx{border-color:var(--ink);background:var(--paper);box-shadow:var(--hard-sm)}
 .rstep.lit .who-t{background:var(--lime);color:var(--ink)}
 .demo-k{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;background:var(--ink);color:var(--lime);border-radius:var(--r-pill);padding:5px 12px}
 .demo-k i{width:8px;height:8px;border-radius:50%;background:var(--lime);animation:blink 1.4s steps(2,start) infinite}
@@ -881,6 +849,10 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .ints-strip .lg .disc{width:40px;height:40px}
 .ints-strip .lg .disc svg{width:20px;height:20px}
 
+.ints-strip .lg.more{align-items:center;gap:8px;background:var(--lime);border:var(--line);border-radius:var(--r-pill);box-shadow:var(--hard-sm);padding:.3em 1em}
+.ints-strip .lg.more .disc{display:none}
+.ints-strip .lg.more b{font-size:.9rem}
+
 /* ---------- visibilidad y acompañamiento ---------- */
 .vis .dash-grid{grid-template-columns:1fr}
 .vis .dash{margin-top:clamp(24px,3vw,32px)}
@@ -888,6 +860,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 @media (max-width:1020px){.vis{grid-template-columns:1fr}}
 .vis-side{background:var(--cream);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard);padding:clamp(22px,2.6vw,30px);position:sticky;top:96px}
 @media (max-width:1020px){.vis-side{position:static}}
+.vis-badge{display:inline-flex;align-items:center;gap:10px;background:var(--lime);border:var(--line);border-radius:var(--r-pill);box-shadow:var(--hard-sm);padding:.3em .9em .3em .3em;font-weight:600;font-size:.9rem;margin:0 0 18px}
+.vis-ic{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink)}
+.vis-ic svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .vis-side h3{font-size:clamp(1.3rem,2vw,1.6rem);margin-bottom:12px}
 .vis-side>p{color:var(--ink-70);margin:0 0 18px}
 
