@@ -787,6 +787,17 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .plan .seats-l{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;font-size:.82rem;font-weight:600;background:var(--paper);border:var(--line);border-radius:var(--r-pill);padding:4px 12px}
 .plan .acts{margin-top:auto;padding-top:14px;display:grid;gap:10px}
 .plan .acts .btn{margin-top:0;justify-content:center}
+.plan.custom{grid-column:1/-1;background:var(--ink);color:var(--cream);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) auto;align-items:center;gap:clamp(18px,3vw,44px)}
+.plan.custom .cu-h{display:flex;flex-direction:column;gap:10px}
+.plan.custom .price{margin-top:0}
+.plan.custom .claim{font-weight:500;opacity:.9;max-width:34ch}
+.plan.custom .seats-l{color:var(--ink)}
+.plan.custom ul{margin:0}
+.plan.custom li::before{background:var(--lime);border-color:var(--cream)}
+.plan.custom .acts{margin:0;padding:0}
+.plan.custom .btn,.plan.custom .btn:hover{box-shadow:4px 4px 0 var(--violet)}
+.plan.custom :focus-visible{outline-color:var(--lime)}
+@media (max-width:900px){.plan.custom{grid-template-columns:1fr;align-items:stretch}}
 .plan-note{margin-top:clamp(26px,3vw,38px);background:var(--paper);border:2px dashed var(--ink);border-radius:var(--r-md);padding:16px 20px;font-size:.95rem;line-height:1.55;max-width:80ch}
 .plan-note b{background:var(--coral);padding:0 .25em;border-radius:4px}
 
@@ -1184,7 +1195,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 <!-- ======================= PLANES · crema ======================= -->
 <section class="b-paper" id="planes">
   <div class="shell">
-    <h2 class="rv" style="max-width:14ch" data-en="Three plans. One platform.">Tres planes. Una plataforma.</h2>
+    <h2 class="rv" style="max-width:16ch" data-en="Three plans, and one made to measure.">Tres planes, y uno a tu medida.</h2>
     <p class="lead rv" data-en="Every plan includes the complete platform. What changes is users and scale, not features.">Todos los planes incluyen la plataforma completa. Cambian los usuarios y la escala, no las funciones.</p>
     <div class="plans">
       <article class="plan">
@@ -1216,6 +1227,19 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <li data-en="Organization by department">Organización por departamentos</li>
         </ul>
         <div class="acts"><a class="btn" href="plan-company.html" data-en="Choose plan">Elegir plan</a></div>
+      </article>
+      <article class="plan custom">
+        <div class="cu-h">
+          <h3 data-en="Custom">A medida</h3>
+          <p class="price" data-en="Priced to your case">Precio según tu caso</p>
+          <p class="claim" data-en="When your company asks for more than a plan includes, we adapt PerfectFlow to the way you work.">Cuando tu empresa pide más de lo que trae un plan, adaptamos PerfectFlow a tu forma de trabajar.</p>
+        </div>
+        <ul>
+          <li data-en="For companies whose operation doesn&#39;t fit a standard plan">Para empresas cuya operación no cabe en un plan estándar</li>
+          <li data-en="We adapt the software to what your business needs">Adaptamos el software a lo que tu negocio necesita</li>
+          <li data-en="You tell us what you need and we send you scope and quote">Nos cuentas qué necesitas y te pasamos alcance y presupuesto</li>
+        </ul>
+        <div class="acts"><a class="btn btn-lime" href="#cierre" data-en="Quote my custom plan" data-u="info" data-d="perfectflow.cloud" data-s="Plan%20A%20medida">Cotizar mi plan a medida</a></div>
       </article>
     </div>
   </div>
