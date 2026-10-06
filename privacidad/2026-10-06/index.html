@@ -485,9 +485,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="arquitectura">
           <h2>2. Dónde viven tus datos</h2>
-          <p>PerfectFlow se despliega en dos modalidades, y tu contrato indica cuál es la tuya:</p>
+          <p>PerfectFlow se despliega en dos modalidades, y tu plan determina cuál es la tuya:</p>
           <ul>
-            <li><strong>Instancia dedicada.</strong> Tu empresa tiene su propio servidor y su propia base de datos. Ningún otro cliente comparte ninguno de los dos. Es la modalidad por defecto.</li>
+            <li><strong>Instancia dedicada.</strong> Tu empresa tiene su propio servidor y su propia base de datos. Ningún otro cliente comparte ninguno de los dos. Corresponde a los planes que la incluyen.</li>
             <li><strong>PerfectFlow Lite.</strong> Varias empresas se alojan en un mismo servidor y una misma base de datos. Los registros de cada empresa llevan un identificador propio, y el sistema filtra por él <em>toda</em> consulta de forma automática, de modo que cada empresa solo accede a sus propios datos. Cada una entra además por su propio subdominio.</li>
           </ul>
           <p>En ambos casos, los datos de tu empresa —incluidas las cuentas de redes sociales que conectes y las publicaciones que programes— quedan separados de los de cualquier otro cliente.</p>
@@ -652,6 +652,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>PerfectFlow usa el que tu cuenta haya concedido.</p>
 
           <h3>WhatsApp Business</h3>
+          <p><em>Por ahora este canal no está disponible para clientes establecidos en el Espacio Económico Europeo.</em></p>
           <p>Al margen de Instagram, puedes conectar una cuenta de <strong>WhatsApp Business</strong>, que solo hace mensajería: en WhatsApp no se publica nada. Cuando la conectas, el módulo guarda la conversación y los mensajes intercambiados —identificador y nombre de quien escribe, texto y adjuntos, marcas de tiempo, y si el hilo está respondido o archivado— para que los usuarios autorizados de tu empresa puedan responder desde PerfectFlow.</p>
           <p>Es una integración aparte, con su propia autorización, y no se activa salvo que conectes la cuenta.</p>
 
@@ -720,6 +721,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
                 <tr><th scope="row">TikTok</th><td>Publicar los vídeos que programas</td><td>Irlanda y Estados Unidos</td></tr>
                 <tr><th scope="row">Tu proveedor de correo saliente</th><td>Entregar <strong>todo</strong> el correo que sale del sistema: los avisos a tus usuarios —restablecer contraseña, invitaciones— y las comunicaciones a tus contactos. Siempre es tu cuenta</td><td>Según el proveedor que contrates</td></tr>
                 <tr><th scope="row">Stripe</th><td>Cobrar a tus clientes — siempre es tu cuenta</td><td>Irlanda y Estados Unidos</td></tr>
+                <tr><th scope="row">PagueloFacil</th><td>Cobrar a tus clientes — sólo si activas esta pasarela, con tu cuenta</td><td>Panamá</td></tr>
+                <tr><th scope="row">Otras integraciones</th><td>Lo que conectes mediante el motor de automatizaciones con tus propias cuentas — por ejemplo, tu agenda en Calendly</td><td>Según el proveedor que elijas</td></tr>
               </tbody>
             </table>
           </div>
@@ -730,8 +733,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
           <h3>Transferencias internacionales</h3>
           <p>Code Flakes LLC tiene su sede en <strong>Estados Unidos</strong>. Aunque la instancia de un cliente europeo esté alojada en el EEE, <strong>el encargado del tratamiento es una sociedad estadounidense</strong>, y ése es el flujo que cubre el acuerdo de encargo.</p>
-          <p>Las personas que operan esas instancias <strong>acceden desde Venezuela</strong>, un país sin decisión de adecuación de la Comisión Europea. Son socios y directivos de la propia sociedad, no una empresa contratada; aun así, un acceso remoto de este tipo <strong>puede constituir una transferencia internacional</strong> a efectos del capítulo V del RGPD. Lo decimos con claridad porque no podemos prestar el servicio sin ese acceso.</p>
-          <p>Las medidas que aplicamos: entramos <strong>sólo cuando es imprescindible</strong>, siempre <strong>a través de una VPN cifrada</strong> con salida en Estados Unidos, y el trabajo <strong>se ejecuta sobre el propio servidor</strong>, sin descargar copias a equipos locales. Las actualizaciones las instala un sistema de despliegue automatizado (GitHub Actions), que se conecta al servidor desde Estados Unidos, ejecuta allí las órdenes y no extrae copias.</p>
+          <p>Los miembros de Code Flakes que pueden acceder a esas instancias <strong>lo hacen desde Venezuela</strong>, un país sin decisión de adecuación de la Comisión Europea. Son miembros de la propia sociedad, no una empresa contratada; aun así, un acceso remoto de este tipo <strong>puede constituir una transferencia internacional</strong> a efectos del capítulo V del RGPD. Lo decimos con claridad porque no podemos prestar el servicio sin ese acceso.</p>
+          <p>Las medidas que aplicamos: en el día a día no entra nadie —quien se conecta es el sistema de despliegue automatizado—; un miembro del equipo entra <strong>sólo cuando un problema bloquea el servicio</strong>, siempre <strong>a través de una VPN cifrada</strong> con salida en Estados Unidos, y el trabajo <strong>se ejecuta sobre el propio servidor</strong>, sin descargar copias a equipos locales. Las actualizaciones las instala un sistema de despliegue automatizado (GitHub Actions), que se conecta al servidor desde Estados Unidos, ejecuta allí las órdenes y no extrae copias.</p>
+          <p><strong>Lo que configuras tú.</strong> Las integraciones que conectas y las páginas públicas de reserva, formulario o compra que el sistema genera para tu negocio las configuras tú: qué datos pides, si cobras y con qué pasarela. No controlamos esas decisiones ni lo que cargas en tu instancia, y no suprimimos ni depuramos tus datos por iniciativa propia: cuánto tiempo los conservas lo decides tú, y el sistema te da las herramientas para suprimir y exportar. Tu suscripción a PerfectFlow se paga a través de Stripe; no guardamos los datos de tu tarjeta.</p>
           <p><strong>Estas medidas no sustituyen a un instrumento de transferencia del artículo 46.</strong> No hemos determinado ni formalizado un mecanismo del capítulo V para este acceso ni para los proveedores con matriz fuera del EEE, y no invocamos ningún marco de adecuación ni certificación. Si tu empresa necesita formalizarlo —por ejemplo, con Cláusulas Contractuales Tipo—, cooperamos y firmamos el instrumento que resulte razonablemente aplicable; y si la situación no te sirve, puedes resolver el contrato sin penalización. El detalle está en la <a href="/subprocessors">página de subencargados</a> y en el <a href="/dpa">acuerdo de encargo de tratamiento</a>.</p>
           <p>PerfectFlow es un servicio: respondemos de cómo operamos nosotros. Las obligaciones que te corresponden como responsable de los datos que cargas —base legal, información a tus contactos, representante en la Unión si lo necesitas, contratos con los proveedores que conectas con tu cuenta— son tuyas.</p>
           
@@ -750,7 +754,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <ul>
             <li><strong>Los datos de tu cuenta como cliente</strong> —contacto y facturación— se conservan mientras la contratación esté vigente y, después, durante el plazo de prescripción fiscal y mercantil que nos obligue a guardar los justificantes contables.</li>
             <li><strong>Los datos que tu empresa carga en su instancia</strong> los conservas tú: los plazos los decides tú como responsable. Terminado el contrato, mantenemos la instancia <strong>treinta (30) días</strong> para que puedas exportarlos y, pasado ese plazo, suprimimos la instancia, su base de datos y sus archivos, copias de seguridad incluidas, salvo que nos indiques otra cosa por escrito.</li>
-            <li><strong>Las copias de seguridad</strong> se generan a diario y se sustituyen en el ciclo de rotación descrito en tu contrato, de modo que un dato borrado desaparece también de las copias al completarse ese ciclo.</li>
+            <li><strong>Las copias de seguridad</strong> se generan a diario y se conservan siete días, de modo que un dato borrado desaparece también de las copias al cabo de ese plazo.</li>
           </ul>
           <p>Puedes pedir la eliminación en cualquier momento siguiendo las <a href="../../eliminacion-de-datos/">instrucciones de eliminación de datos</a>.</p>
         </section>

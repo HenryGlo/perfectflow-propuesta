@@ -449,7 +449,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Condiciones del servicio</h1>
     <p class="stand rv">Estas condiciones rigen el uso de PerfectFlow, el ERP/CRM modular que Code Flakes LLC desarrolla y opera para sus clientes.</p>
-    <p class="meta rv">Última actualización: <time datetime="2026-09-15"><strong>15 de septiembre de 2026</strong></time></p>
+    <p class="meta rv">Última actualización: <time datetime="2026-10-06"><strong>6 de octubre de 2026</strong></time></p>
     
   </div>
 </section>
@@ -458,17 +458,20 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <div class="lgrid">
       <details class="toc" id="toc"><summary>Contenido</summary><nav aria-label="Contenido de la página"><ol>
           <li><a href="#servicio">Qué es PerfectFlow</a></li>
+          <li><a href="#aceptacion">Cómo se acepta</a></li>
           <li><a href="#instancia">Tu instancia</a></li>
           <li><a href="#cuentas">Cuentas y credenciales</a></li>
           <li><a href="#uso">Uso aceptable</a></li>
           <li><a href="#redes">Módulo de redes sociales</a></li>
+          <li><a href="#integraciones">Integraciones y páginas públicas</a></li>
           <li><a href="#contenido">Tus datos y tu contenido</a></li>
+          <li><a href="#landing">LandingHub</a></li>
           <li><a href="#disponibilidad">Disponibilidad y mantenimiento</a></li>
           <li><a href="#pagos">Precios y pagos</a></li>
           <li><a href="#baja">Suspensión y baja</a></li>
           <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
           <li><a href="#cambios">Cambios en estas condiciones</a></li>
-          <li><a href="#ley">Ley aplicable</a></li>
+          <li><a href="#ley">Ley aplicable y tribunales</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ol></nav></details>
       <article class="prose" id="doc">
@@ -477,30 +480,39 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>PerfectFlow es un sistema modular de gestión empresarial (ERP/CRM) que <strong>Code Flakes LLC</strong> ("CodeFlakes", "nosotros"), sociedad constituida en el Estado de Florida, Estados Unidos, con domicilio en 4855 West Hillsboro Boulevard, Suite A3, Coconut Creek, FL 33073, presta como servicio. Al contratarlo, tu empresa ("el cliente", "tú") obtiene una licencia de uso limitada, no exclusiva y no transferible, durante la vigencia de la contratación y para los módulos contratados.</p>
         </section>
 
+        <section id="aceptacion">
+          <h2>2. Cómo se acepta</h2>
+          <p>PerfectFlow se contrata suscribiéndose a un plan. El pago se procesa a través de Stripe, y antes de pagar marcas la casilla con la que <strong>aceptas estas condiciones y la <a href="../privacidad/">política de privacidad</a></strong>. Stripe conserva la constancia de esa aceptación.</p>
+          <p>El <a href="../dpa/">acuerdo de encargo de tratamiento</a> y la <a href="../subprocessors/">lista de subencargados</a> <strong>forman parte de estas condiciones</strong>: al aceptarlas, los aceptas también, en la versión publicada en esa fecha. Si contratas en nombre de una empresa, declaras que tienes facultades para obligarla.</p>
+          <p>Estos documentos son los mismos para todos los clientes. No se negocian ni se emiten versiones particulares: si no estás de acuerdo con ellos, no contrates el servicio. Cada versión queda publicada con su fecha, de modo que siempre puedes consultar la que aceptaste.</p>
+        </section>
+
         <section id="instancia">
-          <h2>2. Tu instancia</h2>
-          <p>Cada cliente recibe su propia instancia de PerfectFlow, que CodeFlakes despliega, actualiza y opera. Tu contrato indica en qué modalidad:</p>
+          <h2>3. Tu instancia</h2>
+          <p>Cada cliente recibe su propia instancia de PerfectFlow, que CodeFlakes despliega, actualiza y opera. La modalidad depende de tu plan:</p>
           <ul>
-            <li><strong>Dedicada.</strong> Tu instancia tiene servidor y base de datos propios, sin compartirlos con ningún otro cliente. Es la modalidad por defecto.</li>
-            <li><strong>Compartida (PerfectFlow Lite).</strong> Varios clientes se alojan en un mismo servidor y una misma base de datos, con los registros de cada uno separados por un identificador propio que el sistema aplica a toda consulta, y con un subdominio por cliente.</li>
+            <li><strong>Dedicada.</strong> Tu instancia tiene servidor y base de datos propios, sin compartirlos con ningún otro cliente. Corresponde a los planes que la incluyen.</li>
+            <li><strong>Compartida (PerfectFlow Lite).</strong> Varios clientes se alojan en un mismo servidor y una misma base de datos. Los datos de cada cliente están separados y el sistema limita automáticamente toda consulta a los suyos: <strong>un cliente nunca puede ver los datos de otro</strong>. Cada uno entra por su propio subdominio. Si quieres una base de datos sólo para ti, corresponde a un plan superior.</li>
           </ul>
-          <p>El contrato indica también la <strong>región</strong> en la que se despliega tu instancia, que no se modifica sin acuerdo escrito de ambas partes.</p>
-          <p>El servicio se presta sobre la versión vigente del producto. Las mejoras y correcciones se aplican a las instancias sin coste adicional; los módulos nuevos pueden tener su propio precio.</p>
+          <p>La <strong>región</strong> en la que se despliega tu instancia se fija al contratar y no se modifica sin acuerdo escrito de ambas partes.</p>
+          <p><strong>Actualizaciones.</strong> PerfectFlow es un servicio: todas las instancias funcionan sobre la versión vigente del producto y las actualizaciones se aplican automáticamente. No es posible quedarse en una versión anterior ni rechazar una actualización. Los módulos llevan un interruptor: enciendes los que usas y apagas los que no. Las mejoras y correcciones no tienen coste adicional; los módulos nuevos pueden tener su propio precio.</p>
         </section>
 
         <section id="cuentas">
-          <h2>3. Cuentas y credenciales</h2>
+          <h2>4. Cuentas y credenciales</h2>
           <p>Eres responsable de las cuentas de usuario de tu instancia y de mantener sus contraseñas en secreto, así como de la actividad que se realice con ellas. Avísanos cuanto antes si detectas un uso no autorizado.</p>
         </section>
 
         <section id="uso">
-          <h2>4. Uso aceptable</h2>
+          <h2>5. Uso aceptable</h2>
           <p>No puedes usar PerfectFlow para actividades ilegales, para enviar contenido que infrinja derechos de terceros, para vulnerar la seguridad del sistema o de otras instancias, ni para revender el servicio sin acuerdo previo por escrito.</p>
           <p>Tampoco puedes cargar en tu instancia <strong>categorías especiales de datos</strong> en el sentido del artículo 9 del Reglamento (UE) 2016/679 —datos de salud, origen étnico, creencias, afiliación sindical, vida u orientación sexual o datos biométricos— <strong>sin acuerdo previo y por escrito con nosotros</strong>. No es una formalidad: esos datos exigen medidas y garantías que se pactan caso por caso.</p>
+          <p><strong>Lo que cargas es responsabilidad tuya.</strong> Al introducir datos en tu instancia —a mano, por importación, por un formulario o por una integración— declaras que los has obtenido lícitamente, que tienes base legal y las autorizaciones necesarias para tratarlos y para contactar a esas personas, y que les has informado como corresponde. CodeFlakes no revisa ni controla lo que cargas ni lo que haces con ello, y no puede hacerlo.</p>
+          <p>Si detectamos un uso inusual, ilícito o que ponga en riesgo el servicio, a otros clientes o a terceros, podemos limitar o suspender tu cuenta conforme al apartado 12.</p>
         </section>
 
         <section id="redes">
-          <h2>5. Módulo de redes sociales</h2>
+          <h2>6. Módulo de redes sociales</h2>
           <p>El módulo de redes sociales te permite conectar una cuenta profesional de Instagram o una cuenta de TikTok y publicar en ellas desde PerfectFlow. Se aplican además estas condiciones:</p>
           <ul>
             <li><strong>Autorización.</strong> Solo puedes conectar cuentas sobre las que tengas autorización para publicar. Al conectarla, autorizas a PerfectFlow a publicar en ella en tu nombre.</li>
@@ -514,49 +526,72 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>Qué datos guarda este módulo está detallado en la <a href="../privacidad/">política de privacidad</a>.</p>
         </section>
 
+        <section id="integraciones">
+          <h2>7. Integraciones y páginas públicas</h2>
+          <p>PerfectFlow se conecta con servicios de terceros —pasarelas de cobro, correo, agenda, redes sociales y los que añadas mediante el motor de automatizaciones— usando <strong>tus propias cuentas</strong>. Tú decides qué conectas. La relación con cada proveedor es tuya: sus condiciones, su coste, su disponibilidad y lo que haga con los datos no dependen de nosotros, y respondes de usar esas conexiones conforme a la ley y a las reglas de cada proveedor.</p>
+          <p>Las páginas públicas que el sistema genera para tu negocio —reservas, formularios, tienda— las configuras tú: qué datos pides, si cobras antes o después y con qué pasarela. PerfectFlow es agnóstico respecto de esa configuración: qué pides y por qué lo pides es decisión y responsabilidad tuya.</p>
+          <p>No todas las integraciones están disponibles en todas las regiones.</p>
+        </section>
+
         <section id="contenido">
-          <h2>6. Tus datos y tu contenido</h2>
+          <h2>8. Tus datos y tu contenido</h2>
           <p>Los datos que cargas en PerfectFlow siguen siendo tuyos. Nos autorizas a alojarlos y procesarlos con el único fin de prestarte el servicio, y a acceder a ellos cuando sea necesario para operar o dar soporte a tu instancia.</p>
-          <p>Puedes pedirnos una exportación de tus datos mientras la contratación esté vigente.</p>
+          <p>Puedes exportar tus datos desde el sistema, o pedirnos una exportación, mientras la suscripción esté vigente.</p>
           <p>Respecto de esos datos, tu empresa es el <strong>responsable del tratamiento</strong> y CodeFlakes actúa como <strong>encargado</strong>. Las condiciones de ese tratamiento —instrucciones, confidencialidad, medidas de seguridad, subencargados, asistencia con los derechos de las personas afectadas y qué ocurre con los datos al terminar el contrato— se rigen por el <strong><a href="../dpa/">acuerdo de encargo de tratamiento</a></strong>, que forma parte inseparable de estas condiciones.</p>
-          <p><strong>Al contratar PerfectFlow aceptas también ese acuerdo</strong>, en la versión publicada en el momento de la contratación. Si necesitas una copia firmada o con anexos particulares para tu organización, escríbenos a <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>.</p>
-          <p>El detalle de los datos que trata tu instancia —categorías, finalidades, módulos activos y proveedores conectados— consta en tu <strong>ficha de configuración</strong>, que mantenemos actualizada y te facilitamos cuando la pidas. En caso de contradicción entre estas condiciones y el acuerdo de encargo en materia de protección de datos, prevalece el acuerdo.</p>
+          <p><strong>No tocamos tus datos por iniciativa propia.</strong> Mientras el servicio esté vigente, CodeFlakes no suprime, depura ni modifica los datos de tu instancia: cuánto tiempo conservas cada dato y cuándo lo eliminas lo decides tú, y el sistema te da las herramientas para suprimir y exportar.</p>
+          <p><strong>Desde dónde se opera tu instancia.</strong> Los miembros de CodeFlakes que pueden acceder a tu instancia lo hacen desde fuera del Espacio Económico Europeo, en las condiciones y con las medidas que describe la cláusula 9 del <a href="../dpa/">acuerdo de encargo de tratamiento</a>, que no incorpora un mecanismo de transferencia internacional. Al contratar declaras conocerlo y lo aceptas.</p>
+          <p>En caso de contradicción entre estas condiciones y el acuerdo de encargo en materia de protección de datos, prevalece el acuerdo.</p>
+        </section>
+
+        <section id="landing">
+          <h2>9. LandingHub</h2>
+          <p>Algunos planes incluyen una landing que CodeFlakes diseña, aloja y mantiene mientras dure tu suscripción.</p>
+          <ul>
+            <li><strong>Lo que es tuyo.</strong> Tu marca, tus textos y las imágenes y materiales que nos entregues. Garantizas que tienes los derechos sobre ellos y respondes de cualquier reclamación al respecto.</li>
+            <li><strong>Lo que es de CodeFlakes.</strong> El diseño, el código y las imágenes y materiales que hayamos aportado nosotros. Mientras dure la suscripción puedes usar la landing publicada; CodeFlakes puede reutilizar su diseño y su código.</li>
+            <li><strong>Al terminar.</strong> La landing se retira y sigue siendo de CodeFlakes. Si quieres quedártela, puedes pedir su liberación por un pago único de <strong>100&nbsp;USD</strong>: te entregamos los archivos y pasa a ser tuya, con las licencias de terceros que apliquen a los materiales que incluya.</li>
+            <li><strong>Medición y publicidad.</strong> Si pides instalar herramientas de medición o píxeles publicitarios, se instalan con tus cuentas y bajo tu responsabilidad, incluido el aviso de cookies que exija la ley que te aplique.</li>
+          </ul>
         </section>
 
         <section id="disponibilidad">
-          <h2>7. Disponibilidad y mantenimiento</h2>
-          <p>Trabajamos para mantener el servicio disponible de forma continua, pero no garantizamos un funcionamiento ininterrumpido ni libre de errores. Las ventanas de mantenimiento programado se avisan con antelación. Los compromisos concretos de nivel de servicio, si los hay, son los que figuren en tu contrato.</p>
+          <h2>10. Disponibilidad y mantenimiento</h2>
+          <p>Trabajamos para mantener el servicio disponible de forma continua, pero no garantizamos un funcionamiento ininterrumpido ni libre de errores. Las ventanas de mantenimiento programado se avisan con antelación. Los compromisos concretos de nivel de servicio, si los hay, son los de tu plan.</p>
         </section>
 
         <section id="pagos">
-          <h2>8. Precios y pagos</h2>
-          <p>Los precios y el ciclo de facturación son los de tu plan contratado. Los cambios de precio se comunican con antelación y se aplican al siguiente ciclo. La falta de pago puede dar lugar a la suspensión del servicio.</p>
+          <h2>11. Precios y pagos</h2>
+          <p>Los precios y el ciclo de facturación son los de tu plan. La suscripción se cobra a través de Stripe, que trata tus datos de pago conforme a sus propias condiciones; CodeFlakes no almacena los datos de tu tarjeta. Los cambios de precio se comunican con antelación y se aplican al siguiente ciclo. La falta de pago puede dar lugar a la suspensión del servicio.</p>
         </section>
 
         <section id="baja">
-          <h2>9. Suspensión y baja</h2>
-          <p>Puedes darte de baja al final de tu ciclo de facturación. Podemos suspender el servicio en caso de impago o de incumplimiento grave de estas condiciones, avisándote previamente salvo que la urgencia lo impida.</p>
+          <h2>12. Suspensión y baja</h2>
+          <p>Puedes darte de baja al final de tu ciclo de facturación. Podemos limitar o suspender el servicio en caso de impago, de incumplimiento de estas condiciones, o si detectamos un uso inusual, ilícito o que ponga en riesgo el servicio, a otros clientes o a terceros, avisándote previamente salvo que la urgencia lo impida.</p>
           <p>Tras la baja, avísanos si quieres una exportación de tus datos antes de que se retire la instancia. Para eliminar los datos de las cuentas de redes conectadas, sigue las <a href="../eliminacion-de-datos/">instrucciones de eliminación de datos</a>.</p>
         </section>
 
         <section id="responsabilidad">
-          <h2>10. Limitación de responsabilidad</h2>
+          <h2>13. Limitación de responsabilidad</h2>
           <p>En la medida en que lo permita la ley aplicable, CodeFlakes no responde por daños indirectos, incidentales o consecuentes, ni por lucro cesante, derivados del uso o de la imposibilidad de uso del servicio, incluidas las publicaciones que no lleguen a publicarse por causas atribuibles a las plataformas de terceros.</p>
+          <p><strong>Tope.</strong> En la medida en que lo permita la ley aplicable, la responsabilidad total de CodeFlakes frente a ti, por cualquier causa, no excederá del importe que hayas pagado por el servicio en los doce (12) meses anteriores al hecho que la origine.</p>
+          <p><strong>Lo que respondes tú.</strong> Mantendrás indemne a CodeFlakes frente a las reclamaciones, sanciones y gastos que deriven de los datos y contenidos que cargues, de la falta de base legal o de autorización para tratarlos, de las cuentas y proveedores que conectes, de la configuración de tus páginas públicas, o de un uso del servicio contrario a estas condiciones.</p>
+          <p>Nada de lo anterior limita la responsabilidad que la ley no permite limitar, ni los derechos que la normativa de protección de datos reconoce a las personas afectadas.</p>
         </section>
 
         <section id="cambios">
-          <h2>11. Cambios en estas condiciones</h2>
-          <p>Podemos actualizar estas condiciones. Los cambios se publican en esta página con su fecha de última actualización y, si son relevantes, se avisan por correo a los clientes activos.</p>
+          <h2>14. Cambios en estas condiciones</h2>
+          <p>Podemos actualizar estas condiciones y los documentos que forman parte de ellas. Cada versión se publica con su fecha, y los cambios relevantes se avisan por correo a los clientes activos. <strong>Si sigues usando el servicio después de la fecha de una nueva versión, la aceptas</strong>; si no estás de acuerdo, puedes darte de baja conforme al apartado 12.</p>
         </section>
 
         <section id="ley">
-          <h2>12. Ley aplicable</h2>
+          <h2>15. Ley aplicable y tribunales</h2>
           <p>Estas condiciones se rigen por las leyes del Estado de Florida, Estados Unidos.</p>
+          <p>Cualquier controversia relativa a estas condiciones o al servicio se somete a los tribunales estatales o federales con sede en el condado de Broward, Florida, a cuya jurisdicción exclusiva se someten ambas partes.</p>
           <p>Esa elección de ley no priva a los clientes establecidos en el Espacio Económico Europeo ni en el Reino Unido de la protección que les otorgan sus normas imperativas de protección de datos, que se aplican en todo caso al tratamiento descrito en el acuerdo de encargo de tratamiento.</p>
         </section>
 
         <section id="contacto">
-          <h2>13. Contacto</h2>
+          <h2>16. Contacto</h2>
           <div class="note">
             <p><strong>Code Flakes LLC</strong> — PerfectFlow</p>
             <p>4855 West Hillsboro Boulevard, Suite A3, Coconut Creek, FL 33073, Estados Unidos</p>

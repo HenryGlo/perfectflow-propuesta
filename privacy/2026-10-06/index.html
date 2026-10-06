@@ -485,9 +485,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="arquitectura">
           <h2>2. Where your data lives</h2>
-          <p>PerfectFlow is deployed in one of two modes, and your contract states which one is yours:</p>
+          <p>PerfectFlow is deployed in one of two modes, and your plan determines which one is yours:</p>
           <ul>
-            <li><strong>Dedicated instance.</strong> Your company gets its own server and its own database. No other client shares either. This is the default.</li>
+            <li><strong>Dedicated instance.</strong> Your company gets its own server and its own database. No other client shares either. It comes with the plans that include it.</li>
             <li><strong>PerfectFlow Lite.</strong> Several companies are hosted on one server and one database. Each company's records carry their own identifier, and the system filters <em>every</em> query by it automatically, so each company reaches only its own data. Each also signs in through its own subdomain.</li>
           </ul>
           <p>Either way, your company's data — including the social media accounts you connect and the posts you schedule — stays separate from every other client's.</p>
@@ -652,6 +652,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>PerfectFlow uses whichever your account granted.</p>
 
           <h3>WhatsApp Business</h3>
+          <p><em>For now this channel is not available to clients established in the European Economic Area.</em></p>
           <p>Separately from Instagram, you can connect a <strong>WhatsApp Business</strong> account, which does messaging only: nothing is published to WhatsApp. When you do, the module stores the conversation and the messages exchanged — sender identifier and display information, message text and attachments, timestamps, and whether the thread has been answered or archived — so authorized users of your company can reply from PerfectFlow.</p>
           <p>This is a separate integration with its own authorisation, and it is not enabled unless you connect the account.</p>
 
@@ -720,6 +721,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
                 <tr><th scope="row">TikTok</th><td>Publishing the videos you schedule</td><td>Ireland and the United States</td></tr>
                 <tr><th scope="row">Your outbound email provider</th><td>Delivering <strong>all</strong> mail that leaves the system: notices to your users — password resets, invitations — and communications to your contacts. The account is always yours</td><td>Depends on the provider you contract</td></tr>
                 <tr><th scope="row">Stripe</th><td>Charging your own customers — the account is always yours</td><td>Ireland and the United States</td></tr>
+                <tr><th scope="row">PagueloFacil</th><td>Charging your own customers — only if you turn on this gateway, with your account</td><td>Panama</td></tr>
+                <tr><th scope="row">Other integrations</th><td>Whatever you connect through the automation engine with your own accounts — for example, your Calendly scheduling</td><td>Depends on the provider you choose</td></tr>
               </tbody>
             </table>
           </div>
@@ -730,8 +733,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
           <h3>International transfers</h3>
           <p>Code Flakes LLC is based in the <strong>United States</strong>. Even where a European client's instance is hosted inside the EEA, <strong>the processor is a US company</strong>, and that is the flow the processing agreement covers.</p>
-          <p>The people who operate those instances <strong>access them from Venezuela</strong>, a country with no adequacy decision from the European Commission. They are partners and officers of the company itself, not a contracted firm; even so, remote access of this kind <strong>may constitute an international transfer</strong> under Chapter V of the GDPR. We say so plainly because we cannot provide the service without that access.</p>
-          <p>The measures we apply: we go in <strong>only when strictly necessary</strong>, always <strong>through an encrypted VPN</strong> with an exit point in the United States — and the work <strong>runs on the server itself</strong>, with no copies downloaded to local machines. Updates are installed by an automated deployment system (GitHub Actions), which connects to the server from the United States, runs the commands there and extracts no copies.</p>
+          <p>The members of Code Flakes who can access those instances <strong>do so from Venezuela</strong>, a country with no adequacy decision from the European Commission. They are members of the company itself, not a contracted firm; even so, remote access of this kind <strong>may constitute an international transfer</strong> under Chapter V of the GDPR. We say so plainly because we cannot provide the service without that access.</p>
+          <p>The measures we apply: day to day nobody goes in — what connects is the automated deployment system; a team member goes in <strong>only when a problem is blocking the service</strong>, always <strong>through an encrypted VPN</strong> with an exit point in the United States — and the work <strong>runs on the server itself</strong>, with no copies downloaded to local machines. Updates are installed by an automated deployment system (GitHub Actions), which connects to the server from the United States, runs the commands there and extracts no copies.</p>
+          <p><strong>What you configure.</strong> The integrations you connect and the public booking, form or checkout pages the system generates for your business are configured by you: what data you ask for, whether you charge and through which gateway. We do not control those decisions or what you load into your instance, and we do not delete or purge your data on our own initiative: how long you keep it is your decision, and the system gives you the tools to erase and export. Your PerfectFlow subscription is paid through Stripe; we do not store your card details.</p>
           <p><strong>These measures do not replace a transfer instrument under Article 46.</strong> We have not determined or formalised a Chapter V mechanism for this access or for providers headquartered outside the EEA, and we invoke no adequacy framework and no certification. If your company needs it formalised — for example, through Standard Contractual Clauses — we will cooperate and sign the instrument that is reasonably applicable; and if the situation does not work for you, you may terminate the contract without penalty. The detail is on the <a href="/en/subprocessors">subprocessors page</a> and in the <a href="/en/dpa">data processing agreement</a>.</p>
           <p>PerfectFlow is a service: we answer for how we operate. The obligations that fall to you as controller of the data you load — legal basis, informing your contacts, a representative in the Union if you need one, contracts with the providers you connect through your own account — are yours.</p>
           
@@ -750,7 +754,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <ul>
             <li><strong>Your client account data</strong> — contact and billing — is kept while the subscription is active and, afterwards, for the tax and commercial limitation period that obliges us to retain accounting records.</li>
             <li><strong>The data your company loads into its instance</strong> is yours to keep: you set the periods, as controller. Once the contract ends we hold the instance for <strong>thirty (30) days</strong> so you can export it, and after that we delete the instance, its database and its files, backups included, unless you tell us otherwise in writing.</li>
-            <li><strong>Backups</strong> are taken daily and overwritten on the rotation cycle set out in your contract, so a deleted record also disappears from the backups once that cycle completes.</li>
+            <li><strong>Backups</strong> are taken daily and kept for seven days, so a deleted record also disappears from the backups after that period.</li>
           </ul>
           <p>You can request deletion at any time by following the <a href="../../data-deletion/">data deletion instructions</a>.</p>
         </section>
