@@ -447,7 +447,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Acuerdo de encargo de tratamiento</h1>
     <p class="stand rv">El Anexo B del contrato de servicio. Regula el tratamiento que Code Flakes LLC realiza por cuenta del Cliente sobre los datos personales que este carga en su instancia, conforme al artículo 28 del Reglamento (UE) 2016/679. Al contratar PerfectFlow se acepta este acuerdo junto con las condiciones del servicio.</p>
-    <p class="meta rv">Última actualización: <time datetime="2026-09-15"><strong>15 de septiembre de 2026</strong></time></p>
+    <p class="meta rv">Última actualización: <time datetime="2026-10-06"><strong>6 de octubre de 2026</strong></time></p>
     
   </div>
 </section>
@@ -489,7 +489,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
   </section>
 <section>
     <h2>3 Instrucciones</h2>
-    <p>CodeFlakes trata los datos personales <strong>únicamente siguiendo instrucciones documentadas del Cliente</strong>, incluidas las relativas a transferencias internacionales, salvo que le obligue otra cosa el <strong>Derecho de la Unión o del Estado miembro</strong> que le sea aplicable, en cuyo caso lo informará al Cliente antes del tratamiento salvo que ese mismo Derecho lo prohíba por razones importantes de interés público. Las solicitudes de autoridades de terceros países se tratan conforme a la cláusula 15 de las Cláusulas Contractuales Tipo y no constituyen por sí mismas una obligación que permita apartarse de las instrucciones del Cliente.</p>
+    <p>CodeFlakes trata los datos personales <strong>únicamente siguiendo instrucciones documentadas del Cliente</strong>, incluidas las relativas a transferencias internacionales, salvo que le obligue otra cosa el <strong>Derecho de la Unión o del Estado miembro</strong> que le sea aplicable, en cuyo caso lo informará al Cliente antes del tratamiento salvo que ese mismo Derecho lo prohíba por razones importantes de interés público. Las solicitudes de autoridades de terceros países no constituyen por sí mismas una obligación que permita apartarse de las instrucciones del Cliente: CodeFlakes las examina, informa al Cliente cuando el Derecho aplicable lo permita, y se limita a lo estrictamente exigible. Si llegan a incorporarse Cláusulas Contractuales Tipo, regirá además el procedimiento que éstas prevean.</p>
     <p>El contrato de servicio, este acuerdo y el uso ordinario del sistema por los usuarios del Cliente constituyen las instrucciones iniciales.</p>
     <p>Las instrucciones posteriores se cursan <strong>por correo electrónico</strong> a las direcciones designadas. La coordinación por mensajería instantánea u otros canales no constituye instrucción documentada a efectos de esta cláusula.</p>
     <p>CodeFlakes <strong>informará de inmediato al Cliente</strong> si, en su opinión, una instrucción infringe el RGPD u otra norma de protección de datos, y <strong>suspenderá su ejecución mientras persista la incompatibilidad</strong>. La confirmación del Cliente no hace lícito el contenido de la instrucción: la ejecución se reanuda sólo si la instrucción se modifica o si el Cliente acredita su licitud.</p>
@@ -535,11 +535,16 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <p>Las personas autorizadas son <strong>socios y directivos de CodeFlakes</strong>, sujetos a deber de confidencialidad documentado. No intervienen contratistas externos ni personal de otras sociedades, de modo que este acceso <strong>no constituye un subencargo</strong>.</p>
     <p><strong>Las tareas de operación y soporte se ejecutan sobre el propio servidor</strong>, conectándose a la Instancia. <strong>No se descargan ni se replican copias</strong> de la base de datos, de los archivos ni de las copias de seguridad a equipos situados fuera de la Región. Los datos permanecen en Fráncfort; lo que cruza la frontera es el acceso, no una copia.</p>
     <p>Cualquier alta de personal autorizado en otro país se incorpora al Anexo IV <strong>antes</strong> de concederle acceso.</p>
-    <p>El <strong>Anexo IV</strong> recoge el mapa de flujos: quién exporta, quién recibe, desde qué país, con qué finalidad, sobre qué datos y con qué mecanismo. Ese mapa, y no el domicilio de las partes, es lo que determina las garantías aplicables a cada flujo.</p>
-    <p>Antes de la firma debe verificarse, con asesoría jurídica, qué mecanismo del capítulo V del RGPD corresponde a cada flujo del Anexo IV. En particular, si CodeFlakes queda directamente sujeto al RGPD por el <strong>artículo 3.2</strong>, la aplicabilidad de las Cláusulas Contractuales Tipo de la Decisión de Ejecución (UE) 2021/914 a ese tratamiento es una cuestión abierta que <strong>no se resuelve rellenando el Módulo Dos</strong>. Este acuerdo no invoca ningún marco de adecuación ni certificación mientras esa verificación no se complete.</p>
+    <p>Las actualizaciones de versión, las migraciones y la configuración inicial no las ejecuta una persona conectada al servidor, sino un <strong>sistema de despliegue automatizado</strong> (GitHub Actions, operado por GitHub, Inc., Estados Unidos), que se conecta a la Instancia, ejecuta las órdenes sobre el propio servidor y no extrae copias de los datos. GitHub, Inc. figura como subencargado en el Anexo III.</p>
+    <p>El <strong>Anexo IV</strong> recoge el mapa de flujos: receptor y entidad jurídica, país de origen y de destino o acceso, finalidad, categorías de datos y mecanismo aplicable o pendiente. Las garantías aplicables a cada flujo se determinan atendiendo a los hechos del flujo y a todos los criterios legales pertinentes, incluidos el establecimiento de las partes y el ámbito territorial de la norma. El mapa documenta esos hechos; no sustituye esa valoración.</p>
+    <p>Las partes hacen constar que <strong>el mecanismo del capítulo V aplicable a cada flujo del Anexo IV no está determinado</strong>. En particular, si CodeFlakes queda directamente sujeto al Reglamento por el <strong>artículo 3.2</strong>, la aplicabilidad de las Cláusulas Contractuales Tipo de la Decisión de Ejecución (UE) 2021/914 a ese tratamiento es una cuestión que no se resuelve rellenando el Módulo Dos. Que quienes acceden sean personal propio de CodeFlakes excluye el subencargo, pero no excluye por sí solo que el acceso constituya una transferencia. <strong>Este acuerdo no invoca ningún marco de adecuación ni certificación alguna.</strong></p>
+    <p><strong>Medidas aplicadas.</strong> CodeFlakes aplica a ese acceso las medidas de esta cláusula y del Anexo II: acceso únicamente cuando resulta imprescindible, siempre a través de VPN cifrada con punto de salida en Estados Unidos, soporte sobre el propio servidor sin descarga de copias, y personal propio sujeto a confidencialidad.</p>
+    <p><strong>Al aceptar este acuerdo, el Cliente declara conocer esta situación y la acepta</strong>: contrata sabiendo que el acuerdo no incorpora un instrumento del artículo 46 del RGPD para este acceso y que las medidas anteriores no lo sustituyen.</p>
+    <p>Si el Cliente considera necesario formalizar un mecanismo —por ejemplo, Cláusulas Contractuales Tipo—, puede proponerlo en cualquier momento. CodeFlakes cooperará de buena fe, facilitará la información necesaria y suscribirá el instrumento que resulte razonablemente aplicable. Cada parte asume el coste de su propio asesoramiento.</p>
+    <p><strong>El Cliente puede resolver este acuerdo y el contrato en cualquier momento por este motivo, sin penalización</strong>, y CodeFlakes procederá conforme a la cláusula 11.</p>
     <p>Cuando se determine que proceden las Cláusulas Contractuales Tipo, se incorporarán <strong>como anexo firmado, no por mera referencia</strong>, identificando expresamente: módulo aplicable, partes exportadora e importadora, el Derecho aplicable a las cláusulas, los tribunales competentes, la autoridad de control competente, las opciones elegidas en cada cláusula que ofrezca alternativas, y sus anexos debidamente cumplimentados. El orden de prevalencia se establecerá en ese anexo.</p>
     <p>La autorización general de subencargados de la cláusula 6 <strong>no constituye por sí sola cobertura de las transferencias posteriores</strong>: cada subencargado establecido fuera del EEE requiere su propio mecanismo, que se documenta en el Anexo IV.</p>
-    <p>CodeFlakes documenta la evaluación de impacto de la transferencia y las medidas complementarias que correspondan, y las pone a disposición del Cliente a su solicitud.</p>
+    <p>CodeFlakes documenta las medidas complementarias que aplica y facilita al Cliente, a su solicitud, la información de hecho necesaria para la evaluación de impacto de la transferencia. La valoración de las obligaciones que corresponden al Cliente como responsable —incluidas las de la cláusula 2— es del propio Cliente.</p>
   </section>
 <section>
     <h2>10 Auditoría</h2>
@@ -599,6 +604,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <ul>
       <li>Todo el tráfico viaja cifrado sobre <strong>HTTPS/TLS</strong>, tanto el acceso al sistema como las llamadas a las API de terceros.</li>
       <li>Los <strong>tokens de acceso</strong> de cuentas conectadas se almacenan cifrados en la base de datos.</li>
+      <li><strong>Cifrado en reposo.</strong> La base de datos del Cliente, la del motor de automatizaciones y sus copias de seguridad residen en el servicio de base de datos gestionado del proveedor de alojamiento, que las cifra en reposo. La Instancia se conecta a él por la red privada del proveedor y con TLS.</li>
       <li>Los archivos se guardan en <strong>almacenamiento de objetos privado</strong>; el acceso externo se hace mediante URL firmada con vencimiento.</li>
     </ul>
     <h3>Control de acceso</h3>
@@ -607,6 +613,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <li>Sistema de <strong>roles y permisos granulares</strong>, con condiciones que restringen los registros visibles según la oficina o la sede del usuario.</li>
       <li>El acceso administrativo de CodeFlakes se limita al personal que opera el servicio, sujeto a compromiso de confidencialidad.</li>
       <li><strong>El soporte se presta sobre el propio servidor.</strong> No se descargan ni se replican copias de la base de datos, de los archivos ni de las copias de seguridad a equipos locales.</li>
+      <li><strong>Conexiones administrativas.</strong> El acceso al servidor se hace exclusivamente por SSH con clave criptográfica; no se admite acceso por contraseña.</li>
+      <li><strong>Autenticación en dos pasos.</strong> Las cuentas con las que CodeFlakes administra la infraestructura —DigitalOcean, Cloudflare y GitHub— tienen activada la autenticación multifactor para todo el personal autorizado.</li>
+      <li><strong>VPN.</strong> Las conexiones que el personal de CodeFlakes realiza al servidor se hacen siempre a través de una red privada virtual (VPN) cifrada con punto de salida en Estados Unidos. Es una medida de protección del canal: no modifica el lugar desde el que se accede ni la calificación del acceso, que se rige por la cláusula 9.</li>
+      <li><strong>Acceso mínimo.</strong> El personal de CodeFlakes sólo accede a la Instancia cuando resulta imprescindible para operarla, mantenerla o dar soporte al Cliente. No se realizan accesos rutinarios a los datos personales.</li>
+      <li><strong>Despliegue automatizado.</strong> Las actualizaciones de versión, las migraciones de la base de datos y la configuración inicial las ejecuta un sistema de despliegue automatizado (GitHub Actions). Ese sistema se conecta al servidor con clave criptográfica y ejecuta las órdenes sobre el propio servidor: no extrae ni almacena copias de la base de datos ni de los archivos, y sus registros recogen la salida técnica de esas órdenes. Esta conexión no pasa por la VPN.</li>
     </ul>
     <h3>Trazabilidad</h3>
     <ul>
@@ -624,7 +635,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <li><strong>Supresión por interesado.</strong> Desde la ficha de cada registro, el Cliente puede suprimir de forma irreversible los datos de un interesado concreto —incluidos los archivos asociados y los registros relacionados— o anonimizarlos de modo que no puedan volver a asociarse a una persona. Es un camino distinto del borrado ordinario, que es lógico y reversible.</li>
       <li><strong>Portabilidad y acceso.</strong> Desde la misma ficha, el Cliente puede exportar todo lo que el sistema guarda de un interesado, en formato estructurado y legible por máquina.</li>
       <li><strong>Plazos de conservación.</strong> El Cliente fija el plazo aplicable a sus datos y el sistema ejecuta la purga automática al vencimiento. <strong>Viene desactivada</strong> y se enciende cuando el Cliente indica el plazo y los tipos de registro a los que aplica: purgar por defecto borraría datos que el Cliente aún necesita.</li>
-      <li>Las copias de seguridad rotan en un plazo máximo de noventa (90) días, transcurrido el cual los datos suprimidos desaparecen también de ellas.</li>
+      <li>Las copias de seguridad rotan en un plazo máximo de siete (7) días, transcurrido el cual los datos suprimidos desaparecen también de ellas.</li>
     </ul>
 
 </section>
@@ -639,7 +650,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
         </thead>
         <tbody>
           <tr><th scope="row">DigitalOcean, LLC</th><td>Servidores, base de datos y almacenamiento de archivos</td><td>la Región que corresponda: <strong>Fráncfort (Alemania)</strong> para clientes del EEE, <strong>Nueva York (EE.&nbsp;UU.)</strong> en los demás casos, según el Anexo A del contrato</td></tr>
-          <tr><th scope="row">Cloudflare</th><td>Resolución DNS del dominio a la dirección del servidor. Sin proxy: no interviene en el tráfico</td><td>Red global</td></tr>
+          <tr><th scope="row">Cloudflare, Inc.<br><span style="font-weight:400">Sociedad estadounidense</span></th><td>Resolución DNS del dominio a la dirección del servidor. Sin proxy: no interviene en el tráfico</td><td>Red global</td></tr>
+          <tr><th scope="row">GitHub, Inc.<br><span style="font-weight:400">Sociedad estadounidense</span></th><td>Repositorio del código y sistema de despliegue automatizado. Custodia la clave de acceso al servidor y ejecuta sobre él las órdenes de actualización. No aloja datos del Cliente</td><td>Estados Unidos</td></tr>
         </tbody>
       </table>
     </div>
@@ -671,26 +683,23 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <span class="lbl">Sobre el motor de automatizaciones</span>
       <p>Las automatizaciones se ejecutan sobre <strong>software autoalojado por CodeFlakes en el propio servidor de la Instancia del Cliente y con su propia base de datos</strong>. No existe un motor central compartido entre clientes, y el proveedor de ese software no es subencargado ni accede a los datos del Cliente. En consecuencia, las automatizaciones se procesan <strong>en la misma Región</strong> que el resto de la Instancia. Los mensajes que esas automatizaciones envían sí salen por los canales de la tabla anterior.</p>
     </div>
-    <p>Lista vigente a fecha de firma. Las altas y bajas se rigen por la cláusula 6 y se publican en <a href="https://perfectflow.cloud/subprocessors">perfectflow.cloud/subprocessors</a>, donde consta la versión actualizada y su fecha.</p>
+    <p>Lista vigente a la fecha de esta versión. Las altas y bajas se rigen por la cláusula 6 y se publican en <a href="https://perfectflow.cloud/subprocessors">perfectflow.cloud/subprocessors</a>, donde consta la versión actualizada y su fecha.</p>
   </section>
 <section>
     <h2>IV Anexo IV · Mapa de flujos y transferencias</h2>
-    <p>Este anexo, y no el domicilio de las partes, determina qué garantías aplican a cada flujo. Se completa antes de la firma y se actualiza cuando cambie un flujo.</p>
+    <p>Este anexo documenta los hechos de cada flujo. Las garantías aplicables se rigen por la cláusula 9. CodeFlakes lo actualiza cuando cambie un flujo o se incorpore personal autorizado en otro país, y lo publica en esta página.</p>
 
-    <div class="note">
-      <span class="lbl">Pendiente de completar antes de la firma</span>
-      <p>Las filas marcadas requieren confirmación de hechos que no pueden darse por supuestos: desde qué países accede realmente el personal y los contratistas, y qué entidad contractual concreta presta cada servicio.</p>
-    </div>
-
+    
     <div class="dtable-wrap">
       <table class="dtable">
         <thead>
           <tr><th scope="col">Flujo</th><th scope="col">Receptor y entidad</th><th scope="col">País desde/hacia</th><th scope="col">Finalidad y datos</th><th scope="col">Mecanismo</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">Alojamiento de la Instancia</th><td>DigitalOcean, LLC</td><td>Región del Anexo A</td><td>Servidores, base de datos y archivos. Todos los datos de la Instancia</td><td>Sujeto a la determinación de la cláusula 9</td></tr>
-          <tr><th scope="row">Acceso remoto de soporte</th><td>Dos (2) personas autorizadas<br><span style="font-weight:400"><strong>Socios y directivos de Code Flakes LLC.</strong> No son contratistas externos ni personal de otra sociedad: su acceso es el del propio encargado y no constituye un subencargo. La relación nominal se mantiene actualizada y se facilita al Cliente a su solicitud</span></td><td><strong>Venezuela</strong><br><span style="font-weight:400">No cuenta con decisión de adecuación de la Comisión Europea</span></td><td>Operación, mantenimiento y soporte. Acceso potencial a todos los datos de la Instancia</td><td><strong>Calificación y mecanismo sujetos a la determinación de la cláusula 9.</strong> Al tratarse de personal de la propia sociedad y no de un tercero, está por determinar si este acceso constituye una transferencia del capítulo V</td></tr>
-          <tr><th scope="row">Resolución DNS</th><td>Cloudflare, Inc.</td><td>Red global</td><td><strong>Sólo resolución de nombre a dirección IP, sin proxy.</strong> No interviene en el tráfico ni accede a su contenido</td><td>Sujeto a la determinación de la cláusula 9, incluida la valoración de si constituye tratamiento</td></tr>
+          <tr><th scope="row">Alojamiento de la Instancia</th><td>DigitalOcean, LLC</td><td>Región del Anexo A</td><td>Servidores, base de datos y archivos. Todos los datos de la Instancia</td><td>Conforme a la cláusula 9. Mecanismo no determinado</td></tr>
+          <tr><th scope="row">Acceso remoto de soporte</th><td>Dos (2) personas autorizadas<br><span style="font-weight:400"><strong>Socios y directivos de Code Flakes LLC.</strong> No son contratistas externos ni personal de otra sociedad: su acceso es el del propio encargado y no constituye un subencargo. La relación nominal se mantiene actualizada y se facilita al Cliente a su solicitud</span></td><td><strong>Venezuela</strong><br><span style="font-weight:400">No cuenta con decisión de adecuación de la Comisión Europea</span></td><td>Operación, mantenimiento y soporte. Acceso potencial a todos los datos de la Instancia</td><td><strong>Conforme a la cláusula 9. Mecanismo no determinado.</strong> El receptor relevante es Code Flakes LLC, entidad establecida fuera del EEE que opera desde Venezuela. Que quienes acceden sean personal propio excluye el subencargo, pero no excluye por sí solo que el acceso constituya una transferencia del capítulo V. Medidas complementarias: acceso limitado a los casos imprescindibles, siempre por VPN, y soporte sobre el propio servidor sin descarga de copias (Anexo II). Estas medidas no sustituyen a un instrumento del artículo 46</td></tr>
+          <tr><th scope="row">Resolución DNS</th><td>Cloudflare, Inc.</td><td>Red global</td><td><strong>Sólo resolución de nombre a dirección IP, sin proxy.</strong> No interviene en el tráfico ni accede a su contenido</td><td>Conforme a la cláusula 9, incluida la valoración de si constituye tratamiento. Mecanismo no determinado</td></tr>
+          <tr><th scope="row">Despliegue automatizado</th><td>GitHub, Inc.</td><td>Estados Unidos</td><td>Actualizaciones de versión, migraciones y configuración inicial. Se conecta al servidor y ejecuta órdenes sobre él; no se extraen copias. Acceso técnico potencial a la Instancia</td><td>Conforme a la cláusula 9. Mecanismo no determinado</td></tr>
         </tbody>
       </table>
     </div>
@@ -699,15 +708,9 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <p>Si el Cliente solicita incorporar a la Landing un <strong>píxel de medición publicitaria</strong> u otra tecnología equivalente, ese flujo se relaciona en este anexo a efectos informativos, indicando receptor, datos transmitidos y responsable. <strong>No es una funcionalidad estándar</strong>: se instala a petición expresa y con los datos de configuración que el Cliente facilite.</p>
   </section>
 <section>
-    <h2>— Firmas</h2>
-    <div class="sig">
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <div class="sig" style="margin-top:0">
-      <div><strong>Code Flakes LLC</strong>Nombre:<br>Cargo:<br>Fecha:</div>
-      <div><strong>El Cliente</strong>Nombre:<br>Cargo:<br>Fecha:</div>
-    </div>
+    <h2>— Aceptación</h2>
+    <p>Este acuerdo no requiere firma manuscrita. El Cliente lo acepta al contratar PerfectFlow, junto con las condiciones del servicio, en la versión publicada en esa fecha; cada versión se conserva publicada con su fecha. Las referencias de este acuerdo al contrato, a su Anexo A y a la firma se entienden hechas a las condiciones del servicio, a los datos de la contratación del Cliente —plan, modalidad, región y contactos— y a esa aceptación.</p>
+    <p>Si el Cliente necesita un ejemplar firmado para su organización, puede pedirlo por correo a CodeFlakes. Su contenido es el de esta página.</p>
   </section>
       </article>
     </div>

@@ -449,7 +449,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Subencargados del tratamiento</h1>
     <p class="stand rv">Los proveedores que intervienen en la prestación de PerfectFlow y que pueden tratar datos personales por cuenta de nuestros clientes, conforme al artículo 28 del Reglamento (UE) 2016/679. Esta página es la versión vigente del Anexo III del acuerdo de encargo de tratamiento.</p>
-    <p class="meta rv">Última actualización: <time datetime="2026-09-15"><strong>15 de septiembre de 2026</strong></time></p>
+    <p class="meta rv">Última actualización: <time datetime="2026-10-06"><strong>6 de octubre de 2026</strong></time></p>
     
   </div>
 </section>
@@ -474,7 +474,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="permanentes">
           <h2>2. Subencargados permanentes</h2>
-          <p><strong>Son sólo los que hacen que el servicio exista.</strong> Nosotros ponemos el CRM y la conexión con tus cuentas; no ponemos las cuentas de los servicios con los que operas. Por eso esta lista es corta y no crece cuando activas un módulo nuevo. Los dos primeros sostienen tu instancia; el tercero sólo interviene si pides una demostración desde este sitio, antes de ser cliente.</p>
+          <p><strong>Son sólo los que hacen que el servicio exista.</strong> Nosotros ponemos el CRM y la conexión con tus cuentas; no ponemos las cuentas de los servicios con los que operas. Por eso esta lista es corta y no crece cuando activas un módulo nuevo. Los dos primeros sostienen tu instancia; el tercero la mantiene actualizada; el cuarto sólo interviene si pides una demostración desde este sitio, antes de ser cliente.</p>
           <div class="dtable-wrap">
             <table class="dtable">
               <thead>
@@ -482,7 +482,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               </thead>
               <tbody>
                 <tr><th scope="row">DigitalOcean</th><td>Servidores, base de datos y almacenamiento de archivos</td><td>Todos los datos de tu instancia</td><td>La región de tu instancia (UE o EE.&nbsp;UU.)</td></tr>
-                <tr><th scope="row">Cloudflare</th><td>DNS y seguridad de red</td><td>Metadatos de conexión; no almacena contenido</td><td>Red global</td></tr>
+                <tr><th scope="row">Cloudflare</th><td>Resolución DNS de tu dominio hacia tu servidor. Sin proxy: no interviene en el tráfico</td><td>El nombre de dominio consultado; no ve ni almacena contenido</td><td>Red global</td></tr>
+                <tr><th scope="row">GitHub</th><td>Repositorio del código y despliegue automatizado: instala las actualizaciones y ejecuta las migraciones sobre tu servidor</td><td>No aloja datos de tu instancia. Custodia la clave de acceso al servidor y conserva la salida técnica de las órdenes que ejecuta</td><td>Estados Unidos</td></tr>
                 <tr><th scope="row">Calendly</th><td>Agendar las reuniones de demostración que se piden desde este sitio</td><td>Nombre, correo y la franja horaria que elijas</td><td>Estados Unidos</td></tr>
               </tbody>
             </table>
@@ -534,9 +535,22 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <h2>6. Región y transferencias internacionales</h2>
           <p>La región de tu instancia se fija al contratar y no se modifica sin acuerdo escrito. Los datos no se replican a otra región. <strong>Si tu empresa está establecida en el Espacio Económico Europeo, o tratas datos de personas que se encuentran en él, tu instancia se despliega en Fráncfort (Alemania).</strong></p>
           <p>Code Flakes LLC tiene su sede en <strong>Estados Unidos</strong>. Tu instancia se aloja en Fráncfort, pero <strong>el encargado del tratamiento es una sociedad estadounidense</strong>: ese es el flujo que el acuerdo de encargo tiene que cubrir.</p>
-          <p>Las personas que operan y dan soporte a tu instancia <strong>acceden desde Venezuela</strong>. Son socios y personal de Code Flakes LLC, no una empresa contratada: al formar parte de la misma entidad, ese acceso <strong>no constituye por sí mismo una transferencia a un tercero</strong>. Te lo contamos igualmente porque tienes derecho a saber desde dónde se toca tu sistema.</p>
-          <p>Lo que hacemos al respecto: el soporte <strong>se ejecuta sobre el propio servidor</strong> —no se descargan ni se replican copias de la base de datos, de los archivos ni de las copias de seguridad a equipos locales—, el acceso está limitado a personal sujeto a deber de confidencialidad documentado, y cualquier alta de personal en otro país se documenta antes de concederle acceso. <strong>Si algún día ese soporte lo prestara una empresa externa, sería un subencargado y te lo comunicaríamos</strong> conforme al apartado 5.</p>
-          <p><strong>El mecanismo del capítulo V aplicable se determina en el acuerdo de encargo de tratamiento que firmamos contigo</strong>, con el plazo y las consecuencias que ese acuerdo establece. Esta página no afirma que haya un marco de adecuación ni una certificación en vigor.</p>
+          <p>Las personas que operan y dan soporte a tu instancia <strong>acceden desde Venezuela</strong>, un país que no cuenta con decisión de adecuación de la Comisión Europea. Son socios y directivos de Code Flakes LLC, no una empresa contratada, así que no hay subencargo. Eso no cambia lo esencial: quien recibe el acceso es una sociedad establecida fuera del EEE que opera desde Venezuela, y un acceso remoto así <strong>puede constituir una transferencia internacional</strong> a efectos del capítulo V del RGPD. No tenemos forma de prestar el servicio sin ese acceso, y preferimos decírtelo claro.</p>
+          <p><strong>Lo que hacemos al respecto:</strong></p>
+          <ul>
+            <li><strong>Entramos sólo cuando es imprescindible</strong> para operar, mantener o dar soporte a tu instancia. No hay accesos rutinarios a tus datos.</li>
+            <li><strong>Siempre a través de una VPN cifrada</strong>, con punto de salida en Estados Unidos, donde Code Flakes LLC tiene su sede.</li>
+            <li><strong>Doble factor.</strong> Las cuentas con las que administramos la infraestructura —DigitalOcean, Cloudflare y GitHub— tienen activada la autenticación en dos pasos para todo el equipo.</li>
+            <li><strong>El trabajo se hace sobre el propio servidor.</strong> No se descargan ni se replican copias de la base de datos, de los archivos ni de las copias de seguridad a equipos locales.</li>
+            <li><strong>Las actualizaciones no las instala una persona.</strong> Las ejecuta un sistema de despliegue automatizado (GitHub Actions, apartado 2), que se conecta a tu servidor, ejecuta allí las órdenes y no extrae copias de tus datos. Esa conexión parte de la infraestructura de GitHub en Estados Unidos y no pasa por la VPN.</li>
+            <li><strong>Cifrado.</strong> Todo el tráfico viaja cifrado, y la base de datos y sus copias de seguridad están cifradas en reposo por el proveedor de alojamiento.</li>
+            <li><strong>Confidencialidad.</strong> El acceso está limitado a personal sujeto a deber de confidencialidad documentado, y cualquier alta de personal en otro país se documenta antes de concederle acceso. Si algún día ese soporte lo prestara una empresa externa, sería un subencargado y te lo comunicaríamos conforme al apartado 5.</li>
+          </ul>
+          <p><strong>Lo que estas medidas no son.</strong> Reducen el riesgo, pero no sustituyen a un instrumento de transferencia del artículo 46 del RGPD. A día de hoy <strong>no hemos determinado ni formalizado un mecanismo del capítulo V</strong> para este acceso ni para los proveedores con matriz fuera del EEE, y no invocamos ningún marco de adecuación ni certificación. El <a href="/dpa">acuerdo de encargo de tratamiento</a> lo dice con estas mismas palabras, y lo aceptas al contratar.</p>
+          <p><strong>Si tu empresa necesita formalizarlo</strong> —por ejemplo, con Cláusulas Contractuales Tipo—, propónnoslo: cooperamos, te damos la información que haga falta y firmamos el instrumento que resulte razonablemente aplicable. Cada parte asume el coste de su propio asesoramiento. Y si esta situación no te sirve, puedes resolver el contrato sin penalización.</p>
+          <p><strong>Lo que te toca a ti.</strong> PerfectFlow es un servicio: respondemos de cómo operamos nosotros. Qué datos cargas, con qué base legal, cómo informas a tus contactos, si tu empresa necesita un representante en la Unión Europea y qué contratos tienes con los proveedores que conectas con tu propia cuenta son obligaciones tuyas como responsable del tratamiento.</p>
+          
+          
           <p>Más detalle sobre qué datos guarda el sistema: <a href="../privacidad/">política de privacidad</a>.</p>
         </section>
       </article>

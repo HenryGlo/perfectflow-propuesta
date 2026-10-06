@@ -449,7 +449,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Subprocessors</h1>
     <p class="stand rv">The providers involved in delivering PerfectFlow that may process personal data on behalf of our clients, under Article 28 of Regulation (EU) 2016/679. This page is the current version of Annex III to the data processing agreement.</p>
-    <p class="meta rv">Last updated: <time datetime="2026-09-15"><strong>September 15, 2026</strong></time></p>
+    <p class="meta rv">Last updated: <time datetime="2026-10-06"><strong>October 6, 2026</strong></time></p>
     
   </div>
 </section>
@@ -474,7 +474,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="permanent">
           <h2>2. Permanent subprocessors</h2>
-          <p><strong>These are only the ones that make the service exist.</strong> We provide the CRM and the connection to your accounts; we do not provide the accounts of the services you operate with. That is why this list is short and does not grow when you turn on a new module. The first two hold up your instance; the third only comes in if you request a demo from this site, before you are a client.</p>
+          <p><strong>These are only the ones that make the service exist.</strong> We provide the CRM and the connection to your accounts; we do not provide the accounts of the services you operate with. That is why this list is short and does not grow when you turn on a new module. The first two hold up your instance; the third keeps it up to date; the fourth only comes in if you request a demo from this site, before you are a client.</p>
           <div class="dtable-wrap">
             <table class="dtable">
               <thead>
@@ -482,7 +482,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               </thead>
               <tbody>
                 <tr><th scope="row">DigitalOcean</th><td>Servers, database and file storage</td><td>All the data in your instance</td><td>Your instance's region (EU or US)</td></tr>
-                <tr><th scope="row">Cloudflare</th><td>DNS and network security</td><td>Connection metadata; stores no content</td><td>Global network</td></tr>
+                <tr><th scope="row">Cloudflare</th><td>DNS resolution of your domain to your server. No proxy: it does not sit in the traffic path</td><td>The domain name queried; it neither sees nor stores content</td><td>Global network</td></tr>
+                <tr><th scope="row">GitHub</th><td>Code repository and automated deployment: it installs updates and runs migrations on your server</td><td>Hosts no data from your instance. Holds the server access key and keeps the technical output of the commands it runs</td><td>United States</td></tr>
                 <tr><th scope="row">Calendly</th><td>Booking the demo meetings requested from this site</td><td>Name, email and the slot you pick</td><td>United States</td></tr>
               </tbody>
             </table>
@@ -534,9 +535,22 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <h2>6. Region and international transfers</h2>
           <p>Your instance's region is set when you subscribe and is not changed without written agreement. Data is not replicated to another region. <strong>If your company is established in the European Economic Area, or you process data of people located there, your instance is deployed in Frankfurt, Germany.</strong></p>
           <p>Code Flakes LLC is based in the <strong>United States</strong>. Your instance is hosted in Frankfurt, but <strong>the processor is a US company</strong> — that is the flow the data processing agreement has to cover.</p>
-          <p>The people who operate and support your instance <strong>access it from Venezuela</strong>. They are partners and staff of Code Flakes LLC, not a contracted firm: being part of the same entity, that access <strong>is not in itself a transfer to a third party</strong>. We tell you anyway, because you are entitled to know where your system is touched from.</p>
-          <p>What we do about it: support <strong>runs on the server itself</strong> — no copies of the database, the files or the backups are downloaded or replicated to local machines — access is limited to staff under a documented confidentiality duty, and anyone added in another country is documented before being granted access. <strong>Were that support ever provided by an outside firm, it would be a subprocessor and we would tell you</strong>, under section 5.</p>
-          <p><strong>The applicable Chapter V mechanism is determined in the data processing agreement we sign with you</strong>, on the terms and deadline that agreement sets. This page does not claim that an adequacy framework or a certification is in force.</p>
+          <p>The people who operate and support your instance <strong>access it from Venezuela</strong>, a country with no adequacy decision from the European Commission. They are partners and officers of Code Flakes LLC, not a contracted firm, so there is no sub-processing. That does not change the essential point: the party receiving access is a company established outside the EEA and operating from Venezuela, and remote access of this kind <strong>may constitute an international transfer</strong> under Chapter V of the GDPR. We cannot provide the service without that access, and we would rather tell you plainly.</p>
+          <p><strong>What we do about it:</strong></p>
+          <ul>
+            <li><strong>We only go in when it is strictly necessary</strong> to operate, maintain or support your instance. There is no routine access to your data.</li>
+            <li><strong>Always through an encrypted VPN</strong>, with an exit point in the United States, where Code Flakes LLC is based.</li>
+            <li><strong>Two-factor authentication.</strong> The accounts we use to administer the infrastructure — DigitalOcean, Cloudflare and GitHub — have two-factor authentication turned on for the whole team.</li>
+            <li><strong>The work is done on the server itself.</strong> No copies of the database, the files or the backups are downloaded or replicated to local machines.</li>
+            <li><strong>Updates are not installed by a person.</strong> They are run by an automated deployment system (GitHub Actions, section 2), which connects to your server, runs the commands there and does not extract copies of your data. That connection originates from GitHub's infrastructure in the United States and does not go through the VPN.</li>
+            <li><strong>Encryption.</strong> All traffic is encrypted in transit, and the database and its backups are encrypted at rest by the hosting provider.</li>
+            <li><strong>Confidentiality.</strong> Access is limited to staff under a documented confidentiality duty, and anyone added in another country is documented before being granted access. Were that support ever provided by an outside firm, it would be a subprocessor and we would tell you, under section 5.</li>
+          </ul>
+          <p><strong>What these measures are not.</strong> They reduce risk, but they do not replace a transfer instrument under Article 46 of the GDPR. As of today <strong>we have not determined or formalised a Chapter V mechanism</strong> for this access or for providers headquartered outside the EEA, and we invoke no adequacy framework and no certification. The <a href="/en/dpa">data processing agreement</a> says so in these same terms, and you accept it when you subscribe.</p>
+          <p><strong>If your company needs it formalised</strong> — for example, through Standard Contractual Clauses — propose it to us: we will cooperate, give you the information you need and sign the instrument that is reasonably applicable. Each party bears the cost of its own advice. And if this situation does not work for you, you may terminate the contract without penalty.</p>
+          <p><strong>What is on your side.</strong> PerfectFlow is a service: we answer for how we operate. What data you load, on what legal basis, how you inform your contacts, whether your company needs a representative in the European Union, and what contracts you hold with the providers you connect through your own account are your obligations as controller.</p>
+          
+          
           <p>More detail on what the system stores: <a href="../../privacy/">privacy policy</a>.</p>
         </section>
       </article>

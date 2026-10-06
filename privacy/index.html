@@ -449,7 +449,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Privacy policy</h1>
     <p class="stand rv">PerfectFlow is a modular ERP/CRM for small and medium businesses, built and operated by Code Flakes LLC. This policy describes what data PerfectFlow stores and processes, including the data used by its social media integrations for account connection, analytics, content publishing and customer messaging.</p>
-    <p class="meta rv">Last updated: <time datetime="2026-09-15"><strong>September 15, 2026</strong></time></p>
+    <p class="meta rv">Last updated: <time datetime="2026-10-06"><strong>October 6, 2026</strong></time></p>
     
   </div>
 </section>
@@ -701,7 +701,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               </thead>
               <tbody>
                 <tr><th scope="row">DigitalOcean</th><td>Servers, database and file storage</td><td>Your instance's region (EU or US)</td></tr>
-                <tr><th scope="row">Cloudflare</th><td>DNS and network security</td><td>Global network</td></tr>
+                <tr><th scope="row">Cloudflare</th><td>DNS resolution of the domain to the server. No proxy: it does not sit in the traffic path</td><td>Global network</td></tr>
+                <tr><th scope="row">GitHub</th><td>Code repository and automated deployment of updates onto the server. Hosts no data from your instance</td><td>United States</td></tr>
                 <tr><th scope="row">Calendly</th><td>Booking the demo meetings requested from this site</td><td>United States</td></tr>
               </tbody>
             </table>
@@ -729,8 +730,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
           <h3>International transfers</h3>
           <p>Code Flakes LLC is based in the <strong>United States</strong>. Even where a European client's instance is hosted inside the EEA, <strong>the processor is a US company</strong>, and that is the flow the processing agreement covers.</p>
-          <p>The people who operate those instances <strong>access them from Venezuela</strong>. They are partners and staff of the company itself, not a contracted firm, so that access <strong>is not in itself a transfer to a third party</strong>. We state it for transparency. Support <strong>runs on the server itself</strong>: no copies are downloaded to local machines.</p>
-          <p><strong>The applicable Chapter V mechanism is determined in each client's data processing agreement</strong>, as is that of providers headquartered outside the EEA. We invoke no adequacy framework and no certification.</p>
+          <p>The people who operate those instances <strong>access them from Venezuela</strong>, a country with no adequacy decision from the European Commission. They are partners and officers of the company itself, not a contracted firm; even so, remote access of this kind <strong>may constitute an international transfer</strong> under Chapter V of the GDPR. We say so plainly because we cannot provide the service without that access.</p>
+          <p>The measures we apply: we go in <strong>only when strictly necessary</strong>, always <strong>through an encrypted VPN</strong> with an exit point in the United States — and the work <strong>runs on the server itself</strong>, with no copies downloaded to local machines. Updates are installed by an automated deployment system (GitHub Actions), which connects to the server from the United States, runs the commands there and extracts no copies.</p>
+          <p><strong>These measures do not replace a transfer instrument under Article 46.</strong> We have not determined or formalised a Chapter V mechanism for this access or for providers headquartered outside the EEA, and we invoke no adequacy framework and no certification. If your company needs it formalised — for example, through Standard Contractual Clauses — we will cooperate and sign the instrument that is reasonably applicable; and if the situation does not work for you, you may terminate the contract without penalty. The detail is on the <a href="/en/subprocessors">subprocessors page</a> and in the <a href="/en/dpa">data processing agreement</a>.</p>
+          <p>PerfectFlow is a service: we answer for how we operate. The obligations that fall to you as controller of the data you load — legal basis, informing your contacts, a representative in the Union if you need one, contracts with the providers you connect through your own account — are yours.</p>
+          
         </section>
 
         <section id="conservacion">
@@ -754,6 +758,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
         <section id="seguridad">
           <h2>8. Security</h2>
           <p>Access to PerfectFlow and communications with third-party APIs are encrypted in transit using HTTPS. <strong>Authentication tokens used for supported third-party integrations are encrypted at rest.</strong> Each instance is isolated from the others as described in section 2, and administrative access is limited to the CodeFlakes staff who operate the service.</p>
+          <p>The database and its backups are <strong>encrypted at rest</strong> by the hosting provider. Server access uses a cryptographic key, not a password; our staff always connect through an encrypted VPN and only when strictly necessary, and updates are applied by an automated deployment system. The accounts we use to administer the infrastructure — DigitalOcean, Cloudflare and GitHub — use two-factor authentication.</p>
           <p>No system is infallible. If we detect a security breach affecting your instance's data, we will tell you <strong>without undue delay and in accordance with applicable legal and contractual requirements</strong>, by email at your account's contact address, with the information you need to meet your own notification obligations.</p>
         </section>
 
