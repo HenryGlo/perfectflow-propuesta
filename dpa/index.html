@@ -601,7 +601,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <li><strong>Modalidad compartida (PerfectFlow Lite):</strong> varios clientes se alojan en un mismo servidor y una misma base de datos. Los datos de cada cliente están <strong>separados dentro de ella</strong> y el sistema limita de forma automática toda consulta a los del cliente que la hace: <strong>un cliente nunca puede ver los datos de otro</strong>. Cada cliente entra por su propio subdominio, con las cachés y los trabajos en segundo plano igualmente segmentados.</li>
     </ul>
     <ul>
-      <li>La <strong>región</strong> de la instancia se fija al contratar y no se modifica sin acuerdo escrito. Los datos no se replican a otra región.</li>
+      <li><strong>Región.</strong> Para los clientes del Espacio Económico Europeo, toda la arquitectura de la Instancia —servidor, base de datos, archivos y motor de automatizaciones— se despliega en <strong>Fráncfort (Alemania)</strong>. Para los demás, en una región de Estados Unidos, la que mejor se ajuste a su ubicación entre las disponibles. La región se fija al contratar y no se modifica sin acuerdo escrito. Los datos no se replican a otra región.</li>
     </ul>
     <h3>Cifrado</h3>
     <ul>
@@ -652,7 +652,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <tr><th scope="col">Subencargado</th><th scope="col">Servicio</th><th scope="col">Ubicación</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">DigitalOcean, LLC</th><td>Servidores, base de datos y almacenamiento de archivos</td><td>la Región que corresponda: <strong>Fráncfort (Alemania)</strong> para clientes del EEE, <strong>Nueva York (EE.&nbsp;UU.)</strong> en los demás casos</td></tr>
+          <tr><th scope="row">DigitalOcean, LLC</th><td>Servidores, base de datos y almacenamiento de archivos</td><td>la Región que corresponda: <strong>Fráncfort (Alemania)</strong> para clientes del EEE, una región de <strong>Estados Unidos</strong> en los demás casos (hoy, Nueva York)</td></tr>
           <tr><th scope="row">Cloudflare, Inc.<br><span style="font-weight:400">Sociedad estadounidense</span></th><td>Resolución DNS del dominio a la dirección del servidor. Sin proxy: no interviene en el tráfico</td><td>Red global</td></tr>
           <tr><th scope="row">GitHub, Inc.<br><span style="font-weight:400">Sociedad estadounidense</span></th><td>Repositorio del código y sistema de despliegue automatizado. Custodia la clave de acceso al servidor y ejecuta sobre él las órdenes de actualización. No aloja datos del Cliente</td><td>Estados Unidos</td></tr>
         </tbody>

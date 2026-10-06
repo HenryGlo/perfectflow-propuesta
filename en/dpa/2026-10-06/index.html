@@ -601,7 +601,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       <li><strong>Shared mode (PerfectFlow Lite):</strong> several clients are hosted on one server and one database. Each client's data is <strong>kept separate within it</strong>, and the system automatically limits every query to the data of the client making it: <strong>one client can never see another's data</strong>. Each client signs in through its own subdomain, with caches and background jobs segmented in the same way.</li>
     </ul>
     <ul>
-      <li>The instance's <strong>region</strong> is set on subscription and is not changed without written agreement. Data is not replicated to another region.</li>
+      <li><strong>Region.</strong> For clients in the European Economic Area, the whole architecture of the Instance — server, database, files and automation engine — is deployed in <strong>Frankfurt (Germany)</strong>. For all others, in a United States region, the one that best fits their location among those available. The region is set on subscription and is not changed without written agreement. Data is not replicated to another region.</li>
     </ul>
     <h3>Encryption</h3>
     <ul>
@@ -652,7 +652,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <tr><th scope="col">Subprocessor</th><th scope="col">Service</th><th scope="col">Location</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">DigitalOcean, LLC</th><td>Servers, database and file storage</td><td>the applicable Region: <strong>Frankfurt (Germany)</strong> for EEA clients, <strong>New York (US)</strong> otherwise</td></tr>
+          <tr><th scope="row">DigitalOcean, LLC</th><td>Servers, database and file storage</td><td>the applicable Region: <strong>Frankfurt (Germany)</strong> for EEA clients, a <strong>United States</strong> region otherwise (today, New York)</td></tr>
           <tr><th scope="row">Cloudflare, Inc.<br><span style="font-weight:400">US company</span></th><td>DNS resolution of the domain to the server's address. No proxy: it does not sit in the traffic path</td><td>Global network</td></tr>
           <tr><th scope="row">GitHub, Inc.<br><span style="font-weight:400">US company</span></th><td>Code repository and automated deployment system. It holds the server access key and runs the update commands on it. It hosts no Client data</td><td>United States</td></tr>
         </tbody>
