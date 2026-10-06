@@ -685,7 +685,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     </div>
     <div class="note">
       <span class="lbl">About the automation engine</span>
-      <p>Automations run on <strong>software self-hosted by CodeFlakes on the server of the Client's own Instance, with its own database</strong>. There is no central engine shared between clients, and the vendor of that software is not a subprocessor and does not access the Client's data. Automations are therefore processed <strong>in the same Region</strong> as the rest of the Instance. The messages those automations send do go out through the channels in the table above.</p>
+      <p>Automations run on <strong>software self-hosted by CodeFlakes on the same infrastructure as the Client's Instance</strong>. In dedicated mode, that engine and its database are exclusive to the Client. In shared mode (PerfectFlow Lite), the engine is shared between the clients on the same server, with each client's flows and connections kept separate from the others'. In no case is the vendor of that software a subprocessor, and it does not access the Client's data. Automations are processed <strong>in the same Region</strong> as the rest of the Instance. The messages those automations send do go out through the channels in the table above.</p>
     </div>
     <p>List current as of the date of this version. Additions and removals are governed by clause 6 and published at <a href="https://perfectflow.cloud/en/subprocessors">perfectflow.cloud/en/subprocessors</a>, which shows the updated version and its date.</p>
   </section>

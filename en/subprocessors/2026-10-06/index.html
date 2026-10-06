@@ -517,7 +517,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="automation">
           <h2>4. The automation engine is not a subprocessor</h2>
-          <p>Each client's automations run on <strong>software we self-host on your own instance's server</strong>, with its own database. There is no central engine shared between clients, and the software's vendor has no access to any data.</p>
+          <p>Automations run on <strong>software we self-host, on the same infrastructure as your instance</strong>. On a dedicated instance, that engine and its database are yours alone. On PerfectFlow Lite, the engine is shared between the clients on the same server, with each client's flows and connections kept separate from the others'. In no case does the software's vendor have access to any data.</p>
           <p>In other words: your automations are processed <strong>in the same region</strong> as the rest of your instance. The messages they send do go out through the channels in the table above.</p>
         </section>
 

@@ -685,7 +685,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     </div>
     <div class="note">
       <span class="lbl">Sobre el motor de automatizaciones</span>
-      <p>Las automatizaciones se ejecutan sobre <strong>software autoalojado por CodeFlakes en el propio servidor de la Instancia del Cliente y con su propia base de datos</strong>. No existe un motor central compartido entre clientes, y el proveedor de ese software no es subencargado ni accede a los datos del Cliente. En consecuencia, las automatizaciones se procesan <strong>en la misma Región</strong> que el resto de la Instancia. Los mensajes que esas automatizaciones envían sí salen por los canales de la tabla anterior.</p>
+      <p>Las automatizaciones se ejecutan sobre <strong>software autoalojado por CodeFlakes en la misma infraestructura que la Instancia del Cliente</strong>. En la modalidad dedicada, ese motor y su base de datos son exclusivos del Cliente. En la modalidad compartida (PerfectFlow Lite), el motor se comparte entre los clientes del mismo servidor, con los flujos y las conexiones de cada cliente separados de los de los demás. En ningún caso el proveedor de ese software es subencargado ni accede a los datos del Cliente. Las automatizaciones se procesan <strong>en la misma Región</strong> que el resto de la Instancia. Los mensajes que esas automatizaciones envían sí salen por los canales de la tabla anterior.</p>
     </div>
     <p>Lista vigente a la fecha de esta versión. Las altas y bajas se rigen por la cláusula 6 y se publican en <a href="https://perfectflow.cloud/subprocessors">perfectflow.cloud/subprocessors</a>, donde consta la versión actualizada y su fecha.</p>
   </section>
