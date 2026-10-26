@@ -757,6 +757,18 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .meme small{display:block;font-size:.6rem;color:rgba(251,246,236,.6);padding:3px 0 4px}
 @media (max-width:900px){.meme{right:4px;top:-44px;width:140px}}
 
+/* ---------- papel: testimonios ---------- */
+.testi{position:relative;margin:clamp(34px,4vw,54px) 0 0;max-width:62rem;background:var(--paper);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard-lg);padding:clamp(26px,4vw,52px) clamp(22px,4vw,56px) clamp(22px,3vw,36px);transform:rotate(-.6deg)}
+.testi-mark{position:absolute;top:-28px;left:clamp(18px,3vw,40px);width:64px;height:64px;border-radius:50%;background:var(--lime);border:var(--line);box-shadow:var(--hard-sm);display:grid;place-items:center;font-family:"Chillax","Poppins",sans-serif;font-weight:700;font-size:3rem;line-height:1;padding-top:.32em}
+.testi blockquote{margin:0}
+.testi blockquote p{font-size:clamp(1.05rem,1.45vw,1.28rem);line-height:1.6;margin:0 0 1em}
+.testi blockquote p:first-child{font-family:"Chillax","Poppins",sans-serif;font-weight:600;font-size:clamp(1.2rem,1.9vw,1.6rem);line-height:1.35;letter-spacing:-.015em}
+.testi-by{display:flex;align-items:center;gap:14px;margin-top:clamp(14px,2vw,22px);padding-top:clamp(14px,2vw,20px);border-top:1.5px dashed rgba(21,19,27,.25)}
+.testi-av{width:48px;height:48px;flex:0 0 48px;border-radius:50%;background:var(--violet);color:#fff;border:var(--line);display:grid;place-items:center;font-family:"Chillax","Poppins",sans-serif;font-weight:700;font-size:1.3rem}
+.testi-by b{display:block;font-size:1rem}
+.testi-by a{font-size:.9rem;color:var(--violet-tx);text-underline-offset:3px}
+@media (max-width:560px){.testi{transform:none;box-shadow:var(--hard)}.testi-mark{width:52px;height:52px;font-size:2.4rem;top:-22px}}
+
 /* ---------- papel: historias ---------- */
 .polas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px);margin-top:clamp(34px,4vw,54px);align-items:start}
 @media (max-width:900px){.polas{grid-template-columns:repeat(2,1fr)}}
@@ -1137,45 +1149,22 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
 
 
-<!-- ======================= HISTORIAS · papel ======================= -->
-<section class="b-paper" id="historias" hidden>
+<!-- ======================= TESTIMONIOS · papel ======================= -->
+<!-- Testimonios reales, aprobados por el cliente. Lumavitae (Fidelia), oct-2026. -->
+<section class="b-paper" id="historias">
   <div class="shell">
-    <h2 class="rv" style="max-width:16ch" data-en="Getting organized is also a way of growing.">Organizarse bien también es una forma de crecer.</h2>
-    <p class="lead rv" style="margin-top:18px" data-en="These are the stories we&#39;re collecting. Each card says what it will cover: nothing here is invented, and nothing goes live until the client approves it.">Estas son las historias que estamos recogiendo. Cada tarjeta dice de qué irá: aquí no hay nada inventado, y nada se publica hasta que el cliente lo apruebe.</p>
-    <div class="polas">
-      <article class="pola rv">
-        <!-- IMAGEN: sustituir la línea de abajo por <img src="..." alt="..."> -->
-        <div data-img="story" data-label="Retrato del cliente · por subir"></div>
-        <span class="ph" data-en="Placeholder · pending approval">Placeholder · pendiente de aprobación</span>
-        <q data-en="[From three separate calendars to one shared agenda, and what happened to no-shows]">[De tres calendarios separados a una sola agenda, y qué pasó con las ausencias]</q>
-        <p class="by"><b data-en="Name to confirm">Nombre por confirmar</b><span data-en="Wellness studio · team of 4">Estudio de bienestar · equipo de 4</span></p>
-      </article>
-      <article class="pola rv">
-        <span class="ph" data-en="Placeholder">Placeholder</span>
-        <q data-en="[Moving team coordination out of WhatsApp and into assigned tasks]">[Sacar la coordinación del equipo de WhatsApp y pasarla a tareas asignadas]</q>
-        <p class="by"><b data-en="Name to confirm">Nombre por confirmar</b><span data-en="Independent professional">Profesional independiente</span></p>
-      </article>
-      <article class="pola rv">
-        <span class="ph" data-en="Placeholder">Placeholder</span>
-        <q data-en="[Answering Instagram DMs next to the client record instead of in another app]">[Responder los DMs de Instagram junto a la ficha en vez de en otra app]</q>
-        <p class="by"><b data-en="Name to confirm">Nombre por confirmar</b><span data-en="Personal brand">Marca personal</span></p>
-      </article>
-      <article class="pola rv">
-        <span class="ph" data-en="Placeholder">Placeholder</span>
-        <q data-en="[Sending branded campaigns to their community without another tool]">[Mandar campañas a su comunidad con su marca, sin depender de otra herramienta]</q>
-        <p class="by"><b data-en="Name to confirm">Nombre por confirmar</b><span data-en="Studio with several instructors">Estudio con varios instructores</span></p>
-      </article>
-      <article class="pola rv">
-        <span class="ph" data-en="Placeholder">Placeholder</span>
-        <q data-en="[Roles and permissions: each person sees only their part of the operation]">[Roles y permisos: que cada persona vea solo su parte de la operación]</q>
-        <p class="by"><b data-en="Name to confirm">Nombre por confirmar</b><span data-en="Mid-sized company">Empresa mediana</span></p>
-      </article>
-      <article class="pola rv">
-        <span class="ph" data-en="Placeholder">Placeholder</span>
-        <q data-en="[Opening a second location without doubling the coordination work]">[Abrir una segunda sede sin duplicar el trabajo de coordinación]</q>
-        <p class="by"><b data-en="Name to confirm">Nombre por confirmar</b><span data-en="Business in expansion">Negocio en expansión</span></p>
-      </article>
-    </div>
+    <h2 class="rv" style="max-width:18ch" data-en="What our clients say">Lo que comentan nuestros clientes</h2>
+    <figure class="testi rv">
+      <span class="testi-mark" aria-hidden="true">“</span>
+      <blockquote>
+        <p data-en="At Lumavitae we started with PerfectFlow from day one, and that let us launch with everything in order. What helps us most is that people can buy their packages, book and cancel their classes on their own, without waiting for our reply on WhatsApp. They can even buy while we&#39;re asleep! That frees us up enormously, and we can also check the sales summaries.">En Lumavitae empezamos con PerfectFlow desde el principio y eso nos permitió arrancar con todo en orden. Lo que más nos ayuda es que las personas pueden comprar sus paquetes, reservar y cancelar sus clases por su cuenta, sin esperar una respuesta nuestra por WhatsApp. ¡Incluso mientras estamos durmiendo pueden comprar! Eso nos libera muchísimo, y también podemos consultar los resúmenes de ventas.</p>
+        <p data-en="The team&#39;s support has been excellent. The system has adapted to our needs as the business grows, and we&#39;ve loved the visual improvements.">El acompañamiento del equipo ha sido excelente. El sistema se ha adaptado a nuestras necesidades mientras crece el negocio y nos han encantado las mejoras visuales.</p>
+      </blockquote>
+      <figcaption class="testi-by">
+        <span class="testi-av" aria-hidden="true">F</span>
+        <span><b data-en="Fidelia, on behalf of the Lumavitae team">Fidelia, en representación del equipo de Lumavitae</b><a href="https://pilateslumavitae.com" target="_blank" rel="noopener" data-en="Pilates studio · pilateslumavitae.com">Estudio de pilates · pilateslumavitae.com</a></span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
