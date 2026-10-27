@@ -449,7 +449,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Subprocessors</h1>
     <p class="stand rv">The providers involved in delivering PerfectFlow that may process personal data on behalf of our clients, under Article 28 of Regulation (EU) 2016/679. This page is the current version of Annex III to the data processing agreement.</p>
-    <p class="meta rv">Last updated: <time datetime="2026-10-06"><strong>October 6, 2026</strong></time></p>
+    <p class="meta rv">Last updated: <time datetime="2026-10-27"><strong>October 27, 2026</strong></time></p>
     
   </div>
 </section>
@@ -487,7 +487,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               </tbody>
             </table>
           </div>
-          <p>Your landing page measures into <strong>your own analytics property</strong>: you create it and grant us read access so we can show the metrics in your dashboard. The data is yours and stays in your account. <strong>PerfectFlow itself carries no analytics:</strong> no measurement script is loaded inside the CRM.</p>
+          <p>Your landing page measures into <strong>your own analytics property</strong>: you create it and grant us read access so we can show the metrics in your dashboard. The data is yours and stays in your account. <strong>PerfectFlow itself carries no third-party analytics:</strong> no external measurement script is loaded inside the CRM. What it does have is <strong>Code Flakes' own measurement</strong>, as counts aggregated per day, screen and role, never per person, with no new cookies and no session recording. It is worked out in your instance and the totals travel to our base instance, <code>codeflakes.perfectflow.cloud</code>, on the same DigitalOcean infrastructure. <strong>It adds no new subprocessor</strong>, and Code Flakes, not you, is the controller of those counts: the detail, and how to ask us to turn it off for your account, is in <a href="../../privacy/#uso-servicio">section 10 of the privacy policy</a>. On EEA instances, time in view is not measured in the browser unless you ask us to turn it on.</p>
         </section>
 
         <section id="your-accounts">
@@ -502,6 +502,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               <tbody>
                 <tr><th scope="row">Meta <span class="muted">(Instagram)</span></th><td>Account connection, analytics, publishing content and the professional account's conversations</td><td>You connect an Instagram professional account</td><td>Ireland and United States</td></tr>
                 <tr><th scope="row">TikTok</th><td>Publishing the videos you schedule</td><td>You connect a TikTok account</td><td>Ireland and United States</td></tr>
+                <tr><th scope="row">Google <span class="muted">Gmail or Google Workspace</span></th><td>Sending your email from your own address. We ask only for the send permission (<code>gmail.send</code>): we do not read, store or modify your mailbox. The token is stored encrypted</td><td>You connect your account in Settings › Email. You disconnect it with «Desconectar» (Disconnect) or from your Google account</td><td>The United States and other countries where Google operates</td></tr>
                 <tr><th scope="row">Stripe</th><td>Charging your own customers</td><td>You connect your Stripe account — it is always yours</td><td>Ireland and United States</td></tr>
                 <tr><th scope="row">PagueloFacil</th><td>Charging your own customers</td><td>You turn on this gateway and connect your account</td><td>Panama</td></tr>
                 <tr><th scope="row">Other integrations <span class="muted">scheduling, forms or others — for example, Calendly</span></th><td>Whatever you connect through the automation engine, with your own accounts</td><td>You set up the connection</td><td>Depends on the provider you choose</td></tr>
@@ -534,7 +535,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="transfers">
           <h2>6. Region and international transfers</h2>
-          <p>Your instance's region is set when you subscribe and is not changed without written agreement. Data is not replicated to another region. <strong>If your company is established in the European Economic Area, or you process data of people located there, your instance is deployed in Frankfurt, Germany.</strong></p>
+          <p>Your instance's region is set when you subscribe and is not changed without written agreement. Data is not replicated to another region; the only thing that leaves it is the technical reports and aggregate usage counts described in section 2, which go to our base instance in the United States and contain none of your operational data, and, if you connect Gmail, Google's authorisation, which passes through that instance without staying there. <strong>If your company is established in the European Economic Area, or you process data of people located there, your instance is deployed in Frankfurt, Germany</strong>, in DigitalOcean's <code>fra1</code> region.</p>
           <p>If your company is anywhere else, your instance is deployed in a United States region, the one that best fits your location among those available (today, New York). In both cases the whole architecture — server, database, files and automation engine — lives in that same region.</p>
           <p>Code Flakes LLC is based in the <strong>United States</strong>. Your instance is hosted in Frankfurt, but <strong>the processor is a US company</strong> — that is the flow the data processing agreement has to cover.</p>
           <p>The members of Code Flakes who can access your instance <strong>do so from outside the European Economic Area</strong>. They are members of Code Flakes LLC, not a contracted firm, so there is no sub-processing. That does not change the essential point: the party receiving access is a company established outside the EEA whose members also access from outside it, and remote access of this kind <strong>may constitute an international transfer</strong> under Chapter V of the GDPR. We cannot provide the service without that access, and we would rather tell you plainly.</p>
@@ -551,6 +552,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           </ul>
           <p>The full terms of this access, which you accept when you subscribe, are in clause 9 of the <a href="/en/dpa">data processing agreement</a>.</p>
           <p><strong>If your company needs Standard Contractual Clauses</strong> or another instrument, propose it to us: we will cooperate, give you the information you need and sign the instrument that is reasonably applicable. Each party bears the cost of its own advice. And if this situation does not work for you, you may terminate the contract without penalty.</p>
+          <p><strong>Which safeguard covers each flow to the United States</strong>, if your instance is in the EEA:</p>
+          <ul>
+            <li><strong>Code Flakes LLC</strong> — support access, the reports and aggregate counts, and Gmail authorisation passing through our base instance —: we are not certified under the EU-U.S. Data Privacy Framework, so the instrument is the <strong>Standard Contractual Clauses</strong> (module 2 if you are the controller; module 3 if you are a processor for someone else), which we sign when you ask for them.</li>
+            <li><strong>Google</strong>, if you connect Gmail, and <strong>Meta</strong>, if you connect Instagram: these are your own accounts, not our subprocessors. Google LLC and Meta Platforms, Inc. are certified under the EU-U.S. Data Privacy Framework, and the safeguards are those of your own contract with each of them.</li>
+          </ul>
           <p><strong>What is on your side.</strong> PerfectFlow is a service: we answer for how we operate. What data you load, on what legal basis, how you inform your contacts, whether your company needs a representative in the European Union, and what contracts you hold with the providers you connect through your own account are your obligations as controller.</p>
           
           

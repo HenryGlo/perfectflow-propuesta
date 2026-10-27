@@ -449,7 +449,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     
     <h1 class="rv">Subencargados del tratamiento</h1>
     <p class="stand rv">Los proveedores que intervienen en la prestación de PerfectFlow y que pueden tratar datos personales por cuenta de nuestros clientes, conforme al artículo 28 del Reglamento (UE) 2016/679. Esta página es la versión vigente del Anexo III del acuerdo de encargo de tratamiento.</p>
-    <p class="meta rv">Última actualización: <time datetime="2026-10-06"><strong>6 de octubre de 2026</strong></time></p>
+    <p class="meta rv">Última actualización: <time datetime="2026-10-27"><strong>27 de octubre de 2026</strong></time></p>
     
   </div>
 </section>
@@ -487,7 +487,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               </tbody>
             </table>
           </div>
-          <p>Tu landing mide en <strong>tu propia propiedad de analítica</strong>: la creas tú y nos das acceso de lectura para mostrarte las métricas en tu panel. Los datos son tuyos y se quedan en tu cuenta. <strong>El sistema PerfectFlow no lleva analítica:</strong> dentro del CRM no se carga ningún script de medición.</p>
+          <p>Tu landing mide en <strong>tu propia propiedad de analítica</strong>: la creas tú y nos das acceso de lectura para mostrarte las métricas en tu panel. Los datos son tuyos y se quedan en tu cuenta. <strong>El sistema PerfectFlow no lleva analítica de terceros:</strong> dentro del CRM no se carga ningún script de medición externo. Lo que sí hay es una <strong>medición propia de Code Flakes</strong>, en conteos agregados por día, pantalla y rol, nunca por persona, sin cookies nuevas ni grabación de sesiones. Se calcula en tu instancia y los totales viajan a nuestra instancia base, <code>codeflakes.perfectflow.cloud</code>, en la misma infraestructura de DigitalOcean. <strong>No incorpora ningún subencargado nuevo</strong>, y de esos conteos el responsable es Code Flakes, no tú: el detalle, y cómo pedirnos que la apaguemos para tu cuenta, está en el <a href="../privacidad/#uso-servicio">apartado 10 de la política de privacidad</a>. En las instancias del EEE no se mide en el navegador el tiempo a la vista, salvo que nos pidas activarlo.</p>
         </section>
 
         <section id="cuentas">
@@ -502,6 +502,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
               <tbody>
                 <tr><th scope="row">Meta <span class="muted">(Instagram)</span></th><td>Conexión de la cuenta, métricas, publicación de contenido y conversaciones de la cuenta profesional</td><td>Conectas una cuenta profesional de Instagram</td><td>Irlanda y Estados Unidos</td></tr>
                 <tr><th scope="row">TikTok</th><td>Publicar los vídeos que programas</td><td>Conectas una cuenta de TikTok</td><td>Irlanda y Estados Unidos</td></tr>
+                <tr><th scope="row">Google <span class="muted">Gmail o Google Workspace</span></th><td>Enviar tus correos desde tu propia dirección. Pedimos sólo el permiso de envío (<code>gmail.send</code>): no leemos, guardamos ni modificamos tu buzón. El token se guarda cifrado</td><td>Conectas tu cuenta en Configuración › Correos. La desconectas con «Desconectar» o desde tu cuenta de Google</td><td>Estados Unidos y otros países donde opera Google</td></tr>
                 <tr><th scope="row">Stripe</th><td>Cobrar a tus clientes</td><td>Conectas tu cuenta de Stripe — siempre es la tuya</td><td>Irlanda y Estados Unidos</td></tr>
                 <tr><th scope="row">PagueloFacil</th><td>Cobrar a tus clientes</td><td>Activas esta pasarela y conectas tu cuenta</td><td>Panamá</td></tr>
                 <tr><th scope="row">Otras integraciones <span class="muted">agenda, formularios u otros — por ejemplo, Calendly</span></th><td>Lo que conectes mediante el motor de automatizaciones, con tus propias cuentas</td><td>Configuras la conexión</td><td>Según el proveedor que elijas</td></tr>
@@ -534,7 +535,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
         <section id="transferencias">
           <h2>6. Región y transferencias internacionales</h2>
-          <p>La región de tu instancia se fija al contratar y no se modifica sin acuerdo escrito. Los datos no se replican a otra región. <strong>Si tu empresa está establecida en el Espacio Económico Europeo, o tratas datos de personas que se encuentran en él, tu instancia se despliega en Fráncfort (Alemania).</strong></p>
+          <p>La región de tu instancia se fija al contratar y no se modifica sin acuerdo escrito. Los datos no se replican a otra región; lo único que sale de ella son los reportes técnicos y los conteos agregados de uso descritos en el apartado 2, que van a nuestra instancia base en Estados Unidos y no contienen los datos de tu operación, y, si conectas Gmail, la autorización de Google, que pasa por esa instancia sin quedarse en ella. <strong>Si tu empresa está establecida en el Espacio Económico Europeo, o tratas datos de personas que se encuentran en él, tu instancia se despliega en Fráncfort (Alemania)</strong>, en la región <code>fra1</code> de DigitalOcean.</p>
           <p>Si tu empresa está en cualquier otro lugar, tu instancia se despliega en una región de Estados Unidos, la que mejor se ajuste a tu ubicación entre las disponibles (hoy, Nueva York). En ambos casos, toda la arquitectura —servidor, base de datos, archivos y motor de automatizaciones— vive en esa misma región.</p>
           <p>Code Flakes LLC tiene su sede en <strong>Estados Unidos</strong>. Tu instancia se aloja en Fráncfort, pero <strong>el encargado del tratamiento es una sociedad estadounidense</strong>: ese es el flujo que el acuerdo de encargo tiene que cubrir.</p>
           <p>Los miembros de Code Flakes que pueden acceder a tu instancia <strong>lo hacen desde fuera del Espacio Económico Europeo</strong>. Son miembros de Code Flakes LLC, no una empresa contratada, así que no hay subencargo. Eso no cambia lo esencial: quien recibe el acceso es una sociedad establecida fuera del EEE cuyos miembros acceden también desde fuera de él, y un acceso remoto así <strong>puede constituir una transferencia internacional</strong> a efectos del capítulo V del RGPD. No tenemos forma de prestar el servicio sin ese acceso, y preferimos decírtelo claro.</p>
@@ -551,6 +552,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           </ul>
           <p>Las condiciones completas de este acceso, que aceptas al contratar, están en la cláusula 9 del <a href="/dpa">acuerdo de encargo de tratamiento</a>.</p>
           <p><strong>Si tu empresa necesita Cláusulas Contractuales Tipo</strong> u otro instrumento, propónnoslo: cooperamos, te damos la información que haga falta y firmamos el instrumento que resulte razonablemente aplicable. Cada parte asume el coste de su propio asesoramiento. Y si esta situación no te sirve, puedes resolver el contrato sin penalización.</p>
+          <p><strong>Qué garantía cubre cada flujo hacia Estados Unidos</strong>, si tu instancia está en el EEE:</p>
+          <ul>
+            <li><strong>Code Flakes LLC</strong> —el acceso de soporte, los reportes y conteos agregados, y el paso de la autorización de Gmail por nuestra instancia base—: no estamos adheridos al Marco de Privacidad de Datos UE-EE.&nbsp;UU., así que el instrumento son las <strong>Cláusulas Contractuales Tipo</strong> (módulo 2 si eres responsable; módulo 3 si eres encargado de otro), que firmamos cuando nos las pides.</li>
+            <li><strong>Google</strong>, si conectas Gmail, y <strong>Meta</strong>, si conectas Instagram: son cuentas tuyas, no subencargados nuestros. Google LLC y Meta Platforms, Inc. están adheridas al Marco de Privacidad de Datos UE-EE.&nbsp;UU., y las garantías son las de tu contrato con cada una.</li>
+          </ul>
           <p><strong>Lo que te toca a ti.</strong> PerfectFlow es un servicio: respondemos de cómo operamos nosotros. Qué datos cargas, con qué base legal, cómo informas a tus contactos, si tu empresa necesita un representante en la Unión Europea y qué contratos tienes con los proveedores que conectas con tu propia cuenta son obligaciones tuyas como responsable del tratamiento.</p>
           
           

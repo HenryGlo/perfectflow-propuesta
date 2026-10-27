@@ -448,8 +448,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
     <a class="eyebrow rv" href="../?lang=en" lang="en">← Back to PerfectFlow</a>
     
     <h1 class="rv">Privacy policy</h1>
-    <p class="stand rv">PerfectFlow is a modular ERP/CRM for small and medium businesses, built and operated by Code Flakes LLC. This policy describes what data PerfectFlow stores and processes, including the data used by its social media integrations for account connection, analytics, content publishing and customer messaging.</p>
-    <p class="meta rv">Last updated: <time datetime="2026-10-08"><strong>October 8, 2026</strong></time></p>
+    <p class="stand rv">PerfectFlow is a modular ERP/CRM for small and medium businesses, built and operated by Code Flakes LLC. This policy describes what data PerfectFlow stores and processes, including the data used by its social media integrations for account connection, analytics, content publishing and customer messaging, and how we measure, in aggregate, the use of the service itself.</p>
+    <p class="meta rv">Last updated: <time datetime="2026-10-27"><strong>October 27, 2026</strong></time></p>
     
   </div>
 </section>
@@ -460,12 +460,13 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <li><a href="#responsable">Who operates PerfectFlow</a></li>
           <li><a href="#arquitectura">Where your data lives</a></li>
           <li><a href="#datos-cuenta">Your account and business data</a></li>
-          <li><a href="#redes">Social media module</a></li>
+          <li><a href="#redes">Integrations: social media and Gmail</a></li>
           <li><a href="#no-hacemos">What we do not do</a></li>
           <li><a href="#terceros">Who it is shared with</a></li>
           <li><a href="#conservacion">How long it is kept</a></li>
           <li><a href="#seguridad">Security</a></li>
           <li><a href="#control">Your control over this data</a></li>
+          <li><a href="#uso-servicio">Service usage and product improvement</a></li>
           <li><a href="#sitio">This website</a></li>
           <li><a href="#menores">Minors</a></li>
           <li><a href="#cambios">Changes to this policy</a></li>
@@ -502,36 +503,38 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
             <li><strong>Clients in the European Economic Area:</strong> the whole architecture — server, database, storage and automation engine — in <strong>Frankfurt (Germany)</strong>, inside the EEA.</li>
             <li><strong>All other clients:</strong> a <strong>United States</strong> region, the one that best fits their location among those available (today, New York).</li>
           </ul>
-          <p>Your instance's region is set when you subscribe, and you can ask us for it at any time. One instance's data is never replicated or copied into another instance's region.</p>
-          <p>The only exceptions are the social media integrations: CodeFlakes has <strong>a single application registered with Meta and a single application registered with TikTok</strong>, and every instance connects its accounts through them. Those applications are the channel through which the API calls are made; the data they return is still stored in each client's own instance.</p>
+          <p>Your instance's region is set when you subscribe, and you can ask us for it at any time. One instance's data is never replicated or copied into another instance's region. The only thing that leaves your instance for ours is the counts and technical reports described in <a href="#uso-servicio">section 10</a>, which contain none of your operational data, and, if you connect Gmail, Google's authorisation, which passes through our instance without staying there (<a href="#google">section 4</a>).</p>
+          <p>The only exceptions are the social media and Gmail integrations: CodeFlakes has <strong>a single application registered with Meta, one with TikTok and one with Google</strong>, and every instance connects its accounts through them. Those applications are the channel through which the API calls are made; the data they return is still stored in each client's own instance.</p>
         </section>
 
         <section id="datos-cuenta">
           <h2>3. Your account and business data</h2>
           <p>To set up your account and provide the service we store the contact details you give us: name, email address, phone number and your company details.</p>
-          <p>Inside PerfectFlow, your company enters its own operational data (customers, sales, inventory, finance and so on, depending on the modules you use). That data is yours: we store and process it solely so that the system works, and we do not use it for any other purpose.</p>
+          <p><strong>Support desk.</strong> We handle support at <a href="https://codeflakes.perfectflow.cloud/support" rel="noopener">codeflakes.perfectflow.cloud/support</a>. Your company's contact people have an account there to open and follow their requests, and we store their name, their email address, what they write in each request and the files they attach. We use it to handle those requests and to perform what you contracted with us. The desk runs on our own instance, on DigitalOcean infrastructure in the United States. Please do not include data about your customers in a request unless it is needed to solve it; if some arrives, we use it only for that.</p>
+          <p>Inside PerfectFlow, your company enters its own operational data (customers, sales, inventory, finance and so on, depending on the modules you use). That data is yours: we store and process it solely so that the system works, and we do not use it for any other purpose. Separately, the system counts how it is used and how it is running; those counts contain none of your operational data and are described in <a href="#uso-servicio">section 10</a>.</p>
 
           <h3>Who is accountable for which data</h3>
           <p>There are two kinds of data, and they are not governed the same way:</p>
           <ul>
-            <li><strong>Your client account data</strong> — your name, your email address, your company details and billing. We are the <strong>controller</strong> of that data, and this policy is what covers it.</li>
+            <li><strong>Your client account data</strong> — your name, your email address, your company details, billing and your support desk requests — and <strong>the service usage data</strong> in <a href="#uso-servicio">section 10</a>. We are the <strong>controller</strong> of that data, and this policy is what covers it.</li>
             <li><strong>The data your company enters into its instance</strong> — your customers, your contacts, your sales. <strong>You are the controller</strong> of that data and we act as your <strong>processor</strong>: we process it on your instructions and for nothing else. What we may and may not do with it is set out in the <strong><a href="../en/dpa/">data processing agreement (DPA)</a></strong> which you accept when you subscribe and which applies where European data protection law applies to you; where it does not, in the <a href="../terms/">terms of service</a>.</li>
           </ul>
           <p>One practical consequence: if someone whose data sits in your instance wants to exercise their rights, the request is addressed to you, and we give you the tools and the assistance to answer it.</p>
 
           <h3>The legal basis for the data we control — if European law applies to you</h3>
-          <p><strong>This table is for clients to whom the European Union's General Data Protection Regulation</strong>, or its United Kingdom equivalent, applies: that is the law that requires a legal basis to be stated, and the articles cited belong to it. It covers only your client account data, not what your company loads into its instance — you are the controller of that, and you set its basis.</p>
-          <p>If that law does not apply to you, what we do with your account data is the same — signing you up, providing the service, billing you, handling your support, keeping the service secure and meeting our legal obligations — without those articles being applicable.</p>
+          <p><strong>This table is for clients to whom the European Union's General Data Protection Regulation</strong>, or its United Kingdom equivalent, applies: that is the law that requires a legal basis to be stated, and the articles cited belong to it. It covers only the data we control — your client account data and the service usage data — not what your company loads into its instance — you are the controller of that, and you set its basis.</p>
+          <p>If that law does not apply to you, what we do with that data is the same — signing you up, providing the service, billing you, handling your support, keeping the service secure, measuring service usage in aggregate and meeting our legal obligations — without those articles being applicable.</p>
           <div class="dtable-wrap">
             <table class="dtable">
               <thead>
                 <tr><th scope="col">Purpose</th><th scope="col">Legal basis</th></tr>
               </thead>
               <tbody>
-                <tr><td>Setting you up, delivering the service, invoicing you and handling your support</td><td><strong>Performance of the contract</strong> (Art. 6(1)(b) GDPR)</td></tr>
+                <tr><td>Setting you up, delivering the service, invoicing you and handling your support, including support desk accounts and requests</td><td><strong>Performance of the contract</strong> (Art. 6(1)(b) GDPR)</td></tr>
                 <tr><td>Keeping accounting and tax records</td><td><strong>Legal obligation</strong> (Art. 6(1)(c))</td></tr>
                 <tr><td>Answering a demo or information request before you subscribe</td><td><strong>Pre-contractual steps</strong> at the data subject's request (Art. 6(1)(b))</td></tr>
                 <tr><td>Keeping the service secure and logging administrative access</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)): operating the system securely and being able to show it</td></tr>
+                <tr><td>Measuring, in aggregate, how the users of your account use the service (<a href="#uso-servicio">section 10</a>)</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)): running the service, supporting you and deciding what to improve from real usage, without following any individual</td></tr>
                 <tr><td>Telling you about material changes to these terms or to the subprocessors</td><td><strong>Performance of the contract</strong> (Art. 6(1)(b)), and <strong>legal obligation</strong> where the GDPR itself requires the notice</td></tr>
               </tbody>
             </table>
@@ -541,8 +544,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
         </section>
 
         <section id="redes">
-          <h2>4. Social media module</h2>
-          <p>The social media module lets you connect a supported social media account and, from PerfectFlow, view how the account and its content are performing, write and schedule posts, publish them, and — on Instagram — read and answer the conversations your customers start. Each network has its own subsection: everything the module stores for that network is set out there.</p>
+          <h2>4. Integrations: social media and Gmail</h2>
+          <p>The social media module lets you connect a supported social media account and, from PerfectFlow, view how the account and its content are performing, write and schedule posts, publish them, and — on Instagram — read and answer the conversations your customers start. Each network has its own subsection: everything the module stores for that network is set out there. At the end is the <a href="#google">Gmail or Google Workspace connection</a>, which sends your email from your own account.</p>
 
           <h3>Instagram (Meta)</h3>
           <p>PerfectFlow lets you connect an <strong>Instagram professional account</strong>. What follows describes everything the module stores and processes for that connection.</p>
@@ -665,6 +668,46 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
           <h3>Where all of this is stored</h3>
           <p>Image and video files are stored in <strong>private, S3-compatible object storage</strong>. Every other field is stored in your instance's database.</p>
+
+          <h3 id="google">Gmail and Google Workspace</h3>
+          <p>From <strong>Settings › Email</strong> (<em>Configuración › Correos</em>) you can connect your own Google account — Gmail or Google Workspace — so PerfectFlow sends your email from your address: the system's notices to your users and the communications you set up for your contacts. It is optional: until you connect it, no data from your Google account is processed.</p>
+
+          <h4>Which permissions we ask for</h4>
+          <div class="dtable-wrap">
+            <table class="dtable">
+              <thead>
+                <tr><th scope="col">Permission</th><th scope="col">What it is used for</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><code>gmail.send</code></th>
+                  <td>Sending email on behalf of the connected account. It is a <strong>send-only</strong> permission: it does not allow reading, listing, searching, modifying or deleting the messages in your mailbox.</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>openid</code> and <code>email</code></th>
+                  <td>Knowing which address you connected, to show it to you on screen and use it as the sender.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>PerfectFlow never reads, stores or modifies anything in your mailbox.</strong> We ask for no read permission. From your Google account we keep only the connected address and the access tokens. Messages are put together in your instance and handed to the Gmail API so they go out from your address; for each send, the system records the same as with any other sender, such as the recipient, the subject and whether it went out or failed.</p>
+
+          <h4>How the tokens are stored</h4>
+          <p>When you connect, Google issues a refresh token and an access token. <strong>They are stored encrypted</strong> in your instance's database. Authorisation goes through our base instance (<code>codeflakes.perfectflow.cloud</code>, in the United States), which is the one that has the app registered with Google: it exchanges the authorisation code, hands the tokens to your instance server to server and, when your instance asks, renews the access token. The base instance does not keep your tokens or your address, and never sees the content of your email.</p>
+          <p>This is operational data: you are the controller and Code Flakes processes it as processor, like the rest of the data in your instance.</p>
+
+          <h4>How to disconnect it</h4>
+          <p>Press <strong>«Desconectar»</strong> (Disconnect) in Settings › Email: PerfectFlow revokes the token with Google, deletes it from your instance, and your email goes back to the usual route. You can also remove access at any time from your Google account, at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. If Google stops accepting the token, PerfectFlow lets you know so you can reconnect it.</p>
+
+          <h4>Limited Use of Google data</h4>
+          <p>PerfectFlow's use and transfer to any other app of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+          <p>Specifically:</p>
+          <ul>
+            <li>We use that data <strong>only</strong> to send the email you set up in PerfectFlow and to show you which account is connected.</li>
+            <li>We do not transfer it to third parties, except where needed to provide this feature, to comply with the law, or as part of a merger, acquisition or sale of assets, with prior notice.</li>
+            <li>We do not use it for advertising, we do not sell it and we do not use it to train artificial intelligence models.</li>
+            <li>No person at Code Flakes reads it, unless you give us your explicit permission, it is needed for security — for example, to investigate abuse — or the law requires it.</li>
+          </ul>
         </section>
 
         <section id="no-hacemos">
@@ -688,6 +731,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
             <li>We do not share TikTok data with third parties.</li>
           </ul>
           <p>Nothing described in this policy is used for <strong>advertising, profiling of individuals, artificial intelligence model training, or sold or transferred to third parties for their independent marketing or commercial purposes</strong>. Transfers that are necessary to deliver the service — to Meta in order to publish what you asked to publish, or to the infrastructure providers listed below — are a different thing, and they are described in section 6.</p>
+          <p>The same goes for the usage measurement in <a href="#uso-servicio">section 10</a>: it is not used for advertising or to assess anyone on your team, because it is not kept per person.</p>
+          <p>And with <strong>Gmail</strong>, PerfectFlow only sends: it does not read, list or delete your email, and it keeps nothing from your mailbox (<a href="#google">section 4</a>).</p>
         </section>
 
         <section id="terceros">
@@ -696,6 +741,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <ul>
             <li><strong>Meta Platforms</strong> (Instagram): provides authentication and authorized Instagram account information, analytics and messaging data through its APIs and webhooks. Meta also receives the content and messages that authorized PerfectFlow users choose to publish or send through Instagram.</li>
             <li><strong>TikTok</strong>: it receives the video's text and the temporary signed URL it downloads the file from, and returns the <code>publish_id</code> and the status of the post.</li>
+            <li><strong>Google</strong> (Gmail or Google Workspace), only if you connect your account: it receives the email PerfectFlow sends from it — recipient, subject, content and attachments — in order to deliver it.</li>
+            <li><strong>Code Flakes</strong>, to its own base instance (<code>codeflakes.perfectflow.cloud</code>), on the same DigitalOcean infrastructure: the technical reports and aggregate usage counts in <a href="#uso-servicio">section 10</a>. This is not a disclosure to third parties, and it contains none of your operational data or your customers' data.</li>
             <li>When a competent authority legally requires it of us.</li>
           </ul>
           <p>The social media module may communicate with Meta platforms, including Instagram and WhatsApp Business, and with TikTok when the corresponding integration is enabled.</p>
@@ -726,6 +773,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
                 <tr><th scope="row">Meta (Instagram)</th><td>Account connection, analytics, publishing the content you schedule, and the conversations of the connected professional account</td><td>Ireland and the United States</td></tr>
                 <tr><th scope="row">TikTok</th><td>Publishing the videos you schedule</td><td>Ireland and the United States</td></tr>
                 <tr><th scope="row">Your outbound email provider</th><td>Delivering <strong>all</strong> mail that leaves the system: notices to your users — password resets, invitations — and communications to your contacts. The account is always yours</td><td>Depends on the provider you contract</td></tr>
+                <tr><th scope="row">Google (Gmail or Google Workspace)</th><td>Sending your email from your own address, if you connect your account. Send-only: the mailbox is not read — always your own account</td><td>The United States and other countries where Google operates</td></tr>
                 <tr><th scope="row">Stripe</th><td>Charging your own customers — the account is always yours</td><td>Ireland and the United States</td></tr>
                 <tr><th scope="row">PagueloFacil</th><td>Charging your own customers — only if you turn on this gateway, with your account</td><td>Panama</td></tr>
                 <tr><th scope="row">Other integrations</th><td>Whatever you connect through the automation engine with your own accounts — for example, your Calendly scheduling</td><td>Depends on the provider you choose</td></tr>
@@ -741,6 +789,14 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>Code Flakes LLC is based in the <strong>United States</strong>. Even where a European client's instance is hosted inside the EEA, <strong>the processor is a US company</strong>, and that is the flow the processing agreement covers.</p>
           <p>The members of Code Flakes who can access those instances <strong>do so from outside the European Economic Area</strong>. They are members of the company itself, not a contracted firm; even so, remote access of this kind <strong>may constitute an international transfer</strong> under Chapter V of the GDPR. We say so plainly because we cannot provide the service without that access.</p>
           <p>The measures we apply: day to day nobody goes in — what connects is the automated deployment system; a team member goes in <strong>only when a problem is blocking the service</strong>, always <strong>through an encrypted VPN</strong> with an exit point in the United States — and the work <strong>runs on the server itself</strong>, with no copies downloaded to local machines. Updates are installed by an automated deployment system (GitHub Actions), which connects to the server from the United States, runs the commands there and extracts no copies.</p>
+          <h4>If your company is in the European Economic Area</h4>
+          <p>Your instance is hosted in <strong>Frankfurt (Germany)</strong>, in DigitalOcean's <code>fra1</code> region. What leaves it for the United States, and under which safeguard:</p>
+          <ul>
+            <li><strong>Code Flakes LLC</strong>: the remote support access described above; the technical reports and aggregate counts in <a href="#uso-servicio">section 10</a>, to our base instance in New York; and, if you connect Gmail, Google's authorisation, which passes through that instance without staying there. Code Flakes LLC <strong>is not certified</strong> under the EU-U.S. Data Privacy Framework: the intended instrument is the European Commission's <strong>Standard Contractual Clauses</strong> — module 2 if your company is the controller of the data; module 3 if it is itself a processor for someone else — which we sign as an annex when you ask, under clause 9 of the processing agreement.</li>
+            <li><strong>Google</strong>, if you connect Gmail or Google Workspace: the email you send from that account. Google LLC is certified under the <strong>EU-U.S. Data Privacy Framework</strong>; the relationship and its safeguards are those of your own contract with Google.</li>
+            <li><strong>Meta</strong>, if you connect Instagram (and WhatsApp Business, once it is available in the EEA): what is exchanged with that account. Meta Platforms, Inc. is certified under the EU-U.S. Data Privacy Framework; the relationship and its safeguards are those of your own account with Meta.</li>
+          </ul>
+          <p>In addition, on EEA instances <strong>the time each screen spends in view is not measured in the browser</strong>, unless you ask us to turn it on (<a href="#uso-servicio">section 10</a>).</p>
           <p><strong>What you configure.</strong> The integrations you connect and the public booking, form or checkout pages the system generates for your business are configured by you: what data you ask for, whether you charge and through which gateway. We do not control those decisions or what you load into your instance, and we do not delete or purge your data on our own initiative: how long you keep it is your decision, and the system gives you the tools to erase and export. Your PerfectFlow subscription is paid through Stripe; we do not store your card details.</p>
           <p>If your company needs Standard Contractual Clauses or another instrument for this access, we will cooperate and sign the one that is reasonably applicable; and if the situation does not work for you, you may terminate the contract without penalty. The full terms are in clause 9 of the <a href="/en/dpa">data processing agreement</a> and on the <a href="/en/subprocessors">subprocessors page</a>.</p>
           <p>PerfectFlow is a service: we answer for how we operate. The obligations that fall to you as controller of the data you load — legal basis, informing your contacts, a representative in the Union if you need one, contracts with the providers you connect through your own account — are yours.</p>
@@ -751,6 +807,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <h2>7. How long it is kept</h2>
           <ul>
             <li><strong>Access and refresh tokens:</strong> kept while the account is connected. Disconnecting it from PerfectFlow deletes them.</li>
+            <li><strong>Gmail or Google Workspace:</strong> the connected address and its tokens are kept while the account is connected. When you disconnect it, the token is revoked with Google and both are deleted.</li>
             <li><strong>Connected account data and posts:</strong> kept in your instance until you request their deletion or the instance is decommissioned.</li>
             <li><strong>Image and video files:</strong> kept alongside the post they belong to and deleted with it.</li>
             <li><strong>Instagram messages:</strong> retained in the customer's PerfectFlow instance while necessary to provide the Instagram Inbox feature, until deleted by the customer, pursuant to a deletion request, or when the instance is decommissioned.</li>
@@ -761,6 +818,8 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
             <li><strong>Your client account data</strong> — contact and billing — is kept while the subscription is active and, afterwards, for the tax and commercial limitation period that obliges us to retain accounting records.</li>
             <li><strong>The data your company loads into its instance</strong> is yours to keep: you set the periods, as controller. Once the contract ends we hold the instance for <strong>thirty (30) days</strong> so you can export it, and after that we delete the instance, its database and its files, backups included, unless you tell us otherwise in writing.</li>
             <li><strong>Backups</strong> are taken daily and kept for seven days, so a deleted record also disappears from the backups after that period.</li>
+            <li><strong>Support desk accounts and requests</strong> are kept with your client account data and for the same period.</li>
+            <li><strong>Service usage aggregates</strong> are kept for <strong>ninety (90) days</strong> and then deleted. The counters we use to count distinct people expire on their own before that (<a href="#uso-servicio">section 10</a>).</li>
           </ul>
           <p>You can request deletion at any time by following the <a href="../data-deletion/">data deletion instructions</a>.</p>
         </section>
@@ -779,19 +838,62 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
             <li><strong>Disconnect the account</strong> from PerfectFlow's social media module. Doing so deletes the authentication tokens, and PerfectFlow can no longer access Instagram analytics, publish content, receive new Instagram messages, or send replies on behalf of the connected account.</li>
             <li><strong>Revoke access from Meta</strong>, in your Instagram account settings, under the apps and websites connected to your account. This takes effect immediately, independently of PerfectFlow.</li>
             <li><strong>Revoke access from TikTok</strong>, in your account settings, under connected apps. This also takes effect immediately.</li>
+            <li><strong>Disconnect Gmail</strong> with «Desconectar» in Settings › Email, or <strong>remove access from Google</strong>, at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. Either way, PerfectFlow can no longer send from your account.</li>
             <li><strong>Request deletion of your data</strong> by writing to <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>. The details are on the <a href="../data-deletion/">data deletion</a> page.</li>
             <li><strong>Ask us for a copy or a correction</strong> of the data we hold about you, at the same address.</li>
+            <li><strong>Turn off the usage measurement</strong> in <a href="#uso-servicio">section 10</a>: you can ask us to turn it off for your account, at the same address.</li>
           </ul>
 
           <h3>If the General Data Protection Regulation applies to you</h3>
-          <p>For the data we control — your client account data — you can exercise the rights of <strong>access, rectification, erasure, restriction, objection and portability</strong>. Write to <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a> and we will answer within one month at the latest. You can also do so through our representative in the European Union, Prighter: <a href="https://app.prighter.com/portal/13067132566" rel="noopener">https://app.prighter.com/portal/13067132566</a></p>
+          <p>For the data we control — your client account data and the service usage data — you can exercise the rights of <strong>access, rectification, erasure, restriction, objection and portability</strong>. Write to <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a> and we will answer within one month at the latest. You can also do so through our representative in the European Union, Prighter: <a href="https://app.prighter.com/portal/13067132566" rel="noopener">https://app.prighter.com/portal/13067132566</a></p>
           <p>If you believe we have not handled your request properly, you have the right to lodge a complaint with the <strong>data protection supervisory authority</strong> in your country.</p>
           <p>For the data your company enters into its instance, those rights are exercised against you, as their controller. We assist you in answering them under the terms of the data processing agreement: export, correction and deletion of the records you tell us to act on.</p>
         </section>
 
+        <section id="uso-servicio">
+          <h2>10. Service usage and product improvement</h2>
+          <p>To run PerfectFlow, support you and decide what to improve, <strong>Code Flakes LLC</strong> measures how the system is used and how it is running inside your instance. It is our own measurement, kept as counts, and it is worth saying first what it is not:</p>
+          <ul>
+            <li><strong>No third-party scripts.</strong> Neither Google Analytics nor any other external measurement tool is loaded inside the CRM.</li>
+            <li><strong>No new cookies.</strong> The only cookie is still the session cookie the system already uses to keep you signed in.</li>
+            <li><strong>No session recording</strong> and nothing of what is on screen: no clicks, no keystrokes, no screenshots.</li>
+            <li><strong>No content.</strong> For each screen only its generic name is noted — for example, «Contacts › record» — never which record was opened or what it contained.</li>
+            <li><strong>Not per person.</strong> None of this can tell what a specific user did.</li>
+          </ul>
+
+          <h3>What the system always counts</h3>
+          <p>These are counts of what the system itself does, which we need in order to run it:</p>
+          <ul>
+            <li><strong>Errors</strong> per screen: how many and of what type, without the error message or the data being worked on.</li>
+            <li><strong>Records per module</strong>: how many there are and how many were created in the last thirty days, with the module's name.</li>
+            <li><strong>Emails and WhatsApp messages</strong> sent and failed, per day.</li>
+            <li>Whether the system's <strong>initial setup</strong> is finished.</li>
+          </ul>
+          <p>On top of that come the technical reports the system already sent: installed version, server health, number of users and records, and modules turned on.</p>
+
+          <h3>Usage measurement</h3>
+          <p>In addition, unless you ask us to turn it off, the system measures:</p>
+          <ul>
+            <li>The <strong>screens that are opened</strong> and the <strong>time they spend in view</strong> (on EEA instances, screens only: see below).</li>
+            <li>All of it <strong>added up per day and per role</strong> — for example, «Front desk» or «Admin» — never per person.</li>
+            <li>How many <strong>distinct users</strong> used the system in the day, in seven and in thirty days. To count them without storing who they are, statistical counters (HyperLogLog) are kept in your own instance; they do not store user identifiers, cannot list them and expire on their own. The daily totals carry no user identifier.</li>
+          </ul>
+          <p>The totals are kept for <strong>ninety (90) days</strong> and then deleted.</p>
+          <p><strong>Instances in the European Economic Area.</strong> Time in view is measured by a small first-party script that reads in the browser whether the tab is visible and sends that to your instance. Because European law protects access to information stored on the user's device (Art. 5(3) of Directive 2002/58/EC on privacy and electronic communications), <strong>on instances hosted in the EEA that in-browser measurement is off</strong>: only the screens that are opened are counted, on the server. It is turned on only if you ask us in writing, and before that we will tell you what it takes to do so in line with the law of your country, which may require your users' consent.</p>
+
+          <h3>Where they go</h3>
+          <p>The counts are worked out in your instance and travel, already aggregated, to Code Flakes' base instance (<code>codeflakes.perfectflow.cloud</code>), hosted on the same DigitalOcean infrastructure, in the United States, together with the technical reports above. No new providers are involved and nothing is shared with anyone.</p>
+
+          <h3>Who is responsible and on what basis</h3>
+          <p><strong>Code Flakes LLC</strong> is the controller of this data, because we decide to measure and what for: <strong>running the service, supporting you and improving it</strong>. If the General Data Protection Regulation applies to you, the legal basis is our <strong>legitimate interests</strong> (Art. 6(1)(f)) with regard to the users of your account, and you can object to this processing by writing to us. No data is processed about the people listed as customers or contacts in your instance: what is counted is how your team uses the system, not whom it serves.</p>
+
+          <h3>How to turn it off</h3>
+          <p>Usage measurement can be turned off for your account: <strong>you can ask us to turn it off</strong> by writing to <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>. The counts the system always makes — errors, records, messages sent, setup — carry on, because they measure no one: they count what the system does.</p>
+        </section>
+
         <section id="sitio">
-          <h2>10. This website</h2>
-          <p><strong>The public PerfectFlow website at <code>perfectflow.cloud</code> does not use Google Analytics</strong>, nor any other analytics, and sets no tracking cookies. Some <em>customer landing pages</em> may use Google Analytics 4, but only when that customer explicitly enables the analytics feature — that is a different site, under that customer's own property. This section is about this website. The only thing stored in your browser is a local flag (<code>pf_cookies</code>) remembering that you dismissed the cookie notice, so it isn't shown again. That flag never leaves your browser.</p>
+          <h2>11. This website</h2>
+          <p><strong>The public PerfectFlow website at <code>perfectflow.cloud</code> does not use Google Analytics</strong>, nor any other analytics, and sets no tracking cookies. Some <em>customer landing pages</em> may use Google Analytics 4, but only when that customer explicitly enables the analytics feature — that is a different site, under that customer's own property. This section is about this website; the measurement the system does inside your instance is in <a href="#uso-servicio">section 10</a>. The only thing stored in your browser is a local flag (<code>pf_cookies</code>) remembering that you dismissed the cookie notice, so it isn't shown again. That flag never leaves your browser.</p>
           <p>This site has <strong>no contact form</strong>. There are three ways to reach us, each with its own consequence:</p>
           <ul>
             <li><strong>Emailing us</strong> at <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>. We use those details solely to reply to you.</li>
@@ -803,17 +905,17 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
         </section>
 
         <section id="menores">
-          <h2>11. Minors</h2>
+          <h2>12. Minors</h2>
           <p>PerfectFlow is a management tool for businesses. It is not directed at minors and we do not knowingly collect data from people under 18.</p>
         </section>
 
         <section id="cambios">
-          <h2>12. Changes to this policy</h2>
+          <h2>13. Changes to this policy</h2>
           <p>If we change what the system does with data, we update this page and the last-updated date shown above. Significant changes are also announced by email to active clients.</p>
         </section>
 
         <section id="contacto">
-          <h2>13. Contact</h2>
+          <h2>14. Contact</h2>
           <div class="note">
             <p><strong>Code Flakes LLC</strong> — PerfectFlow</p>
             <p>4851 W Hillsboro Blvd, A3, Coconut Creek, FL 33073, United States</p>
