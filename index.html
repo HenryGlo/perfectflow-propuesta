@@ -764,7 +764,11 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 .testi-photo:hover{transform:rotate(0) scale(1.02)}
 .testi-photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border:var(--line);border-radius:10px}
 .testi-tag{position:absolute;left:50%;bottom:10px;transform:translateX(-50%) rotate(-2deg);background:var(--lime);border:var(--line);border-radius:var(--r-pill);box-shadow:var(--hard-sm);padding:.2em .9em;font-family:"Chillax","Poppins",sans-serif;font-weight:700;font-size:.95rem;white-space:nowrap}
-@media (max-width:820px){.testi-wrap{grid-template-columns:1fr}.testi-photo{max-width:260px;justify-self:center}}
+.testi-wrap--flip{grid-template-columns:minmax(0,1fr) minmax(0,320px)}
+.testi-wrap--flip .testi-photo{order:2;transform:rotate(2deg)}
+.testi-wrap--flip .testi-photo img{object-position:50% 40%}
+.testi-role{display:block;font-size:.9rem;color:var(--ink-70);margin-top:2px}
+@media (max-width:820px){.testi-wrap{grid-template-columns:1fr}.testi-photo{max-width:260px;justify-self:center}.testi-wrap--flip .testi-photo{order:0}}
 .testi{position:relative;margin:clamp(34px,4vw,54px) 0 0;max-width:62rem;background:var(--paper);border:var(--line);border-radius:var(--r-lg);box-shadow:var(--hard-lg);padding:clamp(26px,4vw,52px) clamp(22px,4vw,56px) clamp(22px,3vw,36px);transform:rotate(-.6deg)}
 .testi-mark{position:absolute;top:-28px;left:clamp(18px,3vw,40px);width:64px;height:64px;border-radius:50%;background:var(--lime);border:var(--line);box-shadow:var(--hard-sm);display:grid;place-items:center;font-family:"Chillax","Poppins",sans-serif;font-weight:700;font-size:3rem;line-height:1;padding-top:.32em}
 .testi blockquote{margin:0}
@@ -1176,6 +1180,24 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
       </blockquote>
       <figcaption class="testi-by">
         <span><b data-en="Fidelia, on behalf of the Lumavitae team">Fidelia, en representación del equipo de Lumavitae</b><a href="https://pilateslumavitae.com" target="_blank" rel="noopener" data-en="Pilates studio · pilateslumavitae.com">Estudio de pilates · pilateslumavitae.com</a></span>
+      </figcaption>
+    </figure>
+    </div>
+    <!-- Oldtape (Pedro Querales), oct-2026: foto a la derecha para alternar. -->
+    <div class="testi-wrap testi-wrap--flip">
+    <div class="testi-photo rv">
+      <img src="assets/pedro-querales-oldtape.webp" width="720" height="960" loading="lazy" decoding="async" alt="Pedro Querales en su estudio de grabación, frente a su laptop">
+      <span class="testi-tag">Oldtape</span>
+    </div>
+    <figure class="testi rv">
+      <span class="testi-mark" aria-hidden="true">“</span>
+      <blockquote>
+        <p data-en="Before PerfectFlow, at Oldtape we handled communication, feedback and client acquisition by hand, with no clear organization or direction. The project started spontaneously, and that&#39;s how we ran our processes at first.">Antes de utilizar PerfectFlow, en Oldtape gestionábamos la comunicación, el feedback y la captación de forma manual, sin una organización ni una dirección claras. El proyecto nació espontáneamente y así fuimos manejando los procesos al inicio.</p>
+        <p data-en="What I&#39;ve found most useful so far is being able to connect the website with email and a payment platform. That connection has helped me with payment options, replies and follow-up.">De PerfectFlow, lo que más me ha resultado útil hasta ahora es poder conectar la web con el correo y una plataforma de pagos. Esa conexión me ha ayudado con las modalidades de pago, las respuestas y el seguimiento.</p>
+        <p data-en="During the implementation, my experience with the team has been very positive: they&#39;re professional and highly skilled, and they inspire me to keep improving and optimizing my processes.">Durante la implementación, mi experiencia con el equipo ha sido muy positiva: son profesionales y cualificados, y me inspiran a seguir mejorando y optimizando mis procesos.</p>
+      </blockquote>
+      <figcaption class="testi-by">
+        <span><b>Pedro Querales (Oldtape)</b><small class="testi-role" data-en="Venezuelan music producer and songwriter, two-time Latin Grammy nominee.">Productor musical y compositor venezolano, dos veces nominado al Latin Grammy.</small></span>
       </figcaption>
     </figure>
     </div>
