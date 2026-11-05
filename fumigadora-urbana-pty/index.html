@@ -3,244 +3,245 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fumigadora Urbana PTY · Control de plagas con certificado en Ciudad de Panamá</title>
-<meta name="description" content="Fumigación residencial y comercial en Ciudad de Panamá. Compra tu plan en línea, agenda la visita y recibe tu certificado de fumigación por correo.">
+<title>Fumigadora Urbana PTY · Control de plagas profesional en Ciudad de Panamá</title>
+<meta name="description" content="Fumigación residencial y comercial en Ciudad de Panamá. Inspección, tratamiento y certificado firmado en cada servicio. Compra tu plan y agenda en línea.">
 <!-- Propuesta de sitio (demo). No indexar hasta que el cliente la apruebe. -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0F1B2D">
+<meta name="theme-color" content="#121416">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0F1B2D; --navy-2:#16263D; --navy-3:#21364F;
-  --lime:#75B11B; --lime-2:#8DCB2C; --lime-soft:#EEF7E1;
-  --ink:#0F1B2D; --ink-2:#3B4859; --ink-3:#6B7686;
-  --line:#E3E8EE; --bg:#F6F8FA; --white:#fff;
-  --r:16px; --r-lg:24px;
-  --shadow:0 1px 2px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.08);
-  --shadow-lg:0 20px 50px rgba(15,27,45,.18);
-  --max:1180px;
+  --asphalt:#121416; --steel:#1B1F23; --concrete:#262B31; --iron:#3A4149; --fog:#8C96A1;
+  --lime:#75B11B; --lime-hi:#93D12F; --hazard:#F2C200; --paper:#F4F1EA; --paper-2:#E9E4D8;
+  --ink:#121416; --ink-2:#3A4149; --line:#2F353C;
+  --max:1200px;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif; --body:Barlow,system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:Manrope,Inter,sans-serif;line-height:1.12;letter-spacing:-.02em;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:var(--body);color:#E8ECEF;background:var(--asphalt);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--cond);text-transform:uppercase;letter-spacing:.01em;line-height:.98;margin:0;font-weight:800}
 a{color:inherit}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 .8rem/1 Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
-.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:12px;font:700 1rem/1 Manrope,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+/* grano de asfalto */
+.grain{position:relative}
+.grain::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--hazard) 0 18px,var(--asphalt) 18px 36px)}
+.tag{display:inline-flex;align-items:center;gap:10px;font:700 .82rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--lime-hi)}
+.tag::before{content:"";width:10px;height:10px;background:var(--lime);box-shadow:0 0 0 3px rgba(117,177,27,.25)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 26px;font:800 1.05rem/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s,transform .15s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
 .btn:hover{transform:translateY(-1px)}
-.btn-lime{background:var(--lime);color:var(--navy);box-shadow:0 8px 20px rgba(117,177,27,.35)}
-.btn-lime:hover{background:var(--lime-2)}
-.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
-.btn-ghost:hover{border-color:#fff}
-.btn-navy{background:var(--navy);color:#fff}
-.btn-outline{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
-.btn-outline:hover{border-color:var(--navy)}
 .btn svg{width:18px;height:18px}
+.btn-lime{background:var(--lime);color:var(--asphalt)}
+.btn-lime:hover{background:var(--lime-hi)}
+.btn-line{border-color:rgba(255,255,255,.35);color:#fff;clip-path:none}
+.btn-line:hover{border-color:#fff}
+.btn-dark{background:var(--asphalt);color:#fff}
+.btn-paper{background:var(--paper);color:var(--asphalt);clip-path:none;border-color:var(--asphalt)}
 
-/* nav */
-.nav{position:sticky;top:0;z-index:50;background:rgba(15,27,45,.92);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.brand img{width:44px;height:44px;border-radius:10px;background:#fff;object-fit:cover}
-.brand b{font:800 1.05rem/1.1 Manrope,sans-serif;display:block}
-.brand small{font-size:.75rem;color:rgba(255,255,255,.6)}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.78);text-decoration:none;font-weight:500;font-size:.95rem}
-.nav-links a:hover{color:#fff}
-.nav .btn{padding:12px 18px;font-size:.92rem}
-@media (max-width:900px){.nav-links{display:none}}
+/* barra superior */
+.topbar{background:var(--lime);color:var(--asphalt);font:700 .78rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar span:last-child{opacity:.75}
+@media (max-width:700px){.topbar span:last-child{display:none}}
+.nav{position:sticky;top:0;z-index:50;background:rgba(18,20,22,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:48px;height:48px;object-fit:cover;background:#fff;border:2px solid var(--lime)}
+.brand b{font:800 1.35rem/1 var(--cond);letter-spacing:.04em;text-transform:uppercase;display:block;color:#fff}
+.brand small{font:600 .7rem/1.4 var(--mono);letter-spacing:.12em;color:var(--fog);text-transform:uppercase}
+.nav-links{display:flex;gap:30px}
+.nav-links a{font:700 1rem/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#C9D0D6}
+.nav-links a:hover{color:var(--lime-hi)}
+.nav .btn{padding:13px 18px;font-size:.95rem}
 .l-short{display:none}
-@media (max-width:560px){.l-long{display:none}.l-short{display:inline}}
-@media (max-width:420px){.brand small{display:none}.nav .btn{padding:11px 14px;font-size:.85rem}}
+@media (max-width:980px){.nav-links{display:none}}
+@media (max-width:560px){.l-long{display:none}.l-short{display:inline}.brand small{display:none}}
 
 /* hero */
-.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 500px at 85% -10%,rgba(117,177,27,.22),transparent 60%),linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:72px 0 96px}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:180px;opacity:.10;background:
-  linear-gradient(90deg,transparent 0 6%,#fff 6% 9%,transparent 9% 14%,#fff 14% 15.5%,transparent 15.5% 22%,#fff 22% 26%,transparent 26% 31%,#fff 31% 33%,transparent 33% 41%,#fff 41% 45%,transparent 45% 52%,#fff 52% 53.5%,transparent 53.5% 60%,#fff 60% 64%,transparent 64% 71%,#fff 71% 73%,transparent 73% 80%,#fff 80% 85%,transparent 85% 91%,#fff 91% 93%,transparent 93%);
-  -webkit-mask:linear-gradient(0deg,#000 0,#000 30%,transparent 100%);mask:linear-gradient(0deg,#000 0,#000 30%,transparent 100%)}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,5vw,3.9rem);font-weight:800;margin:18px 0 20px}
-.hero h1 em{font-style:normal;color:var(--lime-2)}
-.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:rgba(255,255,255,.82);max-width:34rem;margin:0 0 30px}
+.hero{overflow:hidden;background:radial-gradient(900px 520px at 78% 40%,#23282E 0%,var(--asphalt) 70%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:76px;padding-bottom:84px}
+.hero h1{font-size:clamp(3rem,7.4vw,6.4rem);color:#fff;margin:20px 0 22px}
+.hero h1 span{display:block}
+.hero h1 .hl{color:var(--lime-hi)}
+.hero p.lead{font-size:clamp(1.08rem,1.6vw,1.28rem);color:#C9D0D6;max-width:35rem;margin:0 0 32px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;padding:0;list-style:none}
-.chips li{display:flex;align-items:center;gap:8px;font-size:.92rem;color:rgba(255,255,255,.85)}
-.chips svg{width:18px;height:18px;color:var(--lime-2);flex:none}
-@media (max-width:960px){.hero-grid{grid-template-columns:1fr}.hero{padding:48px 0 72px}}
+.hero-facts{display:flex;flex-wrap:wrap;gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.hero-facts div{padding:16px 26px 0 0;margin-right:26px;border-right:1px solid var(--line)}
+.hero-facts div:last-child{border-right:0}
+.hero-facts b{display:block;font:800 1.7rem/1 var(--cond);color:#fff;letter-spacing:.02em}
+.hero-facts small{font:600 .72rem/1.4 var(--mono);letter-spacing:.1em;color:var(--fog);text-transform:uppercase}
+/* niebla */
+.fog{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.fog i{position:absolute;border-radius:50%;filter:blur(40px);background:radial-gradient(circle,rgba(220,228,232,.20),rgba(220,228,232,0) 65%);animation:drift 22s ease-in-out infinite alternate}
+.fog i:nth-child(1){width:620px;height:340px;right:-120px;top:12%}
+.fog i:nth-child(2){width:520px;height:300px;right:12%;top:46%;animation-duration:28s;animation-delay:-6s}
+.fog i:nth-child(3){width:420px;height:260px;right:-60px;bottom:-40px;animation-duration:18s;animation-delay:-3s}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-80px,-24px,0) scale(1.15)}}
+@media (prefers-reduced-motion:reduce){.fog i{animation:none}}
+/* placa técnica */
+.plate{position:relative;background:linear-gradient(180deg,#2A3037,#1E2328);border:2px solid #444C55;padding:26px 26px 22px;color:#E8ECEF;box-shadow:0 30px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06)}
+.plate::before,.plate::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#9AA3AD,#3A4149);top:10px;left:10px;box-shadow:calc(100% + 0px) 0 0 0 transparent}
+.plate::after{left:auto;right:10px}
+.plate .rivets{position:absolute;inset:auto 10px 10px 10px;display:flex;justify-content:space-between}
+.plate .rivets i{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#9AA3AD,#3A4149)}
+.plate-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border-bottom:2px dashed #4A525B;padding:4px 0 16px;margin-bottom:14px}
+.plate-head h3{font-size:1.9rem;color:#fff}
+.plate-head small{font:700 .72rem/1.4 var(--mono);letter-spacing:.12em;color:var(--lime-hi);text-transform:uppercase;display:block;margin-top:6px}
+.plate-head img{width:58px;height:58px;background:#fff;border:2px solid var(--lime)}
+.spec{width:100%;border-collapse:collapse;font-size:.95rem}
+.spec th{text-align:left;font:700 .72rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fog);padding:9px 12px 9px 0;vertical-align:top;width:40%;border-bottom:1px solid #353C44}
+.spec td{padding:9px 0;border-bottom:1px solid #353C44;font-weight:600}
+.spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
+.stamp{position:absolute;right:18px;bottom:-22px;transform:rotate(-12deg);border:3px solid var(--lime-hi);color:var(--lime-hi);font:800 1.05rem/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;background:rgba(18,20,22,.6)}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.plate{max-width:520px}}
 
-/* certificate mock */
-.cert{background:#fff;color:var(--ink);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:26px 26px 22px;transform:rotate(1.4deg);max-width:440px;margin-left:auto;position:relative}
-.cert::before{content:"";position:absolute;inset:-14px -14px auto auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(141,203,44,.5),transparent 70%);z-index:-1}
-.cert-head{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
-.cert-head img{width:44px;height:44px;border-radius:8px}
-.cert-head b{font:800 1.05rem Manrope,sans-serif;color:#2f6b17;display:block}
-.cert-head small{color:var(--ink-3);font-size:.8rem}
-.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;font-size:.85rem}
-.cert-grid span{display:block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
-.cert-grid b{font-weight:600}
-.cert-table{margin-top:14px;border-radius:10px;overflow:hidden;border:1px solid var(--line);font-size:.8rem}
-.cert-table div{display:flex;justify-content:space-between;padding:7px 12px;border-top:1px solid var(--line)}
-.cert-table div:first-child{border-top:0;background:#2f6b17;color:#fff;font-weight:600}
-.cert-sign{display:flex;justify-content:space-between;gap:18px;margin-top:18px}
-.cert-sign div{flex:1;border-top:1.5px solid #9aa4b2;padding-top:5px;font-size:.72rem;color:var(--ink-3);position:relative}
-.cert-sign svg{position:absolute;bottom:20px;left:6px;width:110px;height:34px;color:var(--navy)}
-.cert-badge{position:absolute;top:-16px;left:22px;background:var(--lime);color:var(--navy);font:800 .75rem/1 Manrope,sans-serif;padding:8px 12px;border-radius:999px;box-shadow:0 6px 14px rgba(117,177,27,.4)}
-@media (max-width:960px){.cert{margin:8px auto 0;transform:none}}
+/* secciones */
+section{padding:100px 0;position:relative}
+.sec-head{max-width:52rem;margin-bottom:50px}
+.sec-head h2{font-size:clamp(2.4rem,5vw,4rem);margin:16px 0 16px;color:#fff}
+.sec-head p{font-size:1.12rem;color:#B8C0C7;margin:0}
+.light{background:var(--paper);color:var(--ink)}
+.light .sec-head h2{color:var(--asphalt)}
+.light .sec-head p{color:var(--ink-2)}
+.light .tag{color:#3E6C0B}
+.steel{background:var(--steel)}
+@media (max-width:700px){section{padding:72px 0}}
 
-/* sections */
-section{padding:96px 0}
-.sec-head{max-width:46rem;margin-bottom:46px}
-.sec-head h2{font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:800;margin:14px 0 14px}
-.sec-head p{color:var(--ink-2);font-size:1.08rem;margin:0}
-.center{text-align:center;margin-left:auto;margin-right:auto}
-.bg-soft{background:var(--bg)}
-@media (max-width:700px){section{padding:68px 0}}
+/* servicios */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--asphalt)}
+.svc article{padding:30px 26px 32px;border-right:2px solid var(--asphalt);background:var(--paper);display:flex;flex-direction:column;gap:12px;transition:background .2s}
+.svc article:last-child{border-right:0}
+.svc article:hover{background:#fff}
+.svc .num{font:800 3.4rem/1 var(--cond);color:var(--lime);letter-spacing:-.02em}
+.svc h3{font-size:1.75rem;color:var(--asphalt)}
+.svc p{margin:0;color:var(--ink-2)}
+.svc ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:7px;font-size:.95rem}
+.svc li{display:flex;gap:9px;align-items:baseline}
+.svc li::before{content:"";width:8px;height:8px;background:var(--lime);flex:none;transform:translateY(-1px)}
+@media (max-width:1050px){.svc{grid-template-columns:1fr 1fr}.svc article:nth-child(2){border-right:0}.svc article:nth-child(-n+2){border-bottom:2px solid var(--asphalt)}}
+@media (max-width:600px){.svc{grid-template-columns:1fr}.svc article{border-right:0;border-bottom:2px solid var(--asphalt)}.svc article:last-child{border-bottom:0}}
 
-/* trust strip */
-.strip{background:var(--lime-soft);padding:26px 0;border-bottom:1px solid #DCEBC6}
-.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.strip div{display:flex;gap:12px;align-items:center}
-.strip svg{width:28px;height:28px;color:#2f6b17;flex:none}
-.strip b{font:700 1rem Manrope,sans-serif;display:block;line-height:1.25}
-.strip small{color:var(--ink-2);font-size:.84rem}
-@media (max-width:900px){.strip .wrap{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.strip .wrap{grid-template-columns:1fr}}
+/* protocolo */
+.proto{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p}
+.proto div{position:relative;padding:0 28px 0 0}
+.proto div::before{counter-increment:p;content:"0" counter(p);display:block;font:800 4.6rem/1 var(--cond);color:transparent;-webkit-text-stroke:2px var(--lime);margin-bottom:6px}
+.proto div::after{content:"";position:absolute;top:36px;left:96px;right:14px;height:2px;background:repeating-linear-gradient(90deg,var(--iron) 0 10px,transparent 10px 18px)}
+.proto div:last-child::after{display:none}
+.proto h3{font-size:1.65rem;color:#fff;margin:6px 0 10px}
+.proto p{margin:0;color:#B8C0C7}
+@media (max-width:980px){.proto{grid-template-columns:1fr 1fr;row-gap:40px}.proto div::after{display:none}}
+@media (max-width:560px){.proto{grid-template-columns:1fr}}
 
-/* services */
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
-.card .ic{width:48px;height:48px;border-radius:12px;background:var(--lime-soft);display:grid;place-items:center;color:#2f6b17}
-.card .ic svg{width:26px;height:26px}
-.card h3{font-size:1.2rem;font-weight:800}
-.card p{margin:0;color:var(--ink-2);font-size:.96rem}
-.card ul{margin:4px 0 0;padding-left:18px;color:var(--ink-2);font-size:.9rem}
-@media (max-width:1000px){.cards{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.cards{grid-template-columns:1fr}}
+/* tarifario */
+.rates{border:2px solid var(--asphalt);background:#fff}
+.rate{display:grid;grid-template-columns:1.25fr 1.5fr .8fr .9fr auto;align-items:center;gap:20px;padding:24px 26px;border-bottom:2px solid var(--asphalt);color:var(--asphalt)}
+.rate:last-child{border-bottom:0}
+.rate.hi{background:#F3FAE6;box-shadow:inset 6px 0 0 var(--lime)}
+.rate h3{font-size:1.75rem}
+.rate .badge{display:inline-block;margin-top:6px;background:var(--asphalt);color:var(--lime-hi);font:700 .68rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:6px 8px}
+.rate p{margin:0;color:var(--ink-2);font-size:.98rem}
+.rate .vis{font:700 .8rem/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.rate .vis b{display:block;font:800 1.6rem/1 var(--cond);color:var(--asphalt);letter-spacing:.02em}
+.rate .price{font:800 2.6rem/1 var(--cond);letter-spacing:.01em}
+.rate .price small{display:block;font:600 .74rem/1.4 var(--mono);letter-spacing:.06em;color:#3E6C0B;text-transform:uppercase}
+.rate .btn{padding:15px 22px}
+.rates-note{margin-top:20px;font:600 .9rem/1.5 var(--mono);color:var(--ink-2)}
+.rates-note a{color:#3E6C0B}
+@media (max-width:980px){.rate{grid-template-columns:1fr 1fr;gap:12px 20px}.rate>div:nth-child(2){grid-column:1/-1;order:3}.rate .btn{grid-column:1/-1;order:5}}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
-.step{position:relative;padding:26px 22px 24px;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
-.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--lime-2);font:800 1.05rem Manrope,sans-serif;margin-bottom:14px}
-.step h3{font-size:1.1rem;font-weight:800;margin-bottom:6px}
-.step p{margin:0;color:var(--ink-2);font-size:.95rem}
-@media (max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.steps{grid-template-columns:1fr}}
+/* certificado en papel */
+.cert-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.clip{position:relative;background:#5A4632;padding:46px 22px 22px;box-shadow:0 30px 60px rgba(0,0,0,.45);max-width:470px;transform:rotate(-1.5deg)}
+.clip::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:140px;height:42px;background:linear-gradient(180deg,#C7CCD1,#8C949C);border-radius:6px 6px 2px 2px;box-shadow:0 3px 0 #5d646b}
+.paper{background:var(--paper);color:var(--asphalt);padding:22px 22px 18px;font-size:.84rem;box-shadow:0 2px 0 var(--paper-2),0 4px 0 #ddd6c7}
+.paper-h{display:flex;gap:12px;align-items:center;border-bottom:2px solid var(--asphalt);padding-bottom:10px;margin-bottom:10px}
+.paper-h img{width:44px;height:44px}
+.paper-h b{font:800 1.3rem/1 var(--cond);text-transform:uppercase;letter-spacing:.03em;display:block}
+.paper-h small{font:600 .68rem/1.4 var(--mono);letter-spacing:.08em;color:#5a6168}
+.paper dl{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin:0}
+.paper dt{font:700 .62rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#6b7279}
+.paper dd{margin:2px 0 0;font-weight:600}
+.paper table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.78rem}
+.paper th{background:#2f6b17;color:#fff;text-align:left;padding:6px 8px;font-weight:600}
+.paper td{padding:6px 8px;border-bottom:1px solid #d9d2c3}
+.paper .sig{display:flex;gap:16px;margin-top:20px}
+.paper .sig div{flex:1;border-top:1.5px solid #6b7279;padding-top:4px;font:600 .62rem/1.3 var(--mono);text-transform:uppercase;color:#6b7279;position:relative}
+.paper .sig svg{position:absolute;bottom:16px;left:4px;width:100px;height:30px;color:#1b2a5a}
+.cert-points{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.cert-points li{display:flex;gap:14px;align-items:flex-start;color:#C9D0D6}
+.cert-points b{color:#fff;font:800 1.2rem/1.2 var(--cond);text-transform:uppercase;letter-spacing:.03em;display:block}
+.cert-points i{flex:none;width:32px;height:32px;display:grid;place-items:center;background:var(--lime);color:var(--asphalt);font:800 1rem/1 var(--cond);font-style:normal}
+@media (max-width:980px){.cert-wrap{grid-template-columns:1fr}.clip{margin:0 auto}}
 
-/* plans */
-.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
-.plan{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
-.plan.featured{border:2px solid var(--lime);box-shadow:0 18px 40px rgba(117,177,27,.18)}
-.plan .tag{position:absolute;top:-13px;left:24px;background:var(--lime);color:var(--navy);font:800 .72rem/1 Manrope,sans-serif;padding:7px 11px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase}
-.plan h3{font-size:1.18rem;font-weight:800}
-.plan .for{color:var(--ink-3);font-size:.88rem;margin:4px 0 16px;min-height:2.6em}
-.plan .price{font:800 2.5rem/1 Manrope,sans-serif;letter-spacing:-.03em}
-.plan .price small{font:500 .9rem Inter,sans-serif;color:var(--ink-3);letter-spacing:0}
-.plan .per{color:#2f6b17;font-weight:600;font-size:.86rem;margin:6px 0 18px}
-.plan ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:9px;font-size:.92rem;color:var(--ink-2)}
-.plan li{display:flex;gap:8px}
-.plan li svg{width:18px;height:18px;color:var(--lime);flex:none;margin-top:3px}
-.plan .btn{margin-top:auto;width:100%}
-.plans-note{margin-top:22px;text-align:center;color:var(--ink-3);font-size:.92rem}
-@media (max-width:1060px){.plans{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.plans{grid-template-columns:1fr}}
-
-/* business */
-.biz{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
-.biz .sec-head p{color:rgba(255,255,255,.78)}
-.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.biz-list{display:grid;gap:18px;margin:0;padding:0;list-style:none}
-.biz-list li{display:flex;gap:14px}
-.biz-list .ic{width:42px;height:42px;border-radius:10px;background:rgba(141,203,44,.14);color:var(--lime-2);display:grid;place-items:center;flex:none}
-.biz-list .ic svg{width:22px;height:22px}
-.biz-list b{font:700 1.05rem Manrope,sans-serif;display:block}
-.biz-list span{color:rgba(255,255,255,.72);font-size:.95rem}
-.dash{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-lg)}
-.dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-.dash-kpis div{background:var(--bg);border-radius:12px;padding:12px}
-.dash-kpis span{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block}
-.dash-kpis b{font:800 1.5rem Manrope,sans-serif}
-.dash h4{font-size:.95rem;font-weight:700;margin:0 0 10px}
-.bars{display:flex;align-items:flex-end;gap:8px;height:120px;padding-bottom:4px;border-bottom:1px solid var(--line)}
-.bars i{flex:1;background:linear-gradient(180deg,var(--lime-2),var(--lime));border-radius:6px 6px 2px 2px}
-.bars-l{display:flex;gap:8px;font-size:.66rem;color:var(--ink-3);margin-top:6px}
-.bars-l span{flex:1;text-align:center}
-.heat{margin-top:16px;display:grid;grid-template-columns:90px repeat(6,1fr);gap:4px;font-size:.72rem;align-items:center}
-.heat em{font-style:normal;color:var(--ink-3)}
-.heat i{height:20px;border-radius:4px}
-@media (max-width:960px){.biz-grid{grid-template-columns:1fr}}
+/* plano de estaciones */
+.biz{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.plan-map{background:#0D2A3A;border:2px solid #24506A;padding:18px;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.plan-map svg{width:100%;height:auto;display:block}
+.plan-map .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font:700 .68rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#9CC3D8}
+.plan-map .legend span{display:inline-flex;align-items:center;gap:6px}
+.plan-map .legend i{width:12px;height:12px;display:inline-block}
+.biz-list{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+.biz-list li{border-left:4px solid var(--lime);padding:4px 0 4px 16px}
+.biz-list b{display:block;font:800 1.35rem/1.1 var(--cond);text-transform:uppercase;letter-spacing:.03em;color:#fff}
+.biz-list span{color:#B8C0C7}
+@media (max-width:980px){.biz{grid-template-columns:1fr}}
 
 /* prep + faq */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.prep{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.prep li{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.prep li svg{width:22px;height:22px;color:var(--lime);flex:none;margin-top:2px}
-details{border-bottom:1px solid var(--line);padding:16px 0}
-summary{cursor:pointer;font:700 1.05rem Manrope,sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.prep{list-style:none;padding:0;margin:0;border:2px solid var(--asphalt)}
+.prep li{display:flex;gap:14px;padding:16px 18px;border-bottom:2px solid var(--asphalt);background:#fff;color:var(--asphalt)}
+.prep li:last-child{border-bottom:0}
+.prep li span{font:800 1.4rem/1 var(--cond);color:#3E6C0B;flex:none;width:28px}
+details{border-bottom:2px solid var(--asphalt);padding:18px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:18px;font:800 1.3rem/1.15 var(--cond);text-transform:uppercase;letter-spacing:.02em;color:var(--asphalt)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--lime)}
-details[open] summary::after{content:"–"}
+summary::after{content:"+";font-size:1.8rem;line-height:.8;color:#3E6C0B}
+details[open] summary::after{content:"−"}
 details p{margin:10px 0 0;color:var(--ink-2)}
-@media (max-width:900px){.two{grid-template-columns:1fr}}
+@media (max-width:980px){.two{grid-template-columns:1fr}}
 
-/* final */
-.final{background:var(--lime);color:var(--navy);padding:72px 0}
-.final .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.final h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;max-width:24ch}
-.final p{margin:10px 0 0;font-size:1.05rem}
+/* cierre */
+.final{background:var(--lime);color:var(--asphalt);padding:76px 0}
+.final .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.final h2{font-size:clamp(2.3rem,5vw,4.2rem);max-width:15ch}
+.final p{margin:12px 0 0;font-size:1.1rem;font-weight:600}
 .final .btns{display:flex;gap:12px;flex-wrap:wrap}
-footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 0;font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
-footer a{color:#fff}
-.pf{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.55);text-decoration:none;font-size:.82rem}
-.pf:hover{color:#fff}
+footer{background:var(--asphalt);border-top:1px solid var(--line);padding:38px 0;color:var(--fog);font:600 .8rem/1.6 var(--mono);letter-spacing:.04em}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer a{color:#C9D0D6;text-decoration:none}
+footer a:hover{color:#fff}
 
-/* sticky mobile CTA */
 .mcta{display:none}
 @media (max-width:700px){
-  .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;gap:8px}
-  .mcta .btn{flex:1;padding:14px 10px;font-size:.92rem;box-shadow:var(--shadow-lg)}
-  footer{padding-bottom:96px}
+  .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px;background:rgba(18,20,22,.96);border-top:1px solid var(--line)}
+  .mcta .btn{flex:1;padding:15px 10px;font-size:1rem}
+  footer{padding-bottom:100px}
 }
-.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
-    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
-    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13l2 2 4-4"/></symbol>
-    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
-    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></symbol>
-    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10M10 20v-6h4v6"/></symbol>
-    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5"/><path d="M4 9v11h16V9M3 9h18M9 20v-6h6v6"/></symbol>
-    <symbol id="i-rat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c0-4 3.5-7 8-7 3 0 5 1.5 6 3l3 1-2 2c-1 2-3.5 3-7 3H8"/><path d="M8 17c-3 0-5 1-5 3"/><circle cx="15.5" cy="11" r=".6" fill="currentColor"/></symbol>
-    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
-    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  </defs>
-</svg>
+<div class="topbar"><div class="wrap"><span>Control de plagas · Ciudad de Panamá</span><span>Residencial · Comercial · Industrial</span></div></div>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="Fumigadora Urbana PTY, inicio">
-      <img src="assets/logo.webp" alt="" width="44" height="44">
-      <span><b>Fumigadora Urbana PTY</b><small>Control de plagas · Ciudad de Panamá</small></span>
+      <img src="assets/logo.webp" alt="" width="48" height="48">
+      <span><b>Fumigadora Urbana</b><small>PTY · Control de plagas</small></span>
     </a>
     <nav class="nav-links" aria-label="Secciones">
       <a href="#servicios">Servicios</a>
-      <a href="#como-funciona">Cómo funciona</a>
-      <a href="#planes">Planes</a>
+      <a href="#protocolo">Protocolo</a>
+      <a href="#tarifas">Tarifas</a>
       <a href="#empresas">Empresas</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
@@ -249,183 +250,211 @@ footer a{color:#fff}
 </header>
 
 <main id="inicio">
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
+<section class="hero grain" aria-labelledby="hero-title" style="padding:0">
+  <div class="fog" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">Control de plagas en Ciudad de Panamá</span>
-      <h1 id="hero-title">Tu casa o tu negocio, libre de plagas. <em>Con certificado.</em></h1>
-      <p class="lead">Elige tu plan, agenda la visita en el horario que te quede mejor y recibe tu certificado de fumigación por correo apenas terminamos. Sin llamadas, sin esperas.</p>
+      <span class="tag">Fumigación profesional · Ciudad de Panamá</span>
+      <h1 id="hero-title"><span>Eliminamos</span><span>la plaga.</span><span class="hl">Certificamos</span><span class="hl">el trabajo.</span></h1>
+      <p class="lead">Técnicos en campo, productos de acción residual y un certificado firmado al terminar cada servicio. Para tu casa, tu restaurante o tu bodega.</p>
       <div class="hero-ctas">
-        <a class="btn btn-lime" data-crm="book" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book">Agenda tu fumigación <svg><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="#planes">Ver planes y precios</a>
+        <a class="btn btn-lime" data-crm="book" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book">Agenda tu fumigación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#tarifas">Ver tarifas</a>
       </div>
-      <ul class="chips">
-        <li><svg><use href="#i-cal"/></svg>Agenda en línea las 24 horas</li>
-        <li><svg><use href="#i-doc"/></svg>Certificado digital al terminar</li>
-        <li><svg><use href="#i-bell"/></svg>Recordatorios antes de tu visita</li>
-      </ul>
+      <div class="hero-facts">
+        <div><b>Lun–Sáb</b><small>Visitas agendadas</small></div>
+        <div><b>Desde $45</b><small>Por servicio</small></div>
+        <div><b>100 %</b><small>Servicios con certificado</small></div>
+      </div>
     </div>
     <div class="rv">
-      <div class="cert" role="img" aria-label="Ejemplo del certificado de fumigación que recibes por correo">
-        <span class="cert-badge">Te llega por correo</span>
-        <div class="cert-head">
-          <img src="assets/logo.webp" alt="" width="44" height="44">
-          <div><b>Certificado de fumigación</b><small>N.º 4448 · Fumigadora Urbana PTY</small></div>
+      <div class="plate">
+        <div class="plate-head">
+          <div><h3>Ficha de servicio</h3><small>Fumigadora Urbana PTY</small></div>
+          <img src="assets/logo.webp" alt="" width="58" height="58">
         </div>
-        <div class="cert-grid">
-          <div><span>Servicio</span><b>Fumigación residencial</b></div>
-          <div><span>Fecha</span><b>7 de noviembre</b></div>
-          <div><span>Plaga</span><b>Cucarachas</b></div>
-          <div><span>Tratamiento</span><b>Gel + aspersión</b></div>
-          <div><span>Área tratada</span><b>95 m²</b></div>
-          <div><span>Técnico</span><b>Carlos Méndez</b></div>
-        </div>
-        <div class="cert-table" aria-hidden="true">
-          <div><span>Producto utilizado</span><span>Cantidad</span></div>
-          <div><span>Cipermetrina 25 % EC</span><span>0,5 l</span></div>
-          <div><span>Gel cucarachicida</span><span>30 g</span></div>
-        </div>
-        <div class="cert-sign" aria-hidden="true">
-          <div>Técnico responsable</div>
-          <div><svg viewBox="0 0 110 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 26c8-14 14-20 18-12s-4 14 4 8 10-16 16-6-2 10 8 2 12-12 18-4 8 6 14 0 10-8 20-4"/></svg>Firma del cliente</div>
-        </div>
+        <table class="spec">
+          <tr><th>Cobertura</th><td>Ciudad de Panamá</td></tr>
+          <tr><th>Espacios</th><td>Casas · Apartamentos · Restaurantes · Locales · Oficinas · Bodegas</td></tr>
+          <tr><th>Plagas</th><td>Cucarachas · Roedores · Hormigas · Mosquitos · Termitas · Chinches</td></tr>
+          <tr><th>Métodos</th><td>Aspersión · Nebulización · Gel · Cebado · Termonebulización</td></tr>
+          <tr><th>Entrega</th><td>Certificado firmado por técnico y cliente</td></tr>
+        </table>
+        <span class="stamp">Certificado</span>
+        <div class="rivets" aria-hidden="true"><i></i><i></i></div>
       </div>
     </div>
   </div>
+  <div class="hazard" aria-hidden="true"></div>
 </section>
 
-<div class="strip" role="list">
-  <div class="wrap">
-    <div role="listitem"><svg><use href="#i-card"/></svg><span><b>Paga como prefieras</b><small>Tarjeta con PagueloFacil, Yappy o transferencia</small></span></div>
-    <div role="listitem"><svg><use href="#i-cal"/></svg><span><b>Tú eliges el día</b><small>Lunes a sábado, agenda en minutos</small></span></div>
-    <div role="listitem"><svg><use href="#i-doc"/></svg><span><b>Certificado digital</b><small>Con productos, diagnóstico y firmas</small></span></div>
-    <div role="listitem"><svg><use href="#i-shield"/></svg><span><b>Seguimiento real</b><small>Te avisamos cuando el técnico va en camino</small></span></div>
-  </div>
-</div>
-
-<section id="servicios" aria-labelledby="servicios-title">
+<section id="servicios" class="light" aria-labelledby="servicios-title">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Servicios</span>
-      <h2 id="servicios-title">Un tratamiento para cada espacio y cada plaga</h2>
-      <p>Inspeccionamos, tratamos los puntos críticos y te dejamos por escrito qué encontramos, qué aplicamos y qué recomendamos.</p>
+      <span class="tag">Servicios</span>
+      <h2 id="servicios-title">Tratamiento según el espacio y la plaga</h2>
+      <p>Cada servicio empieza con una inspección. Tratamos los puntos críticos y dejamos por escrito qué encontramos, qué aplicamos y qué hay que corregir.</p>
     </div>
-    <div class="cards">
-      <article class="card rv"><div class="ic"><svg><use href="#i-home"/></svg></div><h3>Fumigación residencial</h3><p>Casas y apartamentos. Interiores y exteriores, con productos de acción residual.</p><ul><li>Cucarachas, hormigas, arañas</li><li>Mosquitos y chinches</li><li>Visita de unas 2 horas</li></ul></article>
-      <article class="card rv"><div class="ic"><svg><use href="#i-store"/></svg></div><h3>Fumigación comercial</h3><p>Restaurantes, locales, oficinas y bodegas, en el horario que no interrumpa tu operación.</p><ul><li>Certificado para inspecciones</li><li>Plan mensual disponible</li><li>Visita de unas 3 horas</li></ul></article>
-      <article class="card rv"><div class="ic"><svg><use href="#i-rat"/></svg></div><h3>Control de roedores</h3><p>Cebaderas seguras y revisión periódica para cortar el problema de raíz, no solo el síntoma.</p><ul><li>Cebo en bloque protegido</li><li>Sellado de accesos</li><li>Seguimiento por visita</li></ul></article>
-      <article class="card rv"><div class="ic"><svg><use href="#i-target"/></svg></div><h3>Monitoreo con estaciones</h3><p>Para empresas: estaciones numeradas en tu local y un registro de cada revisión.</p><ul><li>Capturas y consumo de cebo</li><li>Historial por zona</li><li>Reportes de tendencia</li></ul></article>
-    </div>
-  </div>
-</section>
-
-<section id="como-funciona" class="bg-soft" aria-labelledby="como-title">
-  <div class="wrap">
-    <div class="sec-head center rv" style="text-align:center">
-      <span class="eyebrow">Cómo funciona</span>
-      <h2 id="como-title">De la compra al certificado, todo en línea</h2>
-      <p>Sin llamadas para cuadrar horarios ni papeles que se pierden.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><h3>Elige tu plan</h3><p>Una visita o un plan semestral, trimestral o mensual. Pagas en línea con tarjeta, Yappy o transferencia.</p></div>
-      <div class="step rv"><h3>Agenda tu visita</h3><p>Escoges el día y la hora disponibles. Te llega la confirmación al instante.</p></div>
-      <div class="step rv"><h3>Te avisamos</h3><p>Un recordatorio el día anterior y otro el mismo día. Sabrás cuando el técnico va en camino.</p></div>
-      <div class="step rv"><h3>Recibe tu certificado</h3><p>Al terminar, el certificado llega a tu correo con lo que hicimos y la firma de ambos.</p></div>
+    <div class="svc rv">
+      <article><span class="num">01</span><h3>Residencial</h3><p>Casas y apartamentos, interiores y exteriores.</p><ul><li>Cucarachas, hormigas, arañas</li><li>Mosquitos y chinches</li><li>Visita de unas 2 horas</li></ul></article>
+      <article><span class="num">02</span><h3>Comercial</h3><p>Restaurantes, locales, oficinas y bodegas, sin frenar tu operación.</p><ul><li>Certificado para inspecciones</li><li>Plan mensual</li><li>Visita de unas 3 horas</li></ul></article>
+      <article><span class="num">03</span><h3>Roedores</h3><p>Cebaderas cerradas y revisión periódica para cortar el problema de raíz.</p><ul><li>Cebo en bloque protegido</li><li>Sellado de accesos</li><li>Seguimiento por visita</li></ul></article>
+      <article><span class="num">04</span><h3>Monitoreo</h3><p>Estaciones numeradas en tu local y registro de cada revisión.</p><ul><li>Capturas y consumo de cebo</li><li>Historial por zona</li><li>Reporte de tendencia</li></ul></article>
     </div>
   </div>
 </section>
 
-<section id="planes" aria-labelledby="planes-title">
+<section id="protocolo" class="steel grain" aria-labelledby="protocolo-title">
   <div class="wrap">
-    <div class="sec-head center rv" style="text-align:center">
-      <span class="eyebrow">Planes</span>
-      <h2 id="planes-title">Compra tu plan y agenda cuando quieras</h2>
-      <p>Pagas una sola vez y usas tus visitas durante la vigencia del plan. Cada visita la agendas tú, en línea.</p>
+    <div class="sec-head rv">
+      <span class="tag">Protocolo de servicio</span>
+      <h2 id="protocolo-title">Así trabajamos en cada visita</h2>
+      <p>El mismo procedimiento en una cocina de apartamento o en una bodega de 900 m².</p>
     </div>
-    <div class="plans">
-      <article class="plan rv">
-        <h3>Fumigación única</h3><p class="for">Para resolver un problema puntual o antes de mudarte.</p>
-        <div class="price">$45 <small>· 1 visita</small></div><p class="per">Vigencia de 90 días</p>
-        <ul><li><svg><use href="#i-check"/></svg>Inspección y tratamiento</li><li><svg><use href="#i-check"/></svg>Certificado digital</li><li><svg><use href="#i-check"/></svg>Recordatorios de tu cita</li></ul>
-        <a class="btn btn-outline" data-crm="plan" data-plan="fumigacion-unica" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=fumigacion-unica">Comprar</a>
-      </article>
-      <article class="plan rv">
-        <h3>Fumigación semestral</h3><p class="for">Mantenimiento para casas y apartamentos.</p>
-        <div class="price">$85 <small>· 2 visitas</small></div><p class="per">$42,50 por visita · 1 año</p>
-        <ul><li><svg><use href="#i-check"/></svg>Una visita cada 6 meses</li><li><svg><use href="#i-check"/></svg>Certificado en cada visita</li><li><svg><use href="#i-check"/></svg>Agenda tú la fecha</li></ul>
-        <a class="btn btn-outline" data-crm="plan" data-plan="fumigacion-semestral" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=fumigacion-semestral">Comprar</a>
-      </article>
-      <article class="plan featured rv">
-        <span class="tag">Recomendado para hogares</span>
-        <h3>Fumigación trimestral</h3><p class="for">Protección continua durante todo el año.</p>
-        <div class="price">$160 <small>· 4 visitas</small></div><p class="per">$40 por visita · 1 año</p>
-        <ul><li><svg><use href="#i-check"/></svg>Una visita cada 3 meses</li><li><svg><use href="#i-check"/></svg>Certificado en cada visita</li><li><svg><use href="#i-check"/></svg>Historial de tratamientos</li></ul>
+    <div class="proto">
+      <div class="rv"><h3>Inspección</h3><p>Recorremos el espacio y ubicamos focos, rutas de entrada y nidos.</p></div>
+      <div class="rv"><h3>Diagnóstico</h3><p>Identificamos la plaga y el nivel de infestación antes de aplicar nada.</p></div>
+      <div class="rv"><h3>Tratamiento</h3><p>Aplicamos el método y el producto adecuados, en la dosis justa.</p></div>
+      <div class="rv"><h3>Certificación</h3><p>Firmas, productos usados y recomendaciones: te llega por correo al terminar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tarifas" class="light" aria-labelledby="tarifas-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="tag">Tarifas</span>
+      <h2 id="tarifas-title">Compra tu plan. Agenda cuando lo necesites.</h2>
+      <p>Pagas una vez y usas tus visitas durante la vigencia del plan. Tarjeta (PagueloFacil), Yappy o transferencia.</p>
+    </div>
+    <div class="rates rv">
+      <div class="rate">
+        <div><h3>Única</h3></div>
+        <div><p>Para un problema puntual o antes de una mudanza.</p></div>
+        <div class="vis"><b>1 visita</b>Vigencia 90 días</div>
+        <div class="price">$45<small>por visita</small></div>
+        <a class="btn btn-paper" data-crm="plan" data-plan="fumigacion-unica" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=fumigacion-unica">Comprar</a>
+      </div>
+      <div class="rate">
+        <div><h3>Semestral</h3></div>
+        <div><p>Mantenimiento para casas y apartamentos: una visita cada 6 meses.</p></div>
+        <div class="vis"><b>2 visitas</b>Vigencia 1 año</div>
+        <div class="price">$85<small>$42,50 por visita</small></div>
+        <a class="btn btn-paper" data-crm="plan" data-plan="fumigacion-semestral" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=fumigacion-semestral">Comprar</a>
+      </div>
+      <div class="rate hi">
+        <div><h3>Trimestral</h3><span class="badge">Recomendado hogares</span></div>
+        <div><p>Protección continua: una visita cada 3 meses, con historial de tratamientos.</p></div>
+        <div class="vis"><b>4 visitas</b>Vigencia 1 año</div>
+        <div class="price">$160<small>$40 por visita</small></div>
         <a class="btn btn-lime" data-crm="plan" data-plan="fumigacion-trimestral" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=fumigacion-trimestral">Comprar</a>
-      </article>
-      <article class="plan rv">
-        <h3>Plan comercial mensual</h3><p class="for">Restaurantes y locales que no pueden fallar en una inspección.</p>
-        <div class="price">$420 <small>· 12 visitas</small></div><p class="per">$35 por visita · 1 año</p>
-        <ul><li><svg><use href="#i-check"/></svg>Una visita al mes</li><li><svg><use href="#i-check"/></svg>Monitoreo con estaciones</li><li><svg><use href="#i-check"/></svg>Certificado mensual</li></ul>
-        <a class="btn btn-navy" data-crm="plan" data-plan="plan-comercial-mensual" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=plan-comercial-mensual">Comprar</a>
-      </article>
+      </div>
+      <div class="rate">
+        <div><h3>Comercial mensual</h3><span class="badge">Restaurantes y locales</span></div>
+        <div><p>Una visita al mes, monitoreo con estaciones y certificado mensual.</p></div>
+        <div class="vis"><b>12 visitas</b>Vigencia 1 año</div>
+        <div class="price">$420<small>$35 por visita</small></div>
+        <a class="btn btn-dark" data-crm="plan" data-plan="plan-comercial-mensual" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=plan-comercial-mensual">Comprar</a>
+      </div>
     </div>
-    <p class="plans-note">¿Ya tienes un plan? <a href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book" data-crm="book">Agenda tu próxima visita</a> con el mismo correo con el que compraste.</p>
+    <p class="rates-note">¿Ya compraste? <a href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book" data-crm="book">Agenda tu próxima visita</a> con el mismo correo.</p>
   </div>
 </section>
 
-<section id="empresas" class="biz" aria-labelledby="empresas-title">
-  <div class="wrap biz-grid">
+<section class="grain" aria-labelledby="cert-title">
+  <div class="wrap cert-wrap">
     <div class="rv">
-      <div class="sec-head" style="margin-bottom:28px">
-        <span class="eyebrow">Para empresas</span>
-        <h2 id="empresas-title">Sabes dónde está la plaga antes de que se vuelva un problema</h2>
-        <p>Instalamos estaciones de monitoreo numeradas en tu local y registramos cada revisión. Tú ves la evolución; nosotros actuamos donde hace falta.</p>
+      <div class="clip" role="img" aria-label="Ejemplo de certificado de fumigación sobre una tabla de campo">
+        <div class="paper">
+          <div class="paper-h"><img src="assets/logo.webp" alt="" width="44" height="44"><div><b>Certificado de fumigación</b><small>N.º 4448 · 07/11/2026</small></div></div>
+          <dl>
+            <div><dt>Servicio</dt><dd>Residencial</dd></div>
+            <div><dt>Técnico</dt><dd>Carlos Méndez</dd></div>
+            <div><dt>Plaga</dt><dd>Cucarachas</dd></div>
+            <div><dt>Infestación</dt><dd>Media</dd></div>
+            <div><dt>Tratamiento</dt><dd>Gel · Aspersión</dd></div>
+            <div><dt>Área tratada</dt><dd>95 m²</dd></div>
+          </dl>
+          <table><tr><th>Producto aplicado</th><th>Cant.</th></tr><tr><td>Cipermetrina 25 % EC</td><td>0,5 l</td></tr><tr><td>Gel cucarachicida</td><td>30 g</td></tr></table>
+          <div class="sig"><div>Técnico responsable</div><div><svg viewBox="0 0 100 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 22c7-12 12-17 16-10s-4 12 4 7 9-14 14-5-2 9 7 2 11-11 16-4 7 5 13 0 9-7 18-4"/></svg>Firma del cliente</div></div>
+        </div>
       </div>
-      <ul class="biz-list">
-        <li><span class="ic"><svg><use href="#i-target"/></svg></span><span><b>Estaciones de monitoreo</b><span>Cebaderas, trampas de luz y adhesivas, cada una con su código y su ubicación.</span></span></li>
-        <li><span class="ic"><svg><use href="#i-chart"/></svg></span><span><b>Tendencias y zonas críticas</b><span>Capturas por semana y por zona: dónde se concentra la actividad y si el tratamiento está funcionando.</span></span></li>
-        <li><span class="ic"><svg><use href="#i-doc"/></svg></span><span><b>Certificado de cada visita</b><span>Con diagnóstico, productos aplicados y medidas correctivas, listo para tus inspecciones sanitarias.</span></span></li>
-      </ul>
-      <p style="margin-top:28px"><a class="btn btn-lime" data-crm="plan" data-plan="plan-comercial-mensual" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=plan-comercial-mensual">Ver el plan comercial</a></p>
     </div>
-    <div class="dash rv" role="img" aria-label="Ejemplo del reporte de monitoreo: capturas por semana y actividad por zona">
-      <div class="dash-kpis"><div><span>Estaciones</span><b>44</b></div><div><span>Con actividad</span><b style="color:#c2410c">12</b></div><div><span>Revisiones</span><b>264</b></div></div>
-      <h4>Capturas por semana</h4>
-      <div class="bars" aria-hidden="true"><i style="height:92%"></i><i style="height:80%"></i><i style="height:71%"></i><i style="height:58%"></i><i style="height:44%"></i><i style="height:36%"></i></div>
-      <div class="bars-l" aria-hidden="true"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span></div>
-      <div class="heat" aria-hidden="true">
-        <em>Cocina</em><i style="background:#f97316"></i><i style="background:#fb923c"></i><i style="background:#fdba74"></i><i style="background:#fed7aa"></i><i style="background:#fde68a"></i><i style="background:#ecfccb"></i>
-        <em>Bodega</em><i style="background:#fb923c"></i><i style="background:#fdba74"></i><i style="background:#fed7aa"></i><i style="background:#fde68a"></i><i style="background:#ecfccb"></i><i style="background:#ecfccb"></i>
-        <em>Exterior</em><i style="background:#fdba74"></i><i style="background:#fde68a"></i><i style="background:#ecfccb"></i><i style="background:#ecfccb"></i><i style="background:#ecfccb"></i><i style="background:#ecfccb"></i>
-      </div>
+    <div class="rv">
+      <span class="tag">Certificado en cada servicio</span>
+      <h2 id="cert-title" style="font-size:clamp(2.4rem,5vw,4rem);color:#fff;margin:16px 0 14px">Todo queda por escrito</h2>
+      <p style="color:#B8C0C7;font-size:1.12rem;margin:0">Al terminar, el certificado llega a tu correo. Guárdalo: es lo primero que te piden en una inspección sanitaria.</p>
+      <ul class="cert-points">
+        <li><i>1</i><span><b>Productos y dosis</b>Qué se aplicó y cuánto, producto por producto.</span></li>
+        <li><i>2</i><span><b>Diagnóstico</b>La plaga, el nivel de infestación y dónde estaba.</span></li>
+        <li><i>3</i><span><b>Medidas correctivas</b>Lo que hay que corregir para que no vuelva.</span></li>
+        <li><i>4</i><span><b>Doble firma</b>Del técnico y tuya, en el teléfono, al cerrar la visita.</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="preguntas" class="bg-soft" aria-labelledby="preguntas-title">
+<section id="empresas" class="steel grain" aria-labelledby="empresas-title">
+  <div class="wrap biz">
+    <div class="rv">
+      <span class="tag">Empresas · Monitoreo</span>
+      <h2 id="empresas-title" style="font-size:clamp(2.4rem,5vw,4rem);color:#fff;margin:16px 0 14px">Cada estación, numerada y revisada</h2>
+      <p style="color:#B8C0C7;font-size:1.12rem;margin:0 0 28px">Instalamos estaciones en tu local y registramos cada revisión. Sabes en qué zona hay actividad antes de que se convierta en un problema.</p>
+      <ul class="biz-list">
+        <li><b>Cebaderas y trampas</b><span>De roedores, de luz UV y adhesivas, cada una con su código y ubicación.</span></li>
+        <li><b>Capturas por zona</b><span>Cocina, bodega, perímetro: dónde se concentra la actividad, semana a semana.</span></li>
+        <li><b>Reporte de tendencia</b><span>La evidencia de que el tratamiento funciona, lista para tu auditoría.</span></li>
+      </ul>
+      <p style="margin-top:30px"><a class="btn btn-lime" data-crm="plan" data-plan="plan-comercial-mensual" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store?plan=plan-comercial-mensual">Plan comercial</a></p>
+    </div>
+    <div class="plan-map rv" role="img" aria-label="Plano de un local con estaciones de monitoreo numeradas; dos con actividad">
+      <svg viewBox="0 0 520 360" fill="none" stroke-linecap="square">
+        <defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" stroke="#174B66" stroke-width="1"/></pattern></defs>
+        <rect width="520" height="360" fill="url(#g)"/>
+        <g stroke="#9CC3D8" stroke-width="4">
+          <path d="M30 30H490V330H30Z"/>
+          <path d="M30 150H230M290 150H490M230 30V110M230 190V330M330 150V330"/>
+        </g>
+        <g fill="#9CC3D8" font-family="JetBrains Mono,monospace" font-size="12" letter-spacing="1.5">
+          <text x="48" y="58">COCINA</text><text x="252" y="58">COMEDOR</text><text x="48" y="178">BODEGA</text><text x="252" y="178">BAÑOS</text><text x="350" y="178">RECEPCIÓN</text>
+        </g>
+        <g font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="13" text-anchor="middle">
+          <g><circle cx="80" cy="110" r="14" fill="#DC2626"/><text x="80" y="115" fill="#fff">E1</text></g>
+          <g><circle cx="190" cy="80" r="14" fill="#F59E0B"/><text x="190" y="85" fill="#121416">E2</text></g>
+          <g><circle cx="80" cy="260" r="14" fill="#DC2626"/><text x="80" y="265" fill="#fff">E3</text></g>
+          <g><circle cx="190" cy="300" r="14" fill="#75B11B"/><text x="190" y="305" fill="#121416">E4</text></g>
+          <g><circle cx="400" cy="80" r="14" fill="#75B11B"/><text x="400" y="85" fill="#121416">E5</text></g>
+          <g><circle cx="280" cy="300" r="14" fill="#75B11B"/><text x="280" y="305" fill="#121416">E6</text></g>
+          <g><circle cx="455" cy="300" r="14" fill="#75B11B"/><text x="455" y="305" fill="#121416">E7</text></g>
+        </g>
+        <circle cx="80" cy="110" r="26" stroke="#DC2626" stroke-width="2" opacity=".5"/>
+        <circle cx="80" cy="260" r="26" stroke="#DC2626" stroke-width="2" opacity=".5"/>
+      </svg>
+      <div class="legend"><span><i style="background:#DC2626"></i>Con actividad</span><span><i style="background:#F59E0B"></i>Vigilar</span><span><i style="background:#75B11B"></i>Sin actividad</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" class="light" aria-labelledby="preguntas-title">
   <div class="wrap two">
     <div class="rv">
-      <div class="sec-head" style="margin-bottom:24px">
-        <span class="eyebrow">Antes de tu visita</span>
-        <h2>Prepárate en 10 minutos</h2>
-      </div>
+      <span class="tag">Antes de la visita</span>
+      <h2 style="font-size:clamp(2.2rem,4.4vw,3.4rem);color:var(--asphalt);margin:16px 0 24px">Prepara el espacio</h2>
       <ul class="prep">
-        <li><svg><use href="#i-check"/></svg><span>Guarda los alimentos y utensilios en gabinetes o recipientes cerrados.</span></li>
-        <li><svg><use href="#i-check"/></svg><span>Retira mascotas, peceras y plantas de las áreas a tratar.</span></li>
-        <li><svg><use href="#i-check"/></svg><span>Deja libre el acceso a cocina, baños y desagües.</span></li>
-        <li><svg><use href="#i-check"/></svg><span>Cuéntale al técnico dónde has visto la plaga: así el tratamiento es más preciso.</span></li>
+        <li><span>01</span>Guarda alimentos y utensilios en gabinetes o recipientes cerrados.</li>
+        <li><span>02</span>Retira mascotas, peceras y plantas de las áreas a tratar.</li>
+        <li><span>03</span>Deja libre el acceso a cocina, baños y desagües.</li>
+        <li><span>04</span>Indícale al técnico dónde has visto la plaga.</li>
       </ul>
     </div>
     <div class="rv">
-      <div class="sec-head" style="margin-bottom:12px">
-        <span class="eyebrow">Preguntas frecuentes</span>
-        <h2 id="preguntas-title">Lo que más nos preguntan</h2>
-      </div>
-      <details><summary>¿Cómo pago mi plan?</summary><p>En línea, con tarjeta a través de PagueloFacil, o por Yappy o transferencia subiendo el comprobante. Al confirmarse el pago puedes agendar.</p></details>
-      <details><summary>¿Puedo cambiar la fecha de mi visita?</summary><p>Sí. En el correo de confirmación tienes un enlace para cambiar la hora o cancelar, sin tener que escribirnos.</p></details>
-      <details><summary>¿Cuánto dura la visita?</summary><p>Alrededor de 2 horas en casas y apartamentos y unas 3 horas en locales comerciales, según el área y el nivel de infestación.</p></details>
+      <span class="tag">Preguntas frecuentes</span>
+      <h2 id="preguntas-title" style="font-size:clamp(2.2rem,4.4vw,3.4rem);color:var(--asphalt);margin:16px 0 8px">Lo que nos preguntan</h2>
+      <details><summary>¿Cómo pago mi plan?</summary><p>En línea con tarjeta a través de PagueloFacil, o por Yappy o transferencia subiendo el comprobante. Confirmado el pago, ya puedes agendar.</p></details>
+      <details><summary>¿Puedo cambiar la fecha?</summary><p>Sí. En el correo de confirmación tienes un enlace para cambiar la hora o cancelar, sin tener que llamarnos.</p></details>
+      <details><summary>¿Cuánto dura la visita?</summary><p>Unas 2 horas en casas y apartamentos y unas 3 horas en locales comerciales, según el área y el nivel de infestación.</p></details>
       <details><summary>¿Qué incluye el certificado?</summary><p>Fecha, dirección, tipo de servicio, plaga, tratamiento, productos aplicados con sus cantidades, diagnóstico, medidas correctivas y las firmas del técnico y del cliente.</p></details>
-      <details><summary>¿Cómo funcionan las visitas de un plan?</summary><p>Compras el plan una vez y cada visita la agendas tú cuando la necesites, durante la vigencia del plan, con el mismo correo con el que compraste.</p></details>
+      <details><summary>¿Cómo se usan las visitas de un plan?</summary><p>Compras el plan una vez y agendas cada visita cuando la necesites, dentro de la vigencia, con el mismo correo de la compra.</p></details>
     </div>
   </div>
 </section>
@@ -433,27 +462,28 @@ footer a{color:#fff}
 <section class="final" aria-label="Agenda tu fumigación">
   <div class="wrap">
     <div>
-      <h2>Agenda hoy y recibe tu certificado al terminar.</h2>
-      <p>Elige tu plan, escoge el día y nosotros nos encargamos del resto.</p>
+      <h2>Agenda hoy. Certificado al terminar.</h2>
+      <p>Elige tu plan, escoge el día y nuestro técnico se encarga del resto.</p>
     </div>
     <div class="btns">
-      <a class="btn btn-navy" data-crm="book" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book">Agenda tu fumigación <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-outline" data-crm="store" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store">Comprar un plan</a>
+      <a class="btn btn-dark" data-crm="book" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book">Agenda tu fumigación</a>
+      <a class="btn btn-paper" data-crm="store" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/store">Comprar un plan</a>
     </div>
   </div>
 </section>
 </main>
+<div class="hazard" aria-hidden="true"></div>
 
 <footer>
   <div class="wrap">
     <span>© <span id="y">2026</span> Fumigadora Urbana PTY · Ciudad de Panamá</span>
-    <a class="pf" href="https://perfectflow.cloud" target="_blank" rel="noopener">Agenda, pagos y certificados con PerfectFlow</a>
+    <a href="https://perfectflow.cloud" target="_blank" rel="noopener">Agenda, pagos y certificados con PerfectFlow</a>
   </div>
 </footer>
 
 <div class="mcta">
   <a class="btn btn-lime" data-crm="book" href="https://fumigadora-urbana-pty.perfectflow.cloud/es/book">Agendar</a>
-  <a class="btn btn-navy" href="#planes">Ver planes</a>
+  <a class="btn btn-line" href="#tarifas">Tarifas</a>
 </div>
 
 <script>
