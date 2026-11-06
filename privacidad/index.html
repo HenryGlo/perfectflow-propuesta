@@ -358,6 +358,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
 
 .prose{max-width:780px;font-size:1.02rem;line-height:1.75}
 .prose section{padding:clamp(28px,4vw,44px) 0;border-top:2px solid var(--ink);scroll-margin-top:100px}
+.prose [id]{scroll-margin-top:100px}
 .prose section:first-child{border-top:0;padding-top:0}
 .prose h2{font-size:clamp(1.5rem,2.6vw,2.05rem);line-height:1.1;margin:0 0 .65em}
 .prose h3{font-size:1.2rem;line-height:1.2;margin:1.5em 0 .45em}
@@ -670,7 +671,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>Los archivos de imagen y video se guardan en un <strong>almacenamiento de objetos compatible con S3</strong>, privado. El resto de los campos se guarda en la base de datos de tu instancia.</p>
 
           <h3 id="google">Gmail y Google Workspace</h3>
-          <p>Desde <strong>Configuración › Correos</strong> puedes conectar tu propia cuenta de Google —Gmail o Google Workspace— para que PerfectFlow envíe tus correos desde tu dirección: los avisos del sistema a tus usuarios y las comunicaciones que configuras para tus contactos. Es opcional: mientras no la conectes, no se trata ningún dato de tu cuenta de Google.</p>
+          <p>Desde <strong>Configuración › Conexiones</strong> puedes conectar tu propia cuenta de Google —Gmail o Google Workspace— para que PerfectFlow envíe tus correos desde tu dirección: los avisos del sistema a tus usuarios y las comunicaciones que configuras para tus contactos. Es opcional: mientras no la conectes, no se trata ningún dato de tu cuenta de Google.</p>
 
           <h4>Qué permisos pedimos</h4>
           <div class="dtable-wrap">
@@ -697,7 +698,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
           <p>Son datos de tu operación: tú eres el responsable y Code Flakes los trata como encargado, igual que el resto de los datos de tu instancia.</p>
 
           <h4>Cómo desconectarla</h4>
-          <p>Pulsa <strong>«Desconectar»</strong> en Configuración › Correos: PerfectFlow revoca el token en Google, lo borra de tu instancia y tus correos vuelven a salir por el camino habitual. También puedes retirar el acceso cuando quieras desde tu cuenta de Google, en <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. Si Google deja de aceptar el token, PerfectFlow te avisa para que la vuelvas a conectar.</p>
+          <p>Pulsa <strong>«Desconectar»</strong> en Configuración › Conexiones: PerfectFlow revoca el token en Google, lo borra de tu instancia y tus correos vuelven a salir por el camino habitual. También puedes retirar el acceso cuando quieras desde tu cuenta de Google, en <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. Si Google deja de aceptar el token, PerfectFlow te avisa para que la vuelvas a conectar.</p>
 
           <h4>Uso limitado de los datos de Google</h4>
           <p>El uso y la transferencia de la información recibida de las API de Google a cualquier otra aplicación por parte de PerfectFlow cumplirán la <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de datos de usuario de los servicios de API de Google</a>, incluidos los requisitos de Uso limitado.</p>
@@ -839,7 +840,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(96px + var(--safe-t))}
             <li><strong>Desconectar la cuenta</strong> desde el módulo de redes de PerfectFlow. Al hacerlo se eliminan los tokens de autenticación, y PerfectFlow deja de poder consultar las métricas de Instagram, publicar contenido, recibir mensajes nuevos o enviar respuestas en nombre de la cuenta conectada.</li>
             <li><strong>Revocar el acceso desde Meta</strong>, en la configuración de tu cuenta de Instagram, en la sección de aplicaciones y sitios web conectados. El efecto es inmediato, independientemente de PerfectFlow.</li>
             <li><strong>Revocar el acceso desde TikTok</strong>, en la configuración de tu cuenta, en la sección de aplicaciones conectadas. El efecto también es inmediato.</li>
-            <li><strong>Desconectar Gmail</strong> con «Desconectar» en Configuración › Correos, o <strong>retirar el acceso desde Google</strong>, en <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. En ambos casos PerfectFlow deja de poder enviar desde tu cuenta.</li>
+            <li><strong>Desconectar Gmail</strong> con «Desconectar» en Configuración › Conexiones, o <strong>retirar el acceso desde Google</strong>, en <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. En ambos casos PerfectFlow deja de poder enviar desde tu cuenta.</li>
             <li><strong>Pedir la eliminación de tus datos</strong> escribiendo a <a  data-u="info" data-d="perfectflow.cloud" data-mt>info <span aria-hidden="true">(arroba)</span> perfectflow.cloud</a>. El detalle está en la página de <a href="../eliminacion-de-datos/">eliminación de datos</a>.</li>
             <li><strong>Pedirnos una copia o la corrección</strong> de los datos que guardamos sobre ti, al mismo correo.</li>
             <li><strong>Apagar la medición de uso</strong> del <a href="#uso-servicio">apartado 10</a>: puedes pedirnos que la apaguemos para tu cuenta, al mismo correo.</li>
@@ -951,6 +952,13 @@ $$("[data-u][data-d]").forEach(function(a){
   if(a.hasAttribute("data-mt")) a.textContent = mail;
 });
 
+/* ancla del enlace (p. ej. #google): el navegador salta antes de que carguen fuentes y tablas, y el contenido de arriba crece después; al terminar de cargar se vuelve a ubicar */
+function toHash(){
+  if(!location.hash) return;
+  var t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if(t) t.scrollIntoView({block: "start", behavior: "auto"});
+}
+addEventListener("load", function(){ (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function(){ requestAnimationFrame(toHash); }); });
 /* barra de lectura */
 var prog = document.getElementById("prog"), tick = false;
 function onScroll(){ var h = document.documentElement.scrollHeight - innerHeight; prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; tick = false; }
