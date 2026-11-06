@@ -955,7 +955,9 @@ $$("[data-u][data-d]").forEach(function(a){
 function toHash(){
   if(!location.hash) return;
   var t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-  if(t) t.scrollIntoView({block: "start", behavior: "auto"});
+  if(!t) return;
+  var r = document.documentElement, sb = r.style.scrollBehavior;
+  r.style.scrollBehavior = "auto"; t.scrollIntoView({block: "start"}); r.style.scrollBehavior = sb;
 }
 addEventListener("load", function(){ (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function(){ requestAnimationFrame(toHash); }); });
 /* barra de lectura */
